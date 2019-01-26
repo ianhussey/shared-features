@@ -1,0 +1,19 @@
+date	time	group	subject	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	windowcenter	trialduration	trialtimeout	blocktimeout	response	correct	latency	inwindow	stimulusnumber1	stimulusitem1	stimulusvpos1	stimulushpos1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusvpos2	stimulushpos2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusvpos3	stimulushpos3	stimulusonset3
+011218	10:20:25	1	1	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	9008	0	1	Consent.htm	40pct	50pct	308	1	I agree to participate	80pct	75pct	308	1	I do NOT agree to participate	80pct	25pct	308
+011218	10:20:44	1	1	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	2653	0	1	Consent.htm	40pct	50pct	16	1	I agree to participate	80pct	75pct	16	1	I do NOT agree to participate	80pct	25pct	16
+011218	10:22:32	1	1	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1551	0	1	Consent.htm	40pct	50pct	19	1	I agree to participate	80pct	75pct	19	1	I do NOT agree to participate	80pct	25pct	19
+011218	10:23:40	1	3	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	841	0	1	Consent.htm	40pct	50pct	19	1	I agree to participate	80pct	75pct	19	1	I do NOT agree to participate	80pct	25pct	19
+011218	10:25:11	1	4	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1120	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+011218	10:26:32	1	5	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	887	0	1	Consent.htm	40pct	50pct	15	1	I agree to participate	80pct	75pct	15	1	I do NOT agree to participate	80pct	25pct	15
+011218	10:27:39	1	6	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1005	0	1	Consent.htm	40pct	50pct	49	1	I agree to participate	80pct	75pct	49	1	I do NOT agree to participate	80pct	25pct	49
+011218	10:28:40	1	7	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1303	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+011218	10:29:48	1	8	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	806	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+011218	10:30:45	1	9	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1221	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+011218	10:31:54	1	10	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1602	0	1	Consent.htm	40pct	50pct	16	1	I agree to participate	80pct	75pct	16	1	I do NOT agree to participate	80pct	25pct	16
+011218	10:35:44	1	10	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1069	0	1	Consent.htm	40pct	50pct	40	1	I agree to participate	80pct	75pct	40	1	I do NOT agree to participate	80pct	25pct	40
+011218	10:36:27	1	11	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1020	0	1	Consent.htm	40pct	50pct	15	1	I agree to participate	80pct	75pct	15	1	I do NOT agree to participate	80pct	25pct	15
+011218	10:37:04	1	12	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	1136	0	1	Consent.htm	40pct	50pct	18	1	I agree to participate	80pct	75pct	18	1	I do NOT agree to participate	80pct	25pct	18
+011218	10:37:57	1	13	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	769	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+011218	10:38:50	1	14	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	684	0	1	Consent.htm	40pct	50pct	47	1	I agree to participate	80pct	75pct	47	1	I do NOT agree to participate	80pct	25pct	47
+011218	10:39:33	1	15	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	945	0	1	Consent.htm	40pct	50pct	16	1	I agree to participate	80pct	75pct	16	1	I do NOT agree to participate	80pct	25pct	16
+011218	10:40:15	1	16	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'B'	1	801	0	1	Consent.htm	40pct	50pct	16	1	I agree to participate	80pct	75pct	16	1	I do NOT agree to participate	80pct	25pct	16

@@ -1,0 +1,304 @@
+﻿**************************************************************************************
+***************************************************************************************
+											SCRIPT EC COLOR
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/02/2018
+***************************************************************************************
+***************************************************************************************
+
+*************************General Variables****************************
+**********************************************************************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = black
+/ txcolor = black
+/ fontstyle = ("Arial", 2%)
+</defaults>
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4 = block4]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = begin, block2 = EC_Training_Block_1, block3 = EC_Training_Block_2, block4 =EC_Training_Block_3)
+</variables>
+
+**************  Stimuli ***************
+
+<text Struan_Big_CS2>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 8%, true)
+/ position = (30%, 50%)
+/color = white
+</text>
+
+<text Struan_Small_CS2>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 4%, true)
+/ position = (30%, 50%)
+/color = white
+</text>
+
+<text MORAG_Big_CS1>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 8%, true)
+/ position = (30%, 50%)
+/color = white
+</text>
+
+<text MORAG_Small_CS1>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 4%, true)
+/ position = (30%, 50%)
+/color = white
+</text>
+
+<text Positive_Stimulus_Big_Top>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY", "RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 8%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = white
+</text>
+
+<text Negative_Stimulus_Big_Top>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT", "WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 8%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = white
+</text>
+
+<text Positive_Stimulus_Big_Bottom>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY", "RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 8%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = white
+</text>
+
+<text Negative_Stimulus_Big_Bottom>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT", "WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 8%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = white
+</text>
+
+<text Positive_Stimulus_Small_Top>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY", "RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 4%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = white
+</text>
+
+<text Negative_Stimulus_Small_Top>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT", "WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 4%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = white
+</text>
+
+<text Positive_Stimulus_Small_Bottom>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY", "RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 4%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = white
+</text>
+
+<text Negative_Stimulus_Small_Bottom>
+/ numitems = 6
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT", "WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 4%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = white
+</text>
+
+**************** text ************************
+
+<text further>
+/numitems =1
+/items= ("Press the spacebar to continue.")
+/ txcolor = (255, 255, 255)
+/ txbgcolor = (0, 0, 0)
+/ position = (50%, 95%)
+/ fontstyle = ("Arial", 3%)
+</text>
+
+<picture erasebig>
+/items= ("erasebig.jpg")
+/ position = (50%, 50%)
+</picture>
+
+********** EC Training ***********
+
+<trial pause>
+/trialcode = "pause"
+/stimulustimes = [ 1 = erasebig]
+/trialduration = 1000
+</trial>
+
+<trial EC_Training_Trial_Struan_CS2_1_Big> 
+/ stimulustimes = [500 = Struan_Big_CS2, Positive_Stimulus_Small_Top, Negative_Stimulus_Big_Bottom]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_Struan_CS2_2_Big> 
+/ stimulustimes = [500 = Struan_Big_CS2, Positive_Stimulus_Small_Bottom, Negative_Stimulus_Big_Top]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_Struan_CS2_1_Small> 
+/ stimulustimes = [500 = Struan_Small_CS2, Positive_Stimulus_Big_Top, Negative_Stimulus_Small_Bottom]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_Struan_CS2_2_Small> 
+/ stimulustimes = [500 = Struan_Small_CS2, Positive_Stimulus_Big_Bottom, Negative_Stimulus_Small_Top]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_MORAG_CS1_1_Big> 
+/ stimulustimes = [500 = MORAG_Big_CS1, Positive_Stimulus_Big_Top, Negative_Stimulus_Small_Bottom]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_MORAG_CS1_2_Big> 
+/ stimulustimes = [500 = MORAG_Big_CS1, Positive_Stimulus_Big_Bottom, Negative_Stimulus_Small_Top]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_MORAG_CS1_1_Small> 
+/ stimulustimes = [500 = MORAG_Small_CS1, Positive_Stimulus_Small_Top, Negative_Stimulus_Big_Bottom]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+<trial EC_Training_Trial_MORAG_CS1_2_Small> 
+/ stimulustimes = [500 = MORAG_Small_CS1, Positive_Stimulus_Small_Bottom, Negative_Stimulus_Big_Top]
+/ pretrialpause = 750
+/ trialduration = 5500
+</trial>
+
+***********  block  **********
+
+<block Begin>
+/ preinstructions = (Instructions, interval)
+</block>
+
+<block EC_Training_Block_1>
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_Struan_CS2_1_Big, EC_Training_Trial_Struan_CS2_2_Big, EC_Training_Trial_Struan_CS2_1_Small, EC_Training_Trial_Struan_CS2_2_Small, EC_Training_Trial_MORAG_CS1_1_Big, EC_Training_Trial_MORAG_CS1_2_Big, EC_Training_Trial_MORAG_CS1_1_Small, EC_Training_Trial_MORAG_CS1_2_Small)]
+</block>
+
+<block EC_Training_Block_2>
+/ preinstructions = (Instructions_1)
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_Struan_CS2_1_Big, EC_Training_Trial_Struan_CS2_2_Big, EC_Training_Trial_Struan_CS2_1_Small, EC_Training_Trial_Struan_CS2_2_Small, EC_Training_Trial_MORAG_CS1_1_Big, EC_Training_Trial_MORAG_CS1_2_Big, EC_Training_Trial_MORAG_CS1_1_Small, EC_Training_Trial_MORAG_CS1_2_Small)]
+</block>
+
+<block EC_Training_Block_3>
+/ preinstructions = (Instructions_2)
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_Struan_CS2_1_Big, EC_Training_Trial_Struan_CS2_2_Big, EC_Training_Trial_Struan_CS2_1_Small, EC_Training_Trial_Struan_CS2_2_Small, EC_Training_Trial_MORAG_CS1_1_Big, EC_Training_Trial_MORAG_CS1_2_Big, EC_Training_Trial_MORAG_CS1_1_Small, EC_Training_Trial_MORAG_CS1_2_Small)]
+</block>
+
+
+*********************
+
+<block end>
+/ screencolor = (255, 255, 255)
+/ trials = [1 = pause]
+</block>
+
+**********  Instructions  *************
+
+<instruct>  
+/ fontstyle = ("Arial", 2.5%)
+/ windowsize = (75%, 75%)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press t to go back"
+/ prevkey = ("t")
+</instruct>
+
+<page Instructions>
+^^ In the next part of the experiment you are going to see a novel word appear on the screen (i.e., MORAG or STRUAN). 
+
+^^ MORAG or STRUAN will appear on the left while two other words will appear on the right side of the screen.
+
+^^ MORAG or STRUAN and other words will all appear in certain sizes.
+
+^^ **PLEASE PAY CLOSE ATTENTION TO THE SIZES OF THE WORDS** 
+You will be asked some questions about this later on.**
+</page>
+
+
+<page Instructions_1>
+^^ Thank you. We will do this task once again. 
+
+^^ REMEMBER: Please pay attention to the sizes of the words as well as the words themselves. We will ask you questions about this later on.
+
+^^ Please press the space bar to continue.
+</page>
+
+<page Instructions_2>
+^^ Thank you. We will do this task one final time. 
+
+^^ REMEMBER: Please pay attention to the sizes of the words as well as the words themselves. We will ask you questions about this later on.
+
+^^ Please press the space bar to continue.
+</page>
+
+<page interval>
+^^ Let’s begin.
+
+^^ REMEMBER: Please pay attention to the sizes of the words as well as the words themselves. We will ask you questions about this later on.
+</page>
+
+
+
+***********************************************************************
+Test Monkey
+***********************************************************************
+<monkey>
+/ latencydistribution = normal(500, 100)
+/ percentcorrect = 60
+</monkey>
+

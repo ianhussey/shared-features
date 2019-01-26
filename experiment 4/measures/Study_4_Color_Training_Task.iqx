@@ -1,0 +1,823 @@
+﻿************************************************
+              COLOR TRAINING
+************************************************
+Authors: Sean Hughes (sean.hughes@ugent.be)
+Last updated: 07-05-2018
+
+************* general variables ****************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = black
+/ txcolor = black
+/ fontstyle = ("Arial", 3%)
+</defaults>
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4= block4; 5 = block5]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = Relational_Training_Phase_Block_1, block2 = Relational_Training_Phase_Block_2, block3 = Relational_Training_Phase_Block_3, block4 = Relational_Testing_Phase, block5 = exit)
+</variables>
+
+<values>
+/ errors_in_block_counter = 0
+</values>
+
+<expressions>
+/ n_errors_in_block = (values.errors_in_block_counter)
+</expressions>
+
+************** stimuli ***************
+
+<item Blue_1>
+/ 1 = "Blue_1.jpg"
+</item>
+
+<item Blue_2>
+/ 1 = "Blue_2.jpg"
+</item>
+
+<item Blue_3>
+/ 1 = "Blue_3.jpg"
+</item>
+
+<item Blue_4>
+/ 1 = "Blue_4.jpg"
+</item>
+
+<item Yellow_1>
+/ 1 = "Yellow_1.jpg"
+</item>
+
+<item Yellow_2>
+/ 1 = "Yellow_2.jpg"
+</item>
+
+<item Yellow_3>
+/ 1 = "Yellow_3.jpg"
+</item>
+
+<item Yellow_4>
+/ 1 = "Yellow_4.jpg"
+</item>
+
+<item Green_1>
+/ 1 = "Green_1.jpg"
+</item>
+
+<item Green_2>
+/ 1 = "Green_2.jpg"
+</item>
+
+<item Green_3>
+/ 1 = "Green_3.jpg"
+</item>
+
+<item Green_4>
+/ 1 = "Green_4.jpg"
+</item>
+
+<item Purple_1>
+/ 1 = "Purple_1.jpg"
+</item>
+
+<item Purple_2>
+/ 1 = "Purple_2.jpg"
+</item>
+
+<item Purple_3>
+/ 1 = "Purple_3.jpg"
+</item>
+
+<item Purple_4>
+/ 1 = "Purple_4.jpg"
+</item>
+
+******Color Stimuli (Phase 1) ******************************
+
+<picture Blue_Target_1>
+/ numitems = 1
+/ items = blue_1
+/ position = (50%, 20%)
+</picture>
+
+<picture Blue_Sample1_1>
+/ numitems = 1
+/ items = blue_1
+/ position = (25%, 70%)
+</picture>
+
+<picture Blue_Sample2_1>
+/ numitems = 1
+/ items = blue_1
+/ position = (75%, 70%)
+</picture>
+
+<picture Green_Target_1>
+/ numitems = 1
+/ items = green_1
+/ position = (50%, 20%)
+</picture>
+
+<picture Green_Sample1_1>
+/ numitems = 1
+/ items = Green_1
+/ position = (25%, 70%)
+</picture>
+
+<picture Green_Sample2_1>
+/ numitems = 1
+/ items = green_1
+/ position = (75%, 70%)
+</picture>
+
+<picture Yellow_Target_1>
+/ numitems = 1
+/ items = yellow_1
+/ position = (50%, 20%)
+</picture>
+
+<picture Yellow_Sample1_1>
+/ numitems = 1
+/ items = yellow_1
+/ position = (25%, 70%)
+</picture>
+
+<picture Yellow_Sample2_1>
+/ numitems = 1
+/ items = yellow_1
+/ position = (75%, 70%)
+</picture>
+
+<picture Purple_Target_1>
+/ numitems = 1
+/ items = purple_1
+/ position = (50%, 20%)
+</picture>
+
+<picture purple_Sample1_1>
+/ numitems = 1
+/ items = purple_1
+/ position = (25%, 70%)
+</picture>
+
+<picture purple_Sample2_1>
+/ numitems = 1
+/ items = purple_1
+/ position = (75%, 70%)
+</picture>
+
+
+******Color Stimuli (Phase 2) ******************************
+
+<picture Blue_Target_2>
+/ numitems = 1
+/ items = blue_2
+/ position = (50%, 20%)
+</picture>
+
+<picture Blue_Sample1_2>
+/ numitems = 1
+/ items = blue_2
+/ position = (25%, 70%)
+</picture>
+
+<picture Blue_Sample2_2>
+/ numitems = 1
+/ items = blue_2
+/ position = (75%, 70%)
+</picture>
+
+<picture Green_Target_2>
+/ numitems = 1
+/ items = green_2
+/ position = (50%, 20%)
+</picture>
+
+<picture Green_Sample1_2>
+/ numitems = 1
+/ items = Green_2
+/ position = (25%, 70%)
+</picture>
+
+<picture Green_Sample2_2>
+/ numitems = 1
+/ items = green_2
+/ position = (75%, 70%)
+</picture>
+
+<picture Yellow_Target_2>
+/ numitems = 1
+/ items = yellow_2
+/ position = (50%, 20%)
+</picture>
+
+<picture Yellow_Sample1_2>
+/ numitems = 1
+/ items = yellow_2
+/ position = (25%, 70%)
+</picture>
+
+<picture Yellow_Sample2_2>
+/ numitems = 1
+/ items = yellow_2
+/ position = (75%, 70%)
+</picture>
+
+<picture Purple_Target_2>
+/ numitems = 1
+/ items = purple_2
+/ position = (50%, 20%)
+</picture>
+
+<picture purple_Sample1_2>
+/ numitems = 1
+/ items = purple_2
+/ position = (25%, 70%)
+</picture>
+
+<picture purple_Sample2_2>
+/ numitems = 1
+/ items = purple_2
+/ position = (75%, 70%)
+</picture>
+
+
+******Color Stimuli (Phase 3) ******************************
+
+<picture Blue_Target_3>
+/ numitems = 1
+/ items = blue_3
+/ position = (50%, 20%)
+</picture>
+
+<picture Blue_Sample1_3>
+/ numitems = 1
+/ items = blue_3
+/ position = (25%, 70%)
+</picture>
+
+<picture Blue_Sample2_3>
+/ numitems = 1
+/ items = blue_3
+/ position = (75%, 70%)
+</picture>
+
+<picture Green_Target_3>
+/ numitems = 1
+/ items = green_3
+/ position = (50%, 20%)
+</picture>
+
+<picture Green_Sample1_3>
+/ numitems = 1
+/ items = Green_3
+/ position = (25%, 70%)
+</picture>
+
+<picture Green_Sample2_3>
+/ numitems = 1
+/ items = green_3
+/ position = (75%, 70%)
+</picture>
+
+<picture Yellow_Target_3>
+/ numitems = 1
+/ items = yellow_3
+/ position = (50%, 20%)
+</picture>
+
+<picture Yellow_Sample1_3>
+/ numitems = 1
+/ items = yellow_3
+/ position = (25%, 70%)
+</picture>
+
+<picture Yellow_Sample2_3>
+/ numitems = 1
+/ items = yellow_3
+/ position = (75%, 70%)
+</picture>
+
+<picture Purple_Target_3>
+/ numitems = 1
+/ items = purple_3
+/ position = (50%, 20%)
+</picture>
+
+<picture purple_Sample1_3>
+/ numitems = 1
+/ items = purple_3
+/ position = (25%, 70%)
+</picture>
+
+<picture purple_Sample2_3>
+/ numitems = 1
+/ items = purple_3
+/ position = (75%, 70%)
+</picture>
+
+
+******************Method Stimuli   *************
+************************************************
+
+<picture erase_end>
+/ erase = false 
+/ numitems = 1
+/ items = ("erase_end.jpg")
+</picture>
+
+***************** labels etc *******************
+
+<text continue>
+/numitems = 1
+/items= ("Press the spacebar to continue")
+/ txcolor = white
+/ txbgcolor = black
+/ position = (50, 95)
+/ font = ("Arial", -18, 700, 0, 49)
+</text>
+
+<text correctMessage>
+/numitems = 1
+/items= ("CORRECT")
+/ txcolor = white
+/ txbgcolor = black
+/ position = (50%, 50%)
+/ fontstyle = ("Arial", 10%)
+</text>
+
+<text errorMessage>
+/numitems = 1
+/items= ("WRONG")
+/ txcolor = red
+/ txbgcolor = black
+/ position = (50%, 50%)
+/ fontstyle = ("Arial", 10%)
+</text>
+
+<text blank>
+/ font = ("Arial", -48, 700, 0, 34)
+/ numitems = 1
+/ txbgcolor = black
+/ erase = false
+/ items = ("                     ")
+</text>
+
+<text f_key>
+/ numitems = 1
+/ items = ("Press 'F' for")
+/ txcolor = white
+/ txbgcolor = black
+/ position = (25%, 50%)
+/ fontstyle = ("Arial", 3%)
+</text>
+
+<text j_key>
+/ numitems = 1
+/ items = ("Press 'J' for")
+/ txcolor = white
+/ txbgcolor = black
+/ position = (75%, 50%)
+/ fontstyle = ("Arial", 3%)
+</text>
+
+<text fixcross>
+/ numitems = 1
+/ items = ("+")
+/ txcolor = white
+/ txbgcolor = black
+/ position = (50, 50)
+/ font = ("Arial", -50, 700, 0, 49)
+</text>
+
+************************************************
+******** Relational Training Phase (Block 1) ***
+
+<trial Blue_Yellow_Purple_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_1; 1000 = Yellow_sample1_1, Purple_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Yellow_Purple_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Blue_Purple_Yellow_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_1; 1000 = Yellow_sample2_1, Purple_sample1_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Purple_Yellow_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Yellow_Purple_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_1; 1000= Yellow_sample1_1, Purple_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Yellow_Purple_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Purple_Yellow_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_1; 1000 = Yellow_sample2_1, Purple_sample1_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Purple_Yellow_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Blue_Green_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_1; 1000 = Blue_sample1_1, Green_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Blue_Green_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Green_Blue_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_1; 1000 = Blue_sample2_1, Green_sample1_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Green_Blue_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Blue_Green_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_1; 1000= Blue_sample1_1, Green_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Blue_Green_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Green_Blue_1> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_1; 1000 = Green_sample1_1, Blue_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Green_Blue_1.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+************************************************
+******** Relational Training Phase (Block 2) ***
+
+<trial Blue_Yellow_Purple_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_2; 1000 = Yellow_sample1_2, Purple_sample2_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Yellow_Purple_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Blue_Purple_Yellow_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_2; 1000 = Yellow_sample2_2, Purple_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Purple_Yellow_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Yellow_Purple_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_2; 1000= Yellow_sample1_2, Purple_sample2_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Yellow_Purple_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Purple_Yellow_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_2; 1000 = Yellow_sample2_2, Purple_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Purple_Yellow_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Blue_Green_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_2; 1000 = Blue_sample1_2, Green_sample2_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Blue_Green_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Green_Blue_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_2; 1000 = Blue_sample2_2, Green_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Green_Blue_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Blue_Green_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_2; 1000= Blue_sample1_2, Green_sample2_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Blue_Green_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Green_Blue_2> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_2; 1000 = Green_sample1_2, Blue_sample2_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Green_Blue_2.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+************************************************
+******** Relational Training Phase (Block 3) ***
+
+<trial Blue_Yellow_Purple_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_3; 1000 = Yellow_sample1_3, Purple_sample2_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Yellow_Purple_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Blue_Purple_Yellow_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Blue_target_3; 1000 = Yellow_sample2_3, Purple_sample1_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Purple_Yellow_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Yellow_Purple_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_3; 1000= Yellow_sample1_3, Purple_sample2_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Yellow_Purple_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Purple_Yellow_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Green_target_3; 1000 = Yellow_sample2_3, Purple_sample1_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Purple_Yellow_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Blue_Green_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_3; 1000 = Blue_sample1_3, Green_sample2_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Blue_Green_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Green_Blue_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Yellow_target_3; 1000 = Blue_sample2_3, Green_sample1_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Green_Blue_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Blue_Green_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ responsemessage = ("j", correctMessage, 750)
+/ responsemessage = ("f", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_3; 1000= Blue_sample1_3, Green_sample2_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Blue_Green_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Green_Blue_3> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ responsemessage = ("f", correctMessage, 750)
+/ responsemessage = ("j", errorMessage, 1500)
+/ stimulustimes = [500 = Purple_target_3; 1000 = Green_sample1_3, Blue_sample2_3, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Green_Blue_3.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+< trial exit>
+/ trialcode = "exit"
+/ stimulustimes = [ 1 = blank ]
+/ trialduration = 1000
+</trial>
+
+********* Relational Testing Phase *************
+
+<trial Blue_Yellow_Purple_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Blue_target_1; 1000 = Yellow_sample1_1, Purple_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Yellow_Purple_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Blue_Purple_Yellow_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Blue_target_2; 1000 = Yellow_sample2_2, Purple_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Blue_Purple_Yellow_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Yellow_Purple_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Green_target_1; 1000= Yellow_sample1_1, Purple_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Yellow_Purple_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Green_Purple_Yellow_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Green_target_2; 1000 = Yellow_sample2_2, Purple_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Green_Purple_Yellow_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Blue_Green_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("f")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Yellow_target_1; 1000 = Blue_sample1_1, Green_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Blue_Green_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Yellow_Green_Blue_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Yellow_target_2; 1000 = Blue_sample2_2, Green_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Yellow_Green_Blue_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Blue_Green_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Purple_target_1; 1000= Blue_sample1_1, Green_sample2_1, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Blue_Green_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+<trial Purple_Green_Blue_Test> 
+/ inputdevice = keyboard
+/ correctresponse = ("j")
+/ validresponse = ("f", "j")
+/ stimulustimes = [500 = Purple_target_2; 1000 = Green_sample2_2, Blue_sample1_2, f_key, j_key]
+/ pretrialpause = 500
+/ ontrialend = [if (trial.Purple_Green_Blue_Test.error == true) values.errors_in_block_counter = values.errors_in_block_counter + 1]
+</trial>
+
+*****************  block  **********************  
+
+<block Relational_Training_Phase_Block_1>
+/ preinstructions = (RTP_instructions_1)
+/ trials = [1-16 = noreplacenorepeat(Blue_Yellow_Purple_1, Blue_Purple_Yellow_1, Green_Yellow_Purple_1, Green_Purple_Yellow_1, Yellow_Blue_Green_1, Yellow_Green_Blue_1, Purple_Blue_Green_1, Purple_Green_Blue_1)]
+</block>
+
+<block Relational_Training_Phase_Block_2>
+/ onblockbegin = [values.errors_in_block_counter = 0]
+/ preinstructions = (RTP_instructions_2)
+/ trials = [1-16 = noreplacenorepeat(Blue_Yellow_Purple_2, Blue_Purple_Yellow_2, Green_Yellow_Purple_2, Green_Purple_Yellow_2, Yellow_Blue_Green_2, Yellow_Green_Blue_2, Purple_Blue_Green_2, Purple_Green_Blue_2)]
+</block>
+
+<block Relational_Training_Phase_Block_3>
+/ onblockbegin = [values.errors_in_block_counter = 0]
+/ preinstructions = (RTP_instructions_3)
+/ trials = [1-16 = noreplacenorepeat(Blue_Yellow_Purple_3, Blue_Purple_Yellow_3, Green_Yellow_Purple_3, Green_Purple_Yellow_3, Yellow_Blue_Green_3, Yellow_Green_Blue_3, Purple_Blue_Green_3, Purple_Green_Blue_3)]
+</block>
+
+<block Relational_Testing_Phase>
+/ preinstructions = (RTP_instructions_4)
+/ trials = [1-16 = noreplace(Blue_Yellow_Purple_test, Blue_Purple_Yellow_test, Green_Yellow_Purple_test, Green_Purple_Yellow_test, Yellow_Blue_Green_test, Yellow_Green_Blue_test, Purple_Blue_Green_test, Purple_Green_Blue_test)]
+</block>
+
+<block exit>
+/ trials = [1 = exit]
+</block>
+
+**************  instructions  ******************
+
+<instruct>  
+/ fontstyle = ("Arial", 2.5%)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press the 't' key to go back"
+/ prevkey = ("t")
+/ windowsize = (800px, 600px)
+</instruct>
+
+<page RTP_instructions_1>
+^^In the next part of the experiment you are going to see three colors - one at the top and two at the bottom. 
+
+Your job is to learn which of the colors on the bottom goes with the color on the top (i.e., which colors are the same and which are different in this experiment).
+
+^^ Please take your time and try to be as accurate as possible.
+</page>
+
+<page RTP_instructions_2>
+^^Well done. We will give you a second opportunity to practice this task.
+
+^^NOTE: There is no 'shortcut' to figuring out which colors are related. The only way you can learn how one color is related to another is by paying attention to whether you are correct or incorrect.
+
+^^Note: you will only move on with the experiment once you have learned to respond very ACCURATELY.
+</page>
+
+<page RTP_instructions_3>
+^^ We are going to give you one last chance to practice this task. 
+^^
+^^NOTE: There is no 'shortcut' to figuring out which colors are related. The only way you can learn how one color is related to another is by paying attention to whether you are correct or incorrect.
+^^
+^^ Please take your time and try to be as accurate as possible.
+</page>
+
+<page RTP_instructions_4>
+^^ We are going to test what you have just learned. 
+^^
+^^IMPORTANT: We will no longer tell you if you are correct or incorrect. 
+^^
+^^Please take your time and respond as ***ACCURATELY AS POSSIBLE***. 
+</page>
+
+<page interval>
+^^ Great. Let's begin.
+</page>

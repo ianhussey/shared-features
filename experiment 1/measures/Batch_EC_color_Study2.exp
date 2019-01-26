@@ -1,0 +1,254 @@
+***************************************************************************************
+***************************************************************************************
+			BATCH FOR EC COLOR STUDY (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Simone Mattavelli (simattav.mattavelli@ugent.be)
+last updated: 21-11-2017
+***************************************************************************************
+
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S1.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S1.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S1.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S1.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S2.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S2.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S2.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC1_S2.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(9 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S1.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(10 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S1.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(11 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S1.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(12 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S1.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(13 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S2.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(14 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S2.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="IAT.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(15 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S2.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(16 of 16)
+/ groupassignment = subjectnumber
+/ file="consent.exp"
+/ file="Demographics.exp"
+/ file="EC2_S2.exp"
+/ file="IAT.exp"
+/ file="Stimulus_Ratings.exp"
+/ file="Exploratory_Questions.exp"
+</batch>

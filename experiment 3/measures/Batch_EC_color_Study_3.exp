@@ -1,0 +1,254 @@
+***************************************************************************************
+***************************************************************************************
+			BATCH FOR EC COLOR STUDY (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/02/2018
+***************************************************************************************
+
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S2.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S2.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S2.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S2.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S1.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S1.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S1.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1_S2  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SB_MG_S1.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(9 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S1.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(10 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S1.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(11 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S1.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(12 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S1.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(13 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S2.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(14 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S2.exp"
+/ file="Study_3_Stimulus_Ratings_Before.exp"
+/ file="Study_3_IAT_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(15 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S2.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC2_S2  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(16 of 16)
+/ groupassignment = subjectnumber
+/ file="Study_3_consent.exp"
+/ file="Study_3_Demographics.exp"
+/ file="Study_3_SG_MB_S2.exp"
+/ file="Study_3_IAT_Before.exp"
+/ file="Study_3_Stimulus_Ratings_After.exp"
+/ file="Study_3_Exploratory_Questions.exp"
+</batch>

@@ -1,0 +1,10 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	latency	correct	pretrialpause	posttrialpause	response	stimulus1	stimulus2	stimulus3	stimulus4	stimulus5	stimulus6	stimulus7	stimulus8	stimulus9	stimulus10	stimulus11	stimulus12	stimulus13	stimulus14	stimulus15	stimulus16
+011218	10:24:26	3	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:25:42	4	begin	1	pause	1	746	0	0	0	mousemove	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:29:02	7	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:30:00	8	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:36:39	11	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:37:17	12	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:39:44	15	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+011218	10:40:26	16	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+052218	13:51:28	1	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

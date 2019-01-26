@@ -1,0 +1,238 @@
+Script Info
+
+Author: Simone Mattavelli (s.mattavelli3@campus.unimib.it)
+last updated: 21-11-2017
+***************************************************************************************
+***************************************************************************************
+
+
+**************************************
+***final questions***
+**************************************
+
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4 = block4; 5 = block5; 6 = block6]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = Contingency_Awareness; block2 = Color_Awareness; block3 = Writing_Down_Contingencies; block4 = color_influence_awareness; block5 = Demand; block6 = Reactance)
+</variables>
+
+<defaults>
+/ canvassize = (1024px, 768px)
+/ screencolor = white
+/ txcolor = black
+/ fontstyle = ("Arial", 20%)
+/ inputdevice = mouse
+</defaults>
+
+<survey Contingency_Awareness>
+/ pages = [1 = awareness_1; 2 = awareness_2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage awareness_1>
+/caption = "In the first part of the experiment (when words appeared initially in white and then switched their color) was MORAG presented together with..."
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=awareness_1]
+</surveypage>
+
+<radiobuttons awareness_1>
+/options = ("positive words only", "negative words only", "both positive and negative words", "neither positive or negative words" "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage awareness_2>
+/caption = "In the first part of the experiment (when words appeared initially in white and then switched their color) was STRUAN presented together with..."
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=awareness_2]
+</surveypage>
+
+<radiobuttons awareness_2>
+/options = ("positive words only", "negative words only", "both positive and negative words", "neither positive or negative words" "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+
+
+**********************************************************
+
+<survey Color_Awareness>
+/ pages = [1 = Color_cont_1; 2 = Color_cont_2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage Color_cont_1>
+/caption = "In the first part of the experiment (when words appeared initially in white and then switched their color) did MORAG switch to..."
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_1]
+</surveypage>
+
+<radiobuttons Color_cont_1>
+/options = ("The same color as positive words", "The same color as negative words",  "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_2>
+/caption = "In the first part of the experiment (when words appeared initially in white and then switch their color) did STRUAN switch to..."
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_2]
+</surveypage>
+
+<radiobuttons Color_cont_2>
+/options = ("The same color as positive words", "The same color as negative words",  "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+
+*********************
+
+**********************************************************
+
+<survey Writing_Down_Contingencies>
+/ pages = [1 = notes] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage notes>
+/caption = "Think back to the first part of the experiment (i.e., when three words were paired onscreen). Did you ever take notes (or write down) what happened in order to help you figure out what was going on? Please be honest here (you will receive payment regardless of what you say)."
+/showquestionnumbers = false
+/questions = [1=notes]
+</surveypage>
+
+<dropdown notes>
+/options = ("Yes", "No", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey Demand>
+/ pages = [1 = demand1; 2 = demand2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage demand1>
+/caption = "Earlier you rated MORAG and STRUAN as being either positive, neutral, or negative. Did you base your ratings NOT on how you actually felt about those words but ONLY on what you thought the researchers wanted you to say?"
+/showquestionnumbers = false
+/questions = [1=demand1]
+</surveypage>
+
+<dropdown demand1>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage demand2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you base your performance in that task NOT on your best efforts to perform the categorizations as quickly and accurately as possible but on your attempt to influence your speed or accuracy in order to go along with what you thought the researchers wanted you to feel about the words?"
+/showquestionnumbers = false
+/questions = [1=demand2, IAT]
+</surveypage>
+
+<dropdown demand2>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey reactance>
+/ pages = [1 = reactance1; 2 = reactance2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage reactance1>
+/caption = "Earlier you rated MORAG and STRUAN as being either positive, neutral, or negative. Did you consciously resist what you thought the researchers wanted you to feel about those words?"
+/showquestionnumbers = false
+/questions = [1=demand1]
+</surveypage>
+
+<dropdown reactance1>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage reactance2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you try to influence your speed or accuracy in order to consciously resist what you thought the researchers wanted you to feel about those words"
+/showquestionnumbers = false
+/questions = [1=demand2, IAT]
+</surveypage>
+
+<dropdown reactance2>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+******************************************************************************
+<surveypage color_influence_awareness>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=color_awareness; 2=Influence_awareness]
+/finishlabel = "Next"
+</surveypage>
+
+<textbox color_awareness>
+/caption = "During the first part of the study, did you notice that the color of MORAG and STRUAN switched to the same color as either positive or negative words? Please be honest here" 
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/textboxsize = (50,30)
+/ position = (5%, 5%)
+</textbox>
+
+<textbox Influence_awareness>
+/caption = "Did this influence how you responded to MORAG and STRUAN? Please be honest here"
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/textboxsize = (50,30)
+/ position = (5%, 45%)
+</textbox>
+
+<survey color_influence_awareness>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ nextlabel = "Next"
+/pages = [1=color_influence_awareness]
+</survey>
+
+
+<image IAT>
+/ items = ("IAT.jpg")
+/ position = (10%, 50%)
+</image>

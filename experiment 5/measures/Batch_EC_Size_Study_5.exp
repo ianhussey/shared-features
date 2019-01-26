@@ -1,0 +1,131 @@
+***************************************************************************************
+***************************************************************************************
+			BATCH FOR EC SIZE STUDY 5 (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 22/05/2018
+***************************************************************************************
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SB_MG.iqx"
+/ file="Study_5_Stimulus_Ratings_Before.exp"
+/ file="Study_5_IAT_After.exp"
+/ file="Study_5_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SB_MG.iqx"
+/ file="Study_5_Stimulus_Ratings_Before.exp"
+/ file="Study_5_IAT_After.exp"
+/ file="Study_5_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SB_MG.iqx"
+/ file="Study_5_IAT_Before.exp"
+/ file="Study_5_Stimulus_Ratings_After.exp"
+/ file="Study_5_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SB_MG.iqx"
+/ file="Study_5_IAT_Before.exp"
+/ file="Study_5_Stimulus_Ratings_After.exp"
+/ file="Study_5_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SG_MB.iqx"
+/ file="Study_5_Stimulus_Ratings_Before.exp"
+/ file="Study_5_IAT_After.exp"
+/ file="Study_5_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SG_MB.iqx"
+/ file="Study_5_Stimulus_Ratings_Before.exp"
+/ file="Study_5_IAT_After.exp"
+/ file="Study_5_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SG_MB.iqx"
+/ file="Study_5_IAT_Before.exp"
+/ file="Study_5_Stimulus_Ratings_After.exp"
+/ file="Study_5_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_5_consent.exp"
+/ file="Study_5_Demographics.iqx"
+/ file="Study_5_SG_MB.iqx"
+/ file="Study_5_IAT_Before.exp"
+/ file="Study_5_Stimulus_Ratings_After.exp"
+/ file="Study_5_Exploratory_Questions_SG_MB.exp"
+</batch>

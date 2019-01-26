@@ -1,0 +1,46 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	response	correct	latency	stimulusnumber1	stimulusitem1	expressions.da	expressions.db	expressions.d
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	2	18	1	749	4	Stimulus_1a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	3	23	1	245	3	Stimulus_2a_iat_2.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	4	23	0	576	4	Stimulus_2a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	5	23	0	256	1	stimulus_2a_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	6	18	1	141	2	Stimulus_1a_iat_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	7	18	1	123	1	stimulus_1a_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	8	23	0	204	2	Stimulus_2a_iat_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	9	18	1	153	3	Stimulus_1a_iat_2.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	10	23	0	228	4	Stimulus_2a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	11	18	1	195	4	Stimulus_1a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	12	23	0	189	1	stimulus_2a_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	13	23	0	153	2	Stimulus_2a_iat_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	14	18	1	93	3	Stimulus_1a_iat_2.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	15	18	1	232	1	stimulus_1a_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	16	18	0	261	2	Stimulus_1a_iat_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	17	18	0	406	4	Stimulus_1a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	18	23	1	126	3	Stimulus_2a_iat_2.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	19	23	1	758	4	Stimulus_2a_iat_3.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetAleft	20	18	0	1397	2	Stimulus_1a_iat_1.jpg			0
+022218	10:43:54	1	targetcompatiblepractice	1	targetBright	21	23	1	520	3	Stimulus_2a_iat_2.jpg			0
+022218	10:43:54	1	attributepractice	2	attributeB	2	23	1	1063	1	Terrible			0
+022218	10:43:54	1	attributepractice	2	attributeB	3	23	0	492	4	Horrible			0
+022218	10:43:54	1	attributepractice	2	attributeB	4	23	0	467	6	Awful			0
+022218	10:43:54	1	attributepractice	2	attributeA	5	18	1	315	3	Nice			0
+022218	10:43:54	1	attributepractice	2	attributeB	6	23	0	489	3	Nasty			0
+022218	10:43:54	1	attributepractice	2	attributeA	7	18	1	97	1	Fantastic			0
+022218	10:43:54	1	attributepractice	2	attributeB	8	23	1	4	7	Sad			0
+022218	10:43:54	1	attributepractice	2	attributeA	9	Ctrl+'B'	0	1101	8	Happy			0
+022218	10:43:54	1	compatibletest1	3	attributeA	2	18	0	1157	7	Amazing			0
+022218	10:43:54	1	compatibletest1	3	targetBright	3	23	0	286	1	stimulus_2a_1.jpg	-0,9021558220863907795		-0,4510779110431953898
+022218	10:43:54	1	compatibletest1	3	attributeB	4	23	1	233	2	Disgusting	-0,8989205820913584999		-0,4494602910456792499
+022218	10:43:54	1	compatibletest1	3	targetAleft	5	18	1	11	1	stimulus_1a_1.jpg	-0,7529506232461158355		-0,3764753116230579177
+022218	10:43:54	1	compatibletest1	3	attributeA	6	18	1	1	5	Pleasant	-0,6597279304614847018		-0,3298639652307423509
+022218	10:43:54	1	compatibletest1	3	targetBright	7	23	0	170	2	Stimulus_2a_iat_1.jpg	-0,6687046920329305921		-0,3343523460164652961
+022218	10:43:54	1	compatibletest1	3	attributeB	8	23	0	166	5	Sick	-0,6776393398178430783		-0,3388196699089215391
+022218	10:43:54	1	compatibletest1	3	targetBright	9	23	0	66	3	Stimulus_2a_iat_2.jpg	-0,6513366789711396709		-0,3256683394855698355
+022218	10:43:54	1	compatibletest1	3	attributeA	10	18	1	23	4	Good	-0,6154612242980604941		-0,3077306121490302471
+022218	10:43:54	1	compatibletest1	3	targetAleft	11	18	0	78	3	Stimulus_1a_iat_2.jpg	-0,6045189273602751268		-0,3022594636801375634
+022218	10:43:54	1	compatibletest1	3	attributeA	12	18	0	87	6	Wonderful	-0,5988100177050672546		-0,2994050088525336273
+022218	10:43:54	1	compatibletest1	3	targetAleft	13	18	0	479	3	Stimulus_1a_iat_2.jpg	-0,6672299456422621233		-0,3336149728211310617
+022218	10:43:54	1	compatibletest1	3	attributeB	14	23	1	17	8	Unpleasant	-0,6396024328973520801		-0,31980121644867604
+022218	10:43:54	1	compatibletest1	3	targetAleft	15	18	0	534	4	Stimulus_1a_iat_3.jpg	-0,7006430854621191751		-0,3503215427310595875
+022218	10:43:54	1	compatibletest1	3	attributeB	16	23	1	5	8	Unpleasant	-0,6711969252250135076		-0,3355984626125067538
+022218	10:43:54	1	compatibletest1	3	targetBright	17	Ctrl+'B'	1	14020	4	Stimulus_2a_iat_3.jpg	-0,6711969252250135076		-0,3355984626125067538
+022218	10:43:54	1	compatibletest2	5	attributeB	1	Ctrl+'B'	1	462	4	Horrible	-0,6711969252250135076		-0,3355984626125067538

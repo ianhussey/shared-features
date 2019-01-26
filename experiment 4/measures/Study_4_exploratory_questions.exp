@@ -1,0 +1,363 @@
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/02/2018
+***************************************************************************************
+***************************************************************************************
+
+
+**************************************
+***final questions***
+**************************************
+
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4 = block4; 5 = block5; 6 = block6; 7 = block7; 8 = block8]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = Color_Contingency_Awareness_COLORS; block2 = Contingency_Awareness; block3 = Writing_Down_Contingencies; block4 = color_influence_awareness;  block5 = Color_Contingency_Awareness_CS_US; block6 = Demand; block7 = Reactance; Block8 = issues)
+</variables>
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = white
+/ txcolor = black
+/ fontstyle = ("Arial", 20%)
+/ inputdevice = mouse
+</defaults>
+
+<survey Contingency_Awareness>
+/ pages = [1 = awareness_1; 2 = awareness_2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage awareness_1>
+/caption = "In the second part of the experiment we presented MORAG along with two other words. Did...?"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=awareness_1]
+</surveypage>
+
+<radiobuttons awareness_1>
+/options = ("Those two other words always have a positive meaning", "Those two other words always have a negative meaning", "One word always have a positive meaning and the other a negative meaning", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage awareness_2>
+/caption = "In the second part of the experiment we presented STRUAN along with two other words. Did...?"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=awareness_2]
+</surveypage>
+
+<radiobuttons awareness_2>
+/options = ("Those two other words always have a positive meaning", "Those two other words always have a negative meaning", "One word always have a positive meaning and the other a negative meaning", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+**********************************************************
+
+<survey Color_Contingency_Awareness_CS_US>
+/ pages = [1 = Color_cont_MORAG; 2 =  Color_cont_STRUAN;  3 = Color_cont_POSITIVE_US; 4 = Color_cont_NEGATIVE_US] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage Color_cont_MORAG>
+/caption = "In the second part of the experiment, when MORAG appeared on the screen with two other words, what color was MORAG presented in:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_MORAG]
+</surveypage>
+
+<radiobuttons Color_cont_MORAG>
+/options = ("Green", "Blue", "Yellow", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_STRUAN>
+/caption = "In the second part of the experiment, when STRUAN appeared on the screen with two other words, what color was STRUAN presented in:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_STRUAN]
+</surveypage>
+
+<radiobuttons Color_cont_STRUAN>
+/options = ("Green", "Blue", "Yellow", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_POSITIVE_US>
+/caption = "In the second part of the experiment, when MORAG or STRUAN appeared on the screen, what color were the POSITIVE WORDS presented in:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_POSITIVE_US]
+</surveypage>
+
+<radiobuttons Color_cont_POSITIVE_US>
+/options = ("Green", "Blue", "Yellow", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_NEGATIVE_US>
+/caption = "In the second part of the experiment, when MORAG or STRUAN appeared on the screen, what color were the NEGATIVE WORDS presented in:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_NEGATIVE_US]
+</surveypage>
+
+<radiobuttons Color_cont_NEGATIVE_US>
+/options = ("Green", "Blue", "Yellow", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+**********************************************************
+
+<survey Color_Contingency_Awareness_COLORS>
+/ pages = [1-4 = noreplace(Color_cont_BLUE, Color_cont_Yellow, Color_cont_Green, Color_cont_Purple)] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage Color_cont_BLUE>
+/caption = "Think back to the first part of the experiment where you learned about the relationship between colors. What color was BLUE related to:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_BLUE]
+</surveypage>
+
+<radiobuttons Color_cont_BLUE>
+/options = ("Green", "Yellow", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_Yellow>
+/caption = "Think back to the first part of the experiment where you learned about the relationship between colors. What color was YELLOW related to:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_YELLOW]
+</surveypage>
+
+<radiobuttons Color_cont_YELLOW>
+/options = ("Green", "Blue", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_Green>
+/caption = "Think back to the first part of the experiment where you learned about the relationships between colors. What color was GREEN related to:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_GREEN]
+</surveypage>
+
+<radiobuttons Color_cont_GREEN>
+/options = ("Yellow", "Blue", "Purple", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Color_cont_Purple>
+/caption = "Think back to the first part of the experiment where you learned about the relationship between colors. What color was PURPLE related to:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Color_cont_Purple]
+</surveypage>
+
+<radiobuttons Color_cont_Purple>
+/options = ("Yellow", "Blue", "Green", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+*********************
+
+
+
+**********************************************************
+
+<survey Writing_Down_Contingencies>
+/ pages = [1 = notes] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage notes>
+/caption = "Did you ever take notes (or write down) what happened during this experiment in order to help you figure out what was going on? Please be honest here (you will receive payment regardless of what you say)."
+/showquestionnumbers = false
+/questions = [1=notes]
+</surveypage>
+
+<dropdown notes>
+/options = ("Yes", "No", "I don’t remember")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey Demand>
+/ pages = [1 = demand1; 2 = demand2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage demand1>
+/caption = "Earlier you rated MORAG and STRUAN as being either positive, neutral, or negative. Did you base your ratings NOT on how you actually felt about those words but on what you thought the researchers wanted you to say?"
+/showquestionnumbers = false
+/questions = [1=demand1]
+</surveypage>
+
+<dropdown demand1>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage demand2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you base your performance in that task NOT on your best efforts to perform the categorizations as quickly and accurately as possible but on your attempt to influence your speed or accuracy in order to go along with what you thought the researchers wanted you to feel about the words?"
+/showquestionnumbers = false
+/questions = [1=demand2, IAT]
+</surveypage>
+
+<dropdown demand2>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey reactance>
+/ pages = [1 = reactance1; 2 = reactance2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage reactance1>
+/caption = "Earlier you rated MORAG and STRUAN as being either positive, neutral, or negative. Did you consciously resist what you thought the researchers wanted you to feel about those words?"
+/showquestionnumbers = false
+/questions = [1=demand1]
+</surveypage>
+
+<dropdown reactance1>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage reactance2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you try to influence your speed or accuracy in order to consciously resist what you thought the researchers wanted you to feel about those words"
+/showquestionnumbers = false
+/questions = [1=demand2, IAT]
+</surveypage>
+
+<dropdown reactance2>
+/options = ("Yes", "No", "I don’t know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+******************************************************************************
+<surveypage color_influence_awareness_1>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=color_awareness; 2=EC_Phase]
+/finishlabel = "Next"
+</surveypage>
+
+<surveypage color_influence_awareness_2>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=Influence_awareness; 2 = EC_Phase]
+/finishlabel = "Next"
+</surveypage>
+
+<textbox color_awareness>
+/caption = "Think back to the first part of the experiment. During that part of the study, we trained you to relate Blue to Yellow and Green to Purple. In the second part (see below), we presented one of the words on the left in blue (or green) and the words on the right in yellow or purple. Did you notice this during the study? Please be honest here" 
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/textboxsize = (50,20)
+/ position = (5%, 5%)
+</textbox>
+
+<textbox Influence_awareness>
+/caption = "Do you think that the color that the words were presented in influenced how you rated or otherwise responded towards MORAG or STRUAN? Please be honest here"
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/textboxsize = (50,30)
+/ position = (5%, 5%)
+</textbox>
+
+<survey color_influence_awareness>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ nextlabel = "Next"
+/pages = [1=color_influence_awareness_1; 2 = color_influence_awareness_2]
+</survey>
+
+<image IAT>
+/ items = ("IAT.jpg")
+/ position = (10%, 50%)
+</image>
+
+<image EC_Phase>
+/ items = ("EC_Phase.jpg")
+/ position = (5%, 50%)
+</image>
+
+
+******************************************************************************
+<surveypage issues>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=issues]
+/finishlabel = "Next"
+</surveypage>
+
+<textbox issues>
+/caption = "Did you encounter any issues or problems when doing this study? If so, please list them here." 
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/textboxsize = (50,20)
+/ position = (5%, 5%)
+</textbox>
+
+<survey issues>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ nextlabel = "Next"
+/pages = [1=issues]
+</survey>

@@ -1,0 +1,2111 @@
+**************************************************************************************
+***************************************************************************************
+											SCRIPT EC COLOR
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/02/2018
+***************************************************************************************
+***************************************************************************************
+
+*************************General Variables****************************
+**********************************************************************
+
+<defaults>
+/ canvassize = (1024px, 768px)
+/ screencolor = black
+/ txcolor = black
+/ fontstyle = ("Arial", 3%)
+</defaults>
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4 = block4]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = begin, block2 = EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_1, block3 = EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_2, block4 =EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_3)
+</variables>
+
+**************  Stimuli ***************
+
+<text stimulus_2wa>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,255)
+</text>
+
+<text stimulus_1wa>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,255)
+</text>
+
+<text stimulus_2wb>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,0)
+</text>
+
+<text stimulus_1wb>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,0)
+</text>
+
+<text stimulus_2wc>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,255,0)
+</text>
+
+<text stimulus_1wc>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,255,0)
+</text>
+
+<text stimulus_2wd>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,0,255)
+</text>
+
+<text stimulus_1wd>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,0,255)
+</text>
+
+<text stimulus_2a>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,255)
+</text>
+
+<text stimulus_1a>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("MORAG")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,255)
+</text>
+
+<text stimulus_2b>
+/ numitems = 1
+/ txbgcolor = black
+/ items = ("STRUAN")
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,0)
+</text>
+
+<text stimulus_1b>
+/ numitems = 1
+/ items = ("MORAG")
+/ txbgcolor = black
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (0,255,0)
+</text>
+
+<text stimulus_2c>
+/ numitems = 1
+/ items = ("STRUAN")
+/ txbgcolor = black
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,255,0)
+</text>
+
+<text stimulus_1c>
+/ numitems = 1
+/ items = ("MORAG")
+/ txbgcolor = black
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,255,0)
+</text>
+
+<text stimulus_2d>
+/ numitems = 1
+/ items = ("STRUAN")
+/ txbgcolor = black
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,0,255)
+</text>
+
+<text stimulus_1d>
+/ numitems = 1
+/ items = ("MORAG")
+/ txbgcolor = black
+/ fontstyle = ("Arial", 7%, true)
+/ position = (30%, 50%)
+/color = (255,0,255)
+</text>
+
+
+<text Positive_Stimulus_wa2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_wa2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_wa1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_wa1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_wb2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_wb2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_wb1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_wb1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+
+<text Positive_Stimulus_wc2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_wc2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_wc1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_wc1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_wd2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_wd2_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_wd1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_wd1_H>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+
+
+<text Positive_Stimulus_a2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_H.currentindex 
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_H.currentindex 
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_H.currentindex 
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_H.currentindex 
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_b2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_H.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_H.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_c2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_d2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_H.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_H_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_H_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_H_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_H_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_H.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+
+
+<text Positive_Stimulus_wa2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_wa2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_wa1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_wa1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_wb2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_wb2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_wb1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_wb1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_wc2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_wc2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_wc1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_wc1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_wd2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_wd2_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_wd1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_wd1_L>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = replacenorepeat
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+
+<text Positive_Stimulus_a2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_b2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_c2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_d2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wa1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_L_a>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wa1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+
+<text Positive_Stimulus_a2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_b2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_c2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_d2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wb1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_L_b>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wb1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+
+<text Positive_Stimulus_a2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_b2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_c2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_d2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wc1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_L_c>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wc1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+
+<text Positive_Stimulus_a2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_a1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,255)
+</text>
+
+<text Negative_Stimulus_a1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,255)
+</text>
+
+<text Positive_Stimulus_b2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_b1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_L.currentindex
+/ position = (70%, 60%)
+/color = (0,255,0)
+</text>
+
+<text Negative_Stimulus_b1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_L.currentindex
+/ position = (70%, 40%)
+/color = (0,255,0)
+</text>
+
+<text Positive_Stimulus_c2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_c1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,255,0)
+</text>
+
+<text Negative_Stimulus_c1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,255,0)
+</text>
+
+<text Positive_Stimulus_d2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("LOVE", "PARADISE", "JOY")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd2_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d2_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("HELL", "MISERY", "VOMIT")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd2_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+<text Positive_Stimulus_d1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("RAINBOW", "PLEASURE", "SMILE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Positive_Stimulus_wd1_L.currentindex
+/ position = (70%, 60%)
+/color = (255,0,255)
+</text>
+
+<text Negative_Stimulus_d1_L_d>
+/ numitems = 3
+/ txbgcolor = black
+/ items = ("WAR", "CANCER", "HATE")
+/ fontstyle = ("Arial", 7%, true)
+/ select = text.Negative_Stimulus_wd1_L.currentindex
+/ position = (70%, 40%)
+/color = (255,0,255)
+</text>
+
+**************** text ************************
+
+<text further>
+/numitems =1
+/items= ("Press the spacebar to continue.")
+/ txcolor = (255, 255, 255)
+/ txbgcolor = (0, 0, 0)
+/ position = (50%, 95%)
+/ fontstyle = ("Arial", 3%)
+</text>
+
+<picture erasebig>
+/items= ("erasebig.jpg")
+/ position = (50%, 50%)
+</picture>
+
+********** EC Training ***********
+
+<trial pause>
+/trialcode = "pause"
+/stimulustimes = [ 1 = erasebig]
+/trialduration = 1000
+</trial>
+
+
+<trial EC_Training_Trial_stimulus_1a_Good_1_H> 
+/ stimulustimes = [500 = stimulus_1wa, Positive_Stimulus_wa2_H, Negative_Stimulus_wa2_H; 3000 = stimulus_1a, Positive_Stimulus_a2_H_a, Negative_Stimulus_b2_H_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2a_Bad_1_H> 
+/ stimulustimes = [500 = stimulus_2wa, Positive_Stimulus_wa1_H, Negative_Stimulus_wa1_H; 3000 = stimulus_2a, Positive_Stimulus_b1_H_a, Negative_Stimulus_a1_H_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1b_Good_1_H> 
+/ stimulustimes = [500 = stimulus_1wb, Positive_Stimulus_wb2_H, Negative_Stimulus_wb2_H; 3000 = stimulus_1b, Positive_Stimulus_b2_H_b, Negative_Stimulus_c2_H_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2b_Bad_1_H> 
+/ stimulustimes = [500 = stimulus_2wb, Positive_Stimulus_wb1_H, Negative_Stimulus_wb1_H; 3000 = stimulus_2b, Positive_Stimulus_c1_H_b, Negative_Stimulus_b1_H_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1c_Good_1_H> 
+/ stimulustimes = [500 = stimulus_1wc, Positive_Stimulus_wc2_H, Negative_Stimulus_wc2_H; 3000 = stimulus_1c, Positive_Stimulus_c2_H_c, Negative_Stimulus_d2_H_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2c_Bad_1_H> 
+/ stimulustimes = [500 = stimulus_2wc, Positive_Stimulus_wc1_H, Negative_Stimulus_wc1_H; 3000 = stimulus_2c, Positive_Stimulus_d1_H_c, Negative_Stimulus_c1_H_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1d_Good_1_H> 
+/ stimulustimes = [500 = stimulus_1wd, Positive_Stimulus_wd2_H, Negative_Stimulus_wd2_H; 3000 = stimulus_1d, Positive_Stimulus_d2_H_d, Negative_Stimulus_a2_H_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2d_Bad_1_H> 
+/ stimulustimes = [500 = stimulus_2wd, Positive_Stimulus_wd1_H, Negative_Stimulus_wd1_H; 3000 = stimulus_2d, Positive_Stimulus_a1_H_d, Negative_Stimulus_d1_H_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+
+<trial EC_Training_Trial_stimulus_1a_Good_2_H> 
+/ stimulustimes = [500 = stimulus_1wa, Positive_Stimulus_wa2_H, Negative_Stimulus_wa2_H; 3000 = stimulus_1a, Positive_Stimulus_a2_H_a, Negative_Stimulus_c2_H_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2a_Bad_2_H> 
+/ stimulustimes = [500 = stimulus_2wa, Positive_Stimulus_wa1_H, Negative_Stimulus_wa1_H; 3000 = stimulus_2a, Positive_Stimulus_c1_H_a, Negative_Stimulus_a1_H_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1b_Good_2_H> 
+/ stimulustimes = [500 = stimulus_1wb, Positive_Stimulus_wb2_H, Negative_Stimulus_wb2_H; 3000 = stimulus_1b, Positive_Stimulus_b2_H_b, Negative_Stimulus_a2_H_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2b_Bad_2_H> 
+/ stimulustimes = [500 = stimulus_2wb, Positive_Stimulus_wb1_H, Negative_Stimulus_wb1_H; 3000 = stimulus_2b, Positive_Stimulus_a1_H_b, Negative_Stimulus_b1_H_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1c_Good_2_H> 
+/ stimulustimes = [500 = stimulus_1wc, Positive_Stimulus_wc2_H, Negative_Stimulus_wc2_H; 3000 = stimulus_1c, Positive_Stimulus_c2_H_c, Negative_Stimulus_d2_H_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2c_Bad_2_H> 
+/ stimulustimes = [500 = stimulus_2wc, Positive_Stimulus_wc1_H, Negative_Stimulus_wc1_H; 3000 = stimulus_2c, Positive_Stimulus_d1_H_c, Negative_Stimulus_c1_H_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1d_Good_2_H> 
+/ stimulustimes = [500 = stimulus_1wd, Positive_Stimulus_wd2_H, Negative_Stimulus_wd2_H; 3000 = stimulus_1d, Positive_Stimulus_d2_H_d, Negative_Stimulus_b2_H_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2d_Bad_2_H> 
+/ stimulustimes = [500 = stimulus_2wd, Positive_Stimulus_wd1_H, Negative_Stimulus_wd1_H; 3000 = stimulus_2d, Positive_Stimulus_b1_H_d, Negative_Stimulus_d1_H_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1a_Good_1_L> 
+/ stimulustimes = [500 = stimulus_1wa, Positive_Stimulus_wa2_L, Negative_Stimulus_wa2_L; 3000 = stimulus_1a, Positive_Stimulus_a2_L_a, Negative_Stimulus_b2_L_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2a_Bad_1_L> 
+/ stimulustimes = [500 = stimulus_2wa, Positive_Stimulus_wa1_L, Negative_Stimulus_wa1_L; 3000 = stimulus_2a, Positive_Stimulus_b1_L_a, Negative_Stimulus_a1_L_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1b_Good_1_L> 
+/ stimulustimes = [500 = stimulus_1wb, Positive_Stimulus_wb2_L, Negative_Stimulus_wb2_L; 3000 = stimulus_1b, Positive_Stimulus_b2_L_b, Negative_Stimulus_c2_L_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2b_Bad_1_L> 
+/ stimulustimes = [500 = stimulus_2wb, Positive_Stimulus_wb1_L, Negative_Stimulus_wb1_L; 3000 = stimulus_2b, Positive_Stimulus_c1_L_b, Negative_Stimulus_b1_L_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1c_Good_1_L> 
+/ stimulustimes = [500 = stimulus_1wc, Positive_Stimulus_wc2_L, Negative_Stimulus_wc2_L; 3000 = stimulus_1c, Positive_Stimulus_c2_L_c, Negative_Stimulus_d2_L_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2c_Bad_1_L> 
+/ stimulustimes = [500 = stimulus_2wc, Positive_Stimulus_wc1_L, Negative_Stimulus_wc1_L; 3000 = stimulus_2c, Positive_Stimulus_d1_L_c, Negative_Stimulus_c1_L_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1d_Good_1_L> 
+/ stimulustimes = [500 = stimulus_1wd, Positive_Stimulus_wd2_L, Negative_Stimulus_wd2_L; 3000 = stimulus_1d, Positive_Stimulus_d2_L_d, Negative_Stimulus_a2_L_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2d_Bad_1_L> 
+/ stimulustimes = [500 = stimulus_2wd, Positive_Stimulus_wd1_L, Negative_Stimulus_wd1_L; 3000 = stimulus_2d, Positive_Stimulus_a1_L_d, Negative_Stimulus_d1_L_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+
+<trial EC_Training_Trial_stimulus_1a_Good_2_L> 
+/ stimulustimes = [500 = stimulus_1wa, Positive_Stimulus_wa2_L, Negative_Stimulus_wa2_L; 2500 = stimulus_1a, Positive_Stimulus_a2_L_a, Negative_Stimulus_c2_L_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2a_Bad_2_L> 
+/ stimulustimes = [500 = stimulus_2wa, Positive_Stimulus_wa1_L, Negative_Stimulus_wa1_L; 2500 = stimulus_2a, Positive_Stimulus_c1_L_a, Negative_Stimulus_a1_L_a]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1b_Good_2_L> 
+/ stimulustimes = [500 = stimulus_1wb, Positive_Stimulus_wb2_L, Negative_Stimulus_wb2_L; 2500 = stimulus_1b, Positive_Stimulus_b2_L_b, Negative_Stimulus_a2_L_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2b_Bad_2_L> 
+/ stimulustimes = [500 = stimulus_2wb, Positive_Stimulus_wb1_L, Negative_Stimulus_wb1_L; 2500 = stimulus_2b, Positive_Stimulus_a1_L_b, Negative_Stimulus_b1_L_b]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1c_Good_2_L> 
+/ stimulustimes = [500 = stimulus_1wc, Positive_Stimulus_wc2_L, Negative_Stimulus_wc2_L; 2500 = stimulus_1c, Positive_Stimulus_c2_L_c, Negative_Stimulus_d2_L_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2c_Bad_2_L> 
+/ stimulustimes = [500 = stimulus_2wc, Positive_Stimulus_wc1_L, Negative_Stimulus_wc1_L; 2500 = stimulus_2c, Positive_Stimulus_d1_L_c, Negative_Stimulus_c1_L_c]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_1d_Good_2_L> 
+/ stimulustimes = [500 = stimulus_1wd, Positive_Stimulus_wd2_L, Negative_Stimulus_wd2_L; 2500 = stimulus_1d, Positive_Stimulus_d2_L_d, Negative_Stimulus_b2_L_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+<trial EC_Training_Trial_stimulus_2d_Bad_2_L> 
+/ stimulustimes = [500 = stimulus_2wd, Positive_Stimulus_wd1_L, Negative_Stimulus_wd1_L; 2500 = stimulus_2d, Positive_Stimulus_b1_L_d, Negative_Stimulus_d1_L_d]
+/ pretrialpause = 750
+/ trialduration = 6500
+</trial>
+
+
+***********  block  **********
+
+<block Begin>
+/ preinstructions = (Instructions, interval)
+</block>
+
+<block EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_1>
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_stimulus_1a_Good_1_H, EC_Training_Trial_stimulus_2a_Bad_1_H,
+EC_Training_Trial_stimulus_1b_Good_1_L, EC_Training_Trial_stimulus_2b_Bad_1_L,
+EC_Training_Trial_stimulus_1c_Good_1_H, EC_Training_Trial_stimulus_2c_Bad_1_H,
+EC_Training_Trial_stimulus_1d_Good_1_L, EC_Training_Trial_stimulus_2d_Bad_1_L,
+EC_Training_Trial_stimulus_1a_Good_2_H, EC_Training_Trial_stimulus_2a_Bad_2_H,
+EC_Training_Trial_stimulus_1b_Good_2_L, EC_Training_Trial_stimulus_2b_Bad_2_L,
+EC_Training_Trial_stimulus_1c_Good_2_H, EC_Training_Trial_stimulus_2c_Bad_2_H,
+EC_Training_Trial_stimulus_1d_Good_2_L, EC_Training_Trial_stimulus_2d_Bad_2_L)]
+</block>
+
+<block EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_2>
+/ preinstructions = (Instructions_1)
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_stimulus_1a_Good_1_H, EC_Training_Trial_stimulus_2a_Bad_1_H,
+EC_Training_Trial_stimulus_1b_Good_1_L, EC_Training_Trial_stimulus_2b_Bad_1_L,
+EC_Training_Trial_stimulus_1c_Good_1_H, EC_Training_Trial_stimulus_2c_Bad_1_H,
+EC_Training_Trial_stimulus_1d_Good_1_L, EC_Training_Trial_stimulus_2d_Bad_1_L,
+EC_Training_Trial_stimulus_1a_Good_2_H, EC_Training_Trial_stimulus_2a_Bad_2_H,
+EC_Training_Trial_stimulus_1b_Good_2_L, EC_Training_Trial_stimulus_2b_Bad_2_L,
+EC_Training_Trial_stimulus_1c_Good_2_H, EC_Training_Trial_stimulus_2c_Bad_2_H,
+EC_Training_Trial_stimulus_1d_Good_2_L, EC_Training_Trial_stimulus_2d_Bad_2_L)]
+</block>
+
+
+<block EC_Training_stimulus_1_Good_stimulus_2_Bad_Block_3>
+/ preinstructions = (Instructions_2)
+/trials = [1-16 = noreplacenorepeat (EC_Training_Trial_stimulus_1a_Good_1_H, EC_Training_Trial_stimulus_2a_Bad_1_H,
+EC_Training_Trial_stimulus_1b_Good_1_L, EC_Training_Trial_stimulus_2b_Bad_1_L,
+EC_Training_Trial_stimulus_1c_Good_1_H, EC_Training_Trial_stimulus_2c_Bad_1_H,
+EC_Training_Trial_stimulus_1d_Good_1_L, EC_Training_Trial_stimulus_2d_Bad_1_L,
+EC_Training_Trial_stimulus_1a_Good_2_H, EC_Training_Trial_stimulus_2a_Bad_2_H,
+EC_Training_Trial_stimulus_1b_Good_2_L, EC_Training_Trial_stimulus_2b_Bad_2_L,
+EC_Training_Trial_stimulus_1c_Good_2_H, EC_Training_Trial_stimulus_2c_Bad_2_H,
+EC_Training_Trial_stimulus_1d_Good_2_L, EC_Training_Trial_stimulus_2d_Bad_2_L)]
+</block>
+
+
+*********************
+
+<block end>
+/ screencolor = (255, 255, 255)
+/ trials = [1 = pause]
+</block>
+
+**********  Instructions  *************
+
+<instruct>  
+/ fontstyle = ("Arial", 3%)
+/ windowsize = (800px, 600px)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press t to go back"
+/ prevkey = ("t")
+</instruct>
+
+<page Instructions>
+^^ In this study you are going to learn about some new words. Afterwards you will complete a speeded computer task and answer some questions. Overall, it will take 20 minutes.
+
+^^ Part I: You are going to see a new word appear on the screen (i.e., MORAG or STRUAN). 
+
+^^ MORAG or STRUAN will appear on the left of the screen. Two other words will appear on the right.
+
+^^ MORAG or STRUAN and other words will first appear in the same color.
+
+^^ MORAG or STRUAN will STAY THE SAME COLOR as one of the words on the right.
+
+^^ **Please pay close attention to the colors of the words. You will be asked some questions about this later on.**
+</page>
+
+
+<page Instructions_1>
+^^ Ok. We will do this task again. Please press the space bar to continue.
+
+^^ REMEMBER: MORAG or STRUAN will stay the same color as one of the words on the right.
+</page>
+
+<page Instructions_2>
+^^ Ok. We will do this task one last time. Please press the space bar to continue.
+
+^^ REMEMBER: MORAG or STRUAN will stay the same color as one of the words on the right.
+</page>
+
+<page interval>
+^^ Great. Let’s start with the first part of the study.
+
+^^ REMEMBER: MORAG or STRUAN will stay the same color as one of the words on the right.
+</page>
+
+
+
+***********************************************************************
+Test Monkey
+***********************************************************************
+<monkey>
+/ latencydistribution = normal(500, 100)
+/ percentcorrect = 60
+</monkey>
+

@@ -1,0 +1,6 @@
+date	time	subject	blockcode	blocknum	trialcode	trialnum	latency	correct	pretrialpause	posttrialpause	response	stimulus1	stimulus2	stimulus3	stimulus4	stimulus5	stimulus6	stimulus7	stimulus8	stimulus9	stimulus10	stimulus11	stimulus12	stimulus13	stimulus14	stimulus15	stimulus16
+050918	12:28:57	1	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+050918	12:29:40	2	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+050918	12:30:16	5	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+050918	12:30:25	6	begin	1	pause	1	1000	0	0	0	0	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+050918	12:30:47	1	begin	1	pause	1	52	1	0	0	Ctrl+'Q'	erasebig.jpg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

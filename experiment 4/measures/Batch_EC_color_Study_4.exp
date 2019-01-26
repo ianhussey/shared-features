@@ -1,0 +1,139 @@
+***************************************************************************************
+***************************************************************************************
+			BATCH FOR EC COLOR STUDY 4 (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/05/2018
+***************************************************************************************
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SB_MG_v1.iqx"
+/ file="Study_4_Stimulus_Ratings_Before.exp"
+/ file="Study_4_IAT_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SB_MG_v1.iqx"
+/ file="Study_4_Stimulus_Ratings_Before.exp"
+/ file="Study_4_IAT_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SB_MG_v1.iqx"
+/ file="Study_4_IAT_Before.exp"
+/ file="Study_4_Stimulus_Ratings_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SB_MG_v1.iqx"
+/ file="Study_4_IAT_Before.exp"
+/ file="Study_4_Stimulus_Ratings_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SG_MB_v1.iqx"
+/ file="Study_4_Stimulus_Ratings_Before.exp"
+/ file="Study_4_IAT_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SG_MB_v1.iqx"
+/ file="Study_4_Stimulus_Ratings_Before.exp"
+/ file="Study_4_IAT_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SG_MB_v1.iqx"
+/ file="Study_4_IAT_Before.exp"
+/ file="Study_4_Stimulus_Ratings_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - EC1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_4_consent.exp"
+/ file="Study_4_Demographics.iqx"
+/ file ="Study_4_Color_Training_Task.iqx"
+/ file="Study_4_SG_MB_v1.iqx"
+/ file="Study_4_IAT_Before.exp"
+/ file="Study_4_Stimulus_Ratings_After.exp"
+/ file="Study_4_Exploratory_Questions.exp"
+</batch>

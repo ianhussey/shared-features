@@ -1,0 +1,10 @@
+date	time	group	subject	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	windowcenter	trialduration	trialtimeout	blocktimeout	response	correct	latency	inwindow	stimulusnumber1	stimulusitem1	stimulusvpos1	stimulushpos1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusvpos2	stimulushpos2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusvpos3	stimulushpos3	stimulusonset3
+050918	12:28:47	1	1	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	1352	0	1	Consent.htm	40pct	50pct	52	1	I agree to participate	80pct	75pct	52	1	I do NOT agree to participate	80pct	25pct	52
+050918	12:29:18	1	2	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	807	0	1	Consent.htm	40pct	50pct	43	1	I agree to participate	80pct	75pct	43	1	I do NOT agree to participate	80pct	25pct	43
+050918	12:29:47	1	3	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	572	0	1	Consent.htm	40pct	50pct	14	1	I agree to participate	80pct	75pct	14	1	I do NOT agree to participate	80pct	25pct	14
+050918	12:29:56	1	4	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	478	0	1	Consent.htm	40pct	50pct	17	1	I agree to participate	80pct	75pct	17	1	I do NOT agree to participate	80pct	25pct	17
+050918	12:30:12	1	5	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	475	0	1	Consent.htm	40pct	50pct	40	1	I agree to participate	80pct	75pct	40	1	I do NOT agree to participate	80pct	25pct	40
+050918	12:30:21	1	6	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	431	0	1	Consent.htm	40pct	50pct	15	1	I agree to participate	80pct	75pct	15	1	I do NOT agree to participate	80pct	25pct	15
+050918	12:30:29	1	7	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	439	0	1	Consent.htm	40pct	50pct	16	1	I agree to participate	80pct	75pct	16	1	I do NOT agree to participate	80pct	25pct	16
+050918	12:30:43	1	1	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	646	0	1	Consent.htm	40pct	50pct	40	1	I agree to participate	80pct	75pct	40	1	I do NOT agree to participate	80pct	25pct	40
+050918	12:30:57	1	8	4.0.10.0	1	1	Consent	Consent	0	0	0	0	0	0	Ctrl+'Q'	1	433	0	1	Consent.htm	40pct	50pct	37	1	I agree to participate	80pct	75pct	37	1	I do NOT agree to participate	80pct	25pct	37
