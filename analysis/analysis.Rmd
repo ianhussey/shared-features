@@ -213,15 +213,15 @@ t_test_analyses <- function(data) {
   t_test_p <- t_test$p.value[[1]]
   t_test_p_apa <- ifelse(t_test_p < 0.001, "< .001", 
                          ifelse(t_test_p < 0.01,
-                                paste("= ", rd(t_test_p, 3), sep = ""),  # rd() rounds, converts to string, and removes the leading 0.
-                                paste("= ", rd(t_test_p, 2), sep = "")))
+                                paste("= ", weights::rd(t_test_p, 3), sep = ""),  # rd() rounds, converts to string, and removes the leading 0.
+                                paste("= ", weights::rd(t_test_p, 2), sep = "")))
   
   t_test_output <- paste("t(", format(round(t_test$parameter[[1]], 2), nsmall = 2), 
                          ") = ", format(round(t_test$statistic[[1]], 2), nsmall = 2), 
                          ", p ", t_test_p_apa, 
                          ", d = ", format(round(cohens_d$estimate[[1]], 2), nsmall = 2), 
-                         ", 95% CI = [", format(round(cohens_d$conf.int[["inf"]], 2), nsmall = 2), ", ", 
-                         format(round(cohens_d$conf.int[["sup"]], 2), nsmall = 2), "]", 
+                         ", 95% CI = [", format(round(cohens_d$conf.int[["lower"]], 2), nsmall = 2), ", ", 
+                         format(round(cohens_d$conf.int[["upper"]], 2), nsmall = 2), "]", 
                          sep = "")
   
   # bayes factor t test
@@ -339,7 +339,7 @@ meta_analysis_workflow <- function(data,
   
   heterogeneity_test_results_text <- 
     paste0("Q(df = ",    fitted_model$k - 1, ") = ", round(fitted_model$QE, 2), 
-           ", p = ",     ifelse(fitted_model$pval < 0.001, "< .001", as.character(round(fitted_model$pval, 3))),
+           ", p = ",     ifelse(fitted_model$QEp < 0.001, "< .001", as.character(round(fitted_model$pval, 3))),
            ", tau^2 = ", round(fitted_model$tau2, 2), 
            ", I^2 = ",   round(fitted_model$I2, 2),
            ", H^2 = ",   round(fitted_model$H2, 2))
@@ -634,16 +634,16 @@ results_for_meta_analysis_h1 <-
                           results_exp_3_h1$cohens_d$estimate[[1]], 
                           results_exp_4_h1$cohens_d$estimate[[1]],
                           results_exp_5_h1$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h1$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h1$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h1$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h1$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h1$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h1$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h1$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h1$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h1$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h1$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2))
 
@@ -712,16 +712,16 @@ results_for_meta_analysis_h2 <-
                           results_exp_3_h2$cohens_d$estimate[[1]], 
                           results_exp_4_h2$cohens_d$estimate[[1]],
                           results_exp_5_h2$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h2$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h2$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h2$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h2$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h2$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h2$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h2$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h2$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h2$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h2$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2))
 
@@ -976,16 +976,16 @@ results_for_meta_analysis_h1_contingency_memory <-
                           results_exp_3_h1_contingency_memory$cohens_d$estimate[[1]], 
                           results_exp_4_h1_contingency_memory$cohens_d$estimate[[1]],
                           results_exp_5_h1_contingency_memory$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -999,16 +999,16 @@ results_for_meta_analysis_h1_demand_compliance <-
                           results_exp_3_h1_demand_compliance$cohens_d$estimate[[1]], 
                           results_exp_4_h1_demand_compliance$cohens_d$estimate[[1]],
                           results_exp_5_h1_demand_compliance$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h1_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h1_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h1_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h1_demand_compliance$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h1_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h1_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h1_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h1_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h1_demand_compliance$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h1_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_demand_compliance$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_demand_compliance$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1022,16 +1022,16 @@ results_for_meta_analysis_h1_hypothesis_aware <-
                           results_exp_3_h1_hypothesis_aware$cohens_d$estimate[[1]], 
                           results_exp_4_h1_hypothesis_aware$cohens_d$estimate[[1]],
                           results_exp_5_h1_hypothesis_aware$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h1_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h1_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h1_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h1_hypothesis_aware$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h1_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h1_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h1_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h1_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h1_hypothesis_aware$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h1_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_hypothesis_aware$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_hypothesis_aware$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1045,16 +1045,16 @@ results_for_meta_analysis_h1_influence_aware <-
                           results_exp_3_h1_influence_aware$cohens_d$estimate[[1]], 
                           results_exp_4_h1_influence_aware$cohens_d$estimate[[1]],
                           results_exp_5_h1_influence_aware$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h1_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h1_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h1_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h1_influence_aware$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h1_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h1_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h1_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h1_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h1_influence_aware$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h1_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_influence_aware$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_influence_aware$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1255,16 +1255,16 @@ results_for_meta_analysis_h2_contingency_memory <-
                           results_exp_3_h2_contingency_memory$cohens_d$estimate[[1]], 
                           results_exp_4_h2_contingency_memory$cohens_d$estimate[[1]],
                           results_exp_5_h2_contingency_memory$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1278,16 +1278,16 @@ results_for_meta_analysis_h2_demand_compliance <-
                           results_exp_3_h2_demand_compliance$cohens_d$estimate[[1]], 
                           results_exp_4_h2_demand_compliance$cohens_d$estimate[[1]],
                           results_exp_5_h2_demand_compliance$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h2_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h2_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h2_demand_compliance$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h2_demand_compliance$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h2_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h2_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h2_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h2_demand_compliance$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h2_demand_compliance$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h2_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_demand_compliance$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_demand_compliance$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_demand_compliance$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_demand_compliance$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1301,16 +1301,16 @@ results_for_meta_analysis_h2_hypothesis_aware <-
                           results_exp_3_h2_hypothesis_aware$cohens_d$estimate[[1]], 
                           results_exp_4_h2_hypothesis_aware$cohens_d$estimate[[1]],
                           results_exp_5_h2_hypothesis_aware$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h2_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h2_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h2_hypothesis_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h2_hypothesis_aware$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h2_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h2_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h2_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h2_hypothesis_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h2_hypothesis_aware$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h2_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_hypothesis_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_hypothesis_aware$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_hypothesis_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_hypothesis_aware$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1324,16 +1324,16 @@ results_for_meta_analysis_h2_influence_aware <-
                           results_exp_3_h2_influence_aware$cohens_d$estimate[[1]], 
                           results_exp_4_h2_influence_aware$cohens_d$estimate[[1]],
                           results_exp_5_h2_influence_aware$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_2_h2_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_3_h2_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_4_h2_influence_aware$cohens_d$conf.int[["inf"]],
-                        results_exp_5_h2_influence_aware$cohens_d$conf.int[["inf"]]),
-             ci_upr = c(results_exp_1_h2_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_2_h2_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_3_h2_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_4_h2_influence_aware$cohens_d$conf.int[["sup"]],
-                        results_exp_5_h2_influence_aware$cohens_d$conf.int[["sup"]])) %>%
+             ci_lwr = c(results_exp_1_h2_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_influence_aware$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_influence_aware$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_influence_aware$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_influence_aware$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
