@@ -1,4 +1,4 @@
-Participant,Color_Matching,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,intention,us_valence_contingency_memory,cs_US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
+Participant,source_valence_condition,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,intention,us_valence_contingency_memory,cs_US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
 847,CS2_Positive_CS1_Negative,0.65469819,0,neitherBrand,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 773,CS2_Positive_CS1_Negative,-0.774536566,-10,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
 166,CS2_Positive_CS1_Negative,-0.481789353,-2.25,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
@@ -24,7 +24,6 @@ Participant,Color_Matching,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,intentio
 549,CS2_Positive_CS1_Negative,-0.562530618,-6.75,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 560,CS2_Positive_CS1_Negative,0.125300953,2,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 580,CS1_Positive_CS2_Negative,-0.527259234,0,neitherBrand,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-626,CS2_Positive_CS1_Negative,NA,4.75,neitherBrand,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 680,CS2_Positive_CS1_Negative,-0.103727806,-1,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 763,CS1_Positive_CS2_Negative,1.10191993,6.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 897,CS1_Positive_CS2_Negative,0.428954907,9.75,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE

@@ -407,7 +407,7 @@ input_data_exp_<span class="dv">9</span> &lt;-<span class="st"> </span>
 <span class="kw">write_csv</span>(input_data_exp_<span class="dv">9</span>, <span class="st">&quot;../experiment 9/data/processed/data_processed.csv&quot;</span>)
 
 <span class="co"># tidy data</span>
-tidied_data_exp_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 1/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+data_exp_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 1/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
@@ -419,8 +419,9 @@ tidied_data_exp_<span class="dv">1</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Color_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -432,10 +433,11 @@ tidied_data_exp_<span class="dv">1</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Color_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 2/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
+data_exp_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 2/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
          <span class="dt">color_valence_contingency_memory =</span> <span class="kw">ifelse</span>(Total_CS_Color_Contingency_Score <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
@@ -446,8 +448,9 @@ tidied_data_exp_<span class="dv">2</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Color_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -459,10 +462,11 @@ tidied_data_exp_<span class="dv">2</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Color_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 3/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
+data_exp_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 3/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
          <span class="dt">color_valence_contingency_memory =</span> <span class="kw">ifelse</span>(Total_CS_Color_Contingency_Score <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
@@ -473,8 +477,9 @@ tidied_data_exp_<span class="dv">3</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Color_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -486,10 +491,11 @@ tidied_data_exp_<span class="dv">3</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Color_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">4</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 4/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
+data_exp_<span class="dv">4</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 4/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
          <span class="dt">color_valence_contingency_memory =</span> <span class="kw">ifelse</span>(Total_CS_Color_Contingency_Score <span class="op">==</span><span class="st"> </span><span class="dv">4</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
@@ -501,8 +507,9 @@ tidied_data_exp_<span class="dv">4</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Color_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -515,9 +522,10 @@ tidied_data_exp_<span class="dv">4</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Color_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">5</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 5/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+data_exp_<span class="dv">5</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 5/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
@@ -529,8 +537,9 @@ tidied_data_exp_<span class="dv">5</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Size_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Size_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -542,10 +551,11 @@ tidied_data_exp_<span class="dv">5</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Size_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Size_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">6</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 6/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
+data_exp_<span class="dv">6</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 6/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
          <span class="dt">us_valence_contingency_memory =</span> <span class="kw">ifelse</span>(Total_US_Valence_Contingency_Score <span class="op">==</span><span class="st"> </span><span class="dv">2</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
@@ -556,8 +566,9 @@ tidied_data_exp_<span class="dv">6</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Color_Matching,
+         source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -569,17 +580,22 @@ tidied_data_exp_<span class="dv">6</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Color_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Color_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">7</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 7/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>( <span class="dt">US_contingency_memory =</span> <span class="kw">ifelse</span>(US_Contingency_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
+data_exp_<span class="dv">7</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 7/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">US_contingency_memory =</span> <span class="kw">ifelse</span>(US_Contingency_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">hypothesis_awareness =</span> <span class="kw">ifelse</span>(Hypothesis_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">influence_awareness =</span> <span class="kw">ifelse</span>(Influence_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">reactance_IAT =</span> <span class="kw">ifelse</span>(Reactance_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
-         <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+         <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
+         <span class="dt">source_valence_condition =</span> <span class="kw">ifelse</span>(<span class="kw">str_detect</span>(<span class="kw">as.character</span>(Stimulus_Identity), <span class="st">&quot;Chris_Good_James_Bad&quot;</span>), <span class="st">&quot;CS2_Positive_CS1_Negative&quot;</span>,
+                                           <span class="kw">ifelse</span>(<span class="kw">str_detect</span>(<span class="kw">as.character</span>(Stimulus_Identity), <span class="st">&quot;Chris_Bad_James_Good&quot;</span>), <span class="st">&quot;CS1_Positive_CS2_Negative&quot;</span>, <span class="kw">as.character</span>(Stimulus_Identity)))) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Bag_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Bag_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
+         source_valence_condition,
          Bag_Matching,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -590,9 +606,10 @@ tidied_data_exp_<span class="dv">7</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Bag_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Bag_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">drop_na</span>(<span class="op">-</span>influence_awareness)
 
-tidied_data_exp_<span class="dv">8</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 8/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+data_exp_<span class="dv">8</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 8/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">intention =</span> <span class="kw">str_remove_all</span>(Intentions_response, <span class="st">&quot; &quot;</span>),
          <span class="dt">intention =</span> <span class="kw">str_remove_all</span>(intention, <span class="st">&quot;Iwouldtry&quot;</span>),
          <span class="dt">intention =</span> <span class="kw">as.factor</span>(intention),
@@ -604,8 +621,9 @@ tidied_data_exp_<span class="dv">8</span> &lt;-<span class="st"> </span><span cl
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">source_valence_condition =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Size_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
-         Size_Matching,
+         source_valence_condition,
          EP_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
@@ -617,16 +635,20 @@ tidied_data_exp_<span class="dv">8</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Size_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Size_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">na.omit</span>()
 
-tidied_data_exp_<span class="dv">9</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 9/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="kw">mutate</span>( <span class="dt">US_contingency_memory =</span> <span class="kw">ifelse</span>(US_Contingency_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
+data_exp_<span class="dv">9</span> &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../experiment 9/data/processed/data_processed.csv&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">US_contingency_memory =</span> <span class="kw">ifelse</span>(US_Contingency_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">influence_awareness =</span> <span class="kw">ifelse</span>(Influence_Awareness_recoded <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">reactance_IAT =</span> <span class="kw">ifelse</span>(Reactance_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
          <span class="dt">reactance_self_reports =</span> <span class="kw">ifelse</span>(Reactance_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
          <span class="dt">demand_IAT =</span> <span class="kw">ifelse</span>(Demand_IAT <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>), 
-         <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span>
+         <span class="dt">demand_self_reports =</span> <span class="kw">ifelse</span>(Demand_Self_Reports <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),
+         <span class="dt">source_valence_condition =</span> Stimulus_Identity) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Bag_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Bag_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>))) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(Participant, 
+         source_valence_condition,
          Bag_Matching,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -636,18 +658,19 @@ tidied_data_exp_<span class="dv">9</span> &lt;-<span class="st"> </span><span cl
          reactance_self_reports,
          demand_IAT,
          demand_self_reports) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Bag_Matching =</span> <span class="kw">as.factor</span>(<span class="kw">str_replace_all</span>(<span class="kw">as.character</span>(Bag_Matching), <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)))
+<span class="st">  </span><span class="co"># exclude participants with partial data</span>
+<span class="st">  </span><span class="kw">drop_na</span>(<span class="op">-</span>influence_awareness)
 
 <span class="co"># write to disk</span>
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">1</span>, <span class="st">&quot;../experiment 1/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">2</span>, <span class="st">&quot;../experiment 2/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">3</span>, <span class="st">&quot;../experiment 3/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">4</span>, <span class="st">&quot;../experiment 4/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">5</span>, <span class="st">&quot;../experiment 5/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">6</span>, <span class="st">&quot;../experiment 6/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">7</span>, <span class="st">&quot;../experiment 7/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">8</span>, <span class="st">&quot;../experiment 8/data/processed/data_for_analysis.csv&quot;</span>)
-<span class="kw">write_csv</span>(tidied_data_exp_<span class="dv">9</span>, <span class="st">&quot;../experiment 9/data/processed/data_for_analysis.csv&quot;</span>)</code></pre></div>
+<span class="kw">write_csv</span>(data_exp_<span class="dv">1</span>, <span class="st">&quot;../experiment 1/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">2</span>, <span class="st">&quot;../experiment 2/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">3</span>, <span class="st">&quot;../experiment 3/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">4</span>, <span class="st">&quot;../experiment 4/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">5</span>, <span class="st">&quot;../experiment 5/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">6</span>, <span class="st">&quot;../experiment 6/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">7</span>, <span class="st">&quot;../experiment 7/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">8</span>, <span class="st">&quot;../experiment 8/data/processed/data_for_analysis.csv&quot;</span>)
+<span class="kw">write_csv</span>(data_exp_<span class="dv">9</span>, <span class="st">&quot;../experiment 9/data/processed/data_for_analysis.csv&quot;</span>)</code></pre></div>
 </div>
 
 
