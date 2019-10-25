@@ -16,7 +16,8 @@ output:
 
 - add experiment 7 regular analysis
 - exp 9 sig from zero tests
-- exp 6 uses cs_US_contingency_memory instead of US_contingency_memory for iat, self report and intentions. standardize? other contingency memory variables also exist too across studies
+- exp 6 uses cs_US_contingency_memory instead of US_contingency_memory for iat, self report and intentions. is this a typo or a differnet variable?
+- add color memory too
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(message = FALSE,
