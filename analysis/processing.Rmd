@@ -1,0 +1,172 @@
+---
+title: "Data processing"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    number_sections: no
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+```
+
+```{r}
+
+# disable scientific notation
+options(scipen = 999) 
+
+# dependencies
+library(tidyverse)
+
+```
+
+# Data processing
+
+```{r}
+
+# get data
+
+# convert SPSS to csv
+input_data_exp_1 <- 
+  read.spss("../experiment 1/data/processed/Shared_Features_Study_1_FINAL.sav", to.data.frame = TRUE)
+
+input_data_exp_2 <- 
+  read.spss("../experiment 2/data/processed/Shared_Features_Study_2_FINAL.sav", to.data.frame = TRUE)
+
+input_data_exp_3 <- 
+  read.spss("../experiment 3/data/processed/Shared_Features_Study_3_FINAL.sav", to.data.frame = TRUE)
+
+input_data_exp_4 <- 
+  read.spss("../experiment 4/data/processed/Shared_Features_Study_4_FINAL.sav", to.data.frame = TRUE)
+
+input_data_exp_5 <- 
+  read.spss("../experiment 5/data/processed/Shared_Features_Study_5_FINAL.sav", to.data.frame = TRUE)
+
+write_csv(input_data_exp_1, "../experiment 1/data/processed/data_processed.csv")
+write_csv(input_data_exp_2, "../experiment 2/data/processed/data_processed.csv")
+write_csv(input_data_exp_3, "../experiment 3/data/processed/data_processed.csv")
+write_csv(input_data_exp_4, "../experiment 4/data/processed/data_processed.csv")
+write_csv(input_data_exp_5, "../experiment 5/data/processed/data_processed.csv")
+
+# tidy data
+tidied_data_exp_1 <- read.csv("../experiment 1/data/processed/data_processed.csv") %>%
+  mutate(intention = str_remove_all(Intentions_response, " "),
+         intention = str_remove_all(intention, "Iwouldtry"),
+         intention = as.factor(intention),
+         contingency_memory = ifelse(Total_Contingency_Awareness_Score == 2, TRUE, FALSE),
+         hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == "Correct", TRUE, FALSE),
+         influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
+         demand_IAT = ifelse(Demand_IAT == "Yes", TRUE, FALSE), 
+         demand_self_reports = ifelse(Demand_Self_Reports == "Yes", TRUE, FALSE)) %>%
+  select(Participant, 
+         Color_Matching,
+         IAT_Score,
+         EC_Effect_CS1_CS2_Difference_Score,
+         intention,
+         contingency_memory,
+         hypothesis_awareness,
+         influence_awareness,
+         demand_IAT,
+         demand_self_reports) %>%
+  mutate(Color_Matching = as.factor(str_replace_all(as.character(Color_Matching), " ", "")))
+
+tidied_data_exp_2 <- read.csv("../experiment 2/data/processed/data_processed.csv") %>%
+  mutate(intention = str_remove_all(Intentions_response, " "),
+         intention = str_remove_all(intention, "Iwouldtry"),
+         intention = as.factor(intention),
+         contingency_memory = ifelse(Total_Contingency_Awareness_Score == 2, TRUE, FALSE),
+         hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == "Correct", TRUE, FALSE),
+         influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
+         demand_IAT = ifelse(Demand_IAT == "Yes", TRUE, FALSE), 
+         demand_self_reports = ifelse(Demand_Self_Reports == "Yes", TRUE, FALSE)) %>%
+  select(Participant, 
+         Color_Matching,
+         IAT_Score,
+         EC_Effect_CS1_CS2_Difference_Score,
+         intention,
+         contingency_memory,
+         hypothesis_awareness,
+         influence_awareness,
+         demand_IAT,
+         demand_self_reports) %>%
+  mutate(Color_Matching = as.factor(str_replace_all(as.character(Color_Matching), " ", "")))
+
+tidied_data_exp_3 <- read.csv("../experiment 3/data/processed/data_processed.csv") %>%
+  mutate(intention = str_remove_all(Intentions_response, " "),
+         intention = str_remove_all(intention, "Iwouldtry"),
+         intention = as.factor(intention),
+         contingency_memory = ifelse(Total_Contingency_Awareness_Score == 2, TRUE, FALSE),
+         hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == "Correct", TRUE, FALSE),
+         influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
+         demand_IAT = ifelse(Demand_IAT == "Yes", TRUE, FALSE), 
+         demand_self_reports = ifelse(Demand_Self_Reports == "Yes", TRUE, FALSE)) %>%
+  select(Participant, 
+         Color_Matching,
+         IAT_Score,
+         EC_Effect_CS1_CS2_Difference_Score,
+         intention,
+         contingency_memory,
+         hypothesis_awareness,
+         influence_awareness,
+         demand_IAT,
+         demand_self_reports) %>%
+  mutate(Color_Matching = as.factor(str_replace_all(as.character(Color_Matching), " ", "")))
+
+tidied_data_exp_4 <- read.csv("../experiment 4/data/processed/data_processed.csv") %>%
+  mutate(intention = str_remove_all(Intentions_response, " "),
+         intention = str_remove_all(intention, "Iwouldtry"),
+         intention = as.factor(intention),
+         contingency_memory = ifelse(Total_Contingency_Awareness_Score == 2, TRUE, FALSE),
+         hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == "Correct", TRUE, FALSE),
+         influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
+         demand_IAT = ifelse(Demand_IAT == "Yes", TRUE, FALSE), 
+         demand_self_reports = ifelse(Demand_Self_Reports == "Yes", TRUE, FALSE)) %>%
+  select(Participant, 
+         Color_Matching,
+         IAT_Score,
+         EC_Effect_CS1_CS2_Difference_Score,
+         intention,
+         contingency_memory,
+         hypothesis_awareness,
+         influence_awareness,
+         demand_IAT,
+         demand_self_reports) %>%
+  mutate(Color_Matching = as.factor(str_replace_all(as.character(Color_Matching), " ", "")))
+
+tidied_data_exp_5 <- read.csv("../experiment 5/data/processed/data_processed.csv") %>%
+  mutate(intention = str_remove_all(Intentions_response, " "),
+         intention = str_remove_all(intention, "Iwouldtry"),
+         intention = as.factor(intention),
+         contingency_memory = ifelse(Total_Contingency_Awareness_Score == 2, TRUE, FALSE),
+         hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == "Correct", TRUE, FALSE),
+         influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
+         demand_IAT = ifelse(Demand_IAT == "Yes", TRUE, FALSE), 
+         demand_self_reports = ifelse(Demand_Self_Reports == "Yes", TRUE, FALSE)) %>%
+  select(Participant, 
+         Color_Matching,
+         IAT_Score,
+         EC_Effect_CS1_CS2_Difference_Score,
+         intention,
+         contingency_memory,
+         hypothesis_awareness,
+         influence_awareness,
+         demand_IAT,
+         demand_self_reports) %>%
+  mutate(Color_Matching = as.factor(str_replace_all(as.character(Color_Matching), " ", "")))
+
+# write to disk
+write_csv(tidied_data_exp_1, "../experiment 1/data/processed/data_for_analysis.csv")
+write_csv(tidied_data_exp_2, "../experiment 2/data/processed/data_for_analysis.csv")
+write_csv(tidied_data_exp_3, "../experiment 3/data/processed/data_for_analysis.csv")
+write_csv(tidied_data_exp_4, "../experiment 4/data/processed/data_for_analysis.csv")
+write_csv(tidied_data_exp_5, "../experiment 5/data/processed/data_for_analysis.csv")
+
+```
+
