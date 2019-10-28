@@ -5,7 +5,8 @@ meta_analysis_workflow <- function(data,
                                    effect_size_label, 
                                    reference_line, 
                                    exp_estimates = FALSE,
-                                   plot = TRUE) {
+                                   plot = TRUE,
+                                   at = NULL) {
   require(timesavers)
   require(tidyverse)
   require(metafor)
@@ -71,11 +72,20 @@ meta_analysis_workflow <- function(data,
   
   
   if (plot == TRUE) {
-    forest_plot <- forest(fitted_model,
-                          xlab = effect_size_label,
-                          addcred = TRUE,
-                          atransf = transformation,
-                          refline = reference_line)
+    if(is.null(at)) {
+      forest_plot <- forest(fitted_model,
+                            xlab = effect_size_label,
+                            addcred = TRUE,
+                            atransf = transformation,
+                            refline = reference_line)
+    } else if (!is.null(at)) {
+      forest_plot <- forest(fitted_model,
+                            xlab = effect_size_label,
+                            addcred = TRUE,
+                            atransf = transformation,
+                            refline = reference_line, 
+                            at = at)
+    }
   } else {
     forest_plot <- NULL
   }
@@ -92,7 +102,8 @@ meta_analysis_workflow <- function(data,
 # get data
 # experiments were run (and are recorded in data) as 1,2,3,4,5. However, they are reported in the manuscript as 1,2,3,5,4. 
 # relabel the studies to follow the latter order for reporting in the manuscript
-results_for_meta_analysis_h1_sensitivity <- read.csv("../plots/results_for_meta_analysis_h1_sensitivity.csv") %>%
+results_for_meta_analysis_h1_sensitivity <- read.csv("../meta analysis data/results_for_meta_analysis_iat.csv") %>%
+  filter(Experiment != "Experiment 2") %>%
   mutate(Experiment = dplyr::recode(Experiment, 
                                     `Experiment 1` = "Experiment 1",
                                     `Experiment 3` = "Experiment 3",
@@ -105,7 +116,8 @@ results_for_meta_analysis_h1_sensitivity <- read.csv("../plots/results_for_meta_
                                   "Experiment 5")) %>%
   arrange(Experiment)
 
-results_for_meta_analysis_h2_sensitivity <- read.csv("../plots/results_for_meta_analysis_h2_sensitivity.csv") %>%
+results_for_meta_analysis_h2_sensitivity <- read.csv("../meta analysis data/results_for_meta_analysis_self_report.csv") %>%
+  filter(Experiment != "Experiment 2") %>%
   mutate(Experiment = dplyr::recode(Experiment, 
                                     `Experiment 1` = "Experiment 1",
                                     `Experiment 3` = "Experiment 3",
@@ -118,7 +130,8 @@ results_for_meta_analysis_h2_sensitivity <- read.csv("../plots/results_for_meta_
                                   "Experiment 5")) %>%
   arrange(Experiment)
 
-results_for_meta_analysis_h3_sensitivity <- read.csv("../plots/results_for_meta_analysis_h3_sensitivity.csv") %>%
+results_for_meta_analysis_h3_sensitivity <- read.csv("../meta analysis data/results_for_meta_analysis_behavioural_intentions.csv") %>%
+  filter(Experiment != "Experiment 2") %>%
   mutate(Experiment = dplyr::recode(Experiment, 
                                     `Experiment 1` = "Experiment 1",
                                     `Experiment 3` = "Experiment 3",
@@ -142,12 +155,13 @@ meta_results_h2_sensitivity <-
   meta_analysis_workflow(data              = results_for_meta_analysis_h2_sensitivity,
                          effect_size_label = "Cohen's d",
                          exp_estimates     = FALSE,
-                         reference_line    = NULL)
+                         reference_line    = 0)
 
 meta_results_h3_sensitivity <- 
   meta_analysis_workflow(data              = results_for_meta_analysis_h3_sensitivity,
                          effect_size_label = "Odds Ratio",
                          exp_estimates     = TRUE,
-                         reference_line    = 0)
+                         reference_line    = 0, # on log odds scale
+                         at = c(log(1), log(3), log(10), log(30), log(100)))
 
 ```
