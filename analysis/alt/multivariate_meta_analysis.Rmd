@@ -80,8 +80,6 @@ forest(fit,
        refline = 0)
 
 # model results and heterogeneity stats
-p_value <- timesavers::apa_p_value(fit$pval)  
-
 meta_analysis_results <-
   predict(fit, digits = 5) %>%
   as.data.frame() %>%
@@ -98,18 +96,18 @@ meta_analysis_results <-
 
 meta_analysis_results <- rbind(meta_analysis_results,
                                data.frame(metric = "p",
-                                          estimate = p_value))
+                                          estimate = fit$pval))
 
 # summarize results
 meta_analysis_results_text <- 
   paste0("k = ", fit$k, ", ", 
          "Cohen's d = ", meta_analysis_results$estimate[1],
          # dynamic indexing of some values as different models return variables in different locations, but relative location is reliable
-         ", 95% CI = [", meta_analysis_results$estimate[length(meta_analysis_results$estimate)-4],  
-         ", ", meta_analysis_results$estimate[length(meta_analysis_results$estimate)-3], 
-         "], 95% CR = [", meta_analysis_results$estimate[length(meta_analysis_results$estimate)-2], 
-         ", ", meta_analysis_results$estimate[length(meta_analysis_results$estimate)-1],
-         "], p ", meta_analysis_results$estimate[length(meta_analysis_results$estimate)])
+         ", 95% CI = [", meta_analysis_results$estimate[3],  
+         ", ", meta_analysis_results$estimate[4], 
+         "], 95% CR = [", meta_analysis_results$estimate[5], 
+         ", ", meta_analysis_results$estimate[6],
+         "], p = ", meta_analysis_results$estimate[length(meta_analysis_results$estimate)])
 
 heterogeneity_test_results_text <- 
   paste0("Q(df = ",    fit$k - 1, ") = ", round(fit$QE, 2), 
