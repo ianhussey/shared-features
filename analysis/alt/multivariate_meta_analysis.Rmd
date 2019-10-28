@@ -31,19 +31,47 @@ library(timesavers)
 
 ```
 
-# Multivariate meta analysis
+# Get data
 
 ```{r}
 
 # get data
-data <- read.csv("multivariate meta analysis data.csv")
+results_for_meta_analysis_h1 <- read.csv("../../meta analysis data/results_for_meta_analysis_iat.csv")
+results_for_meta_analysis_h2 <- read.csv("../../meta analysis data/results_for_meta_analysis_self_report.csv")
+results_for_meta_analysis_h3 <- read.csv("../../meta analysis data/results_for_meta_analysis_behavioural_intentions.csv")
+
+# combine
+data <- bind_rows(mutate(results_for_meta_analysis_h1,
+                         outcome = "IAT"),
+                  mutate(results_for_meta_analysis_h2,
+                         outcome = "self-report"),
+                  mutate(results_for_meta_analysis_h3,
+                         outcome = "behavioural intentions",
+                         # convert ORs into cohen's d values
+                         ci_lwr = OR_to_d(exp(yi - sei*1.96)),
+                         ci_upr = OR_to_d(exp(yi + sei*1.96)),
+                         yi = OR_to_d(exp(yi)),
+                         sei = (ci_upr - ci_lwr)/(1.96*2))) %>%
+  mutate(V = sei^2) %>%
+  select(Experiment, outcome, yi, V) %>%
+  filter(Experiment != "Experiment 2")
+
+```
+
+# Multivariate meta analysis
+
+random slope for outcome and intercept for study.
+
+```{r}
 
 # fit
 fit <- rma.mv(yi     = yi, 
               V      = V,   # variance is denoted differently to the rma() funciton, which uses vi
-              random = ~ 1 | Experiment,   # assuming no moderators are being tested, specify an intercept only model that clusters the DVs by their source. In this case Experiment, but could be Article etc depending on your data.
+              random = ~ outcome | Experiment,   # assuming no moderators are being tested, specify a random slope and intercept model that clusters the DVs by their source and the slopes by the DV.
               data   = data,
               slab   = paste(Experiment, outcome))
+
+fit
 
 # plot
 forest(fit,
@@ -93,9 +121,4 @@ heterogeneity_test_results_text <-
 Meta analysed effect size: `r meta_analysis_results_text`
 
 Hetergeneity tests: `r heterogeneity_test_results_text`
-
-NB I^2 and H^2 metrics also possible for multi-level models but you have to extract them manually, see http://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate 
-
-
-
 

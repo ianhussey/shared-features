@@ -1,98 +1,98 @@
-Participant,source_valence_condition,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,intention,color_valence_contingency_memory,US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
-300,CS2_Positive_CS1_Negative,0.35,3.75,bothMoragandStruan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-132,CS1_Positive_CS2_Negative,-0.82,0.75,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-261,CS1_Positive_CS2_Negative,0,-0.5,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-295,CS1_Positive_CS2_Negative,0.47,8,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
-93,CS2_Positive_CS1_Negative,-0.18,-6.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-38,CS1_Positive_CS2_Negative,0.16,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-74,CS2_Positive_CS1_Negative,-1.01,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-156,CS2_Positive_CS1_Negative,0.33,2.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-191,CS2_Positive_CS1_Negative,0.09,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-285,CS2_Positive_CS1_Negative,-0.49,-0.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-171,CS2_Positive_CS1_Negative,0.01,0,Idon'tknow,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-278,CS1_Positive_CS2_Negative,0.34,7.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-50,CS1_Positive_CS2_Negative,-0.33,9.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-56,CS1_Positive_CS2_Negative,-0.28,-4,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-219,CS2_Positive_CS1_Negative,0.51,3,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-221,CS2_Positive_CS1_Negative,-0.94,-10,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-244,CS1_Positive_CS2_Negative,0.7,3.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-15,CS2_Positive_CS1_Negative,0.93,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-27,CS2_Positive_CS1_Negative,-0.94,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-37,CS1_Positive_CS2_Negative,0.83,5.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-41,CS2_Positive_CS1_Negative,-0.3,-7,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-44,CS2_Positive_CS1_Negative,-1.15,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-47,CS2_Positive_CS1_Negative,-0.33,2,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-72,CS1_Positive_CS2_Negative,0.25,0,Idon'tknow,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-73,CS2_Positive_CS1_Negative,-0.15,0.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-99,CS1_Positive_CS2_Negative,1.06,10,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-105,CS2_Positive_CS1_Negative,-0.61,4,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-107,CS2_Positive_CS1_Negative,0.44,-1,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-110,CS2_Positive_CS1_Negative,0.65,-10,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-129,CS1_Positive_CS2_Negative,0.98,6.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-139,CS2_Positive_CS1_Negative,-0.66,-9.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-143,CS2_Positive_CS1_Negative,0.06,-3.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-150,CS1_Positive_CS2_Negative,-0.04,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-152,CS1_Positive_CS2_Negative,0.87,2,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-173,CS2_Positive_CS1_Negative,-0.55,-10,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-175,CS2_Positive_CS1_Negative,-0.79,-7.5,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-180,CS1_Positive_CS2_Negative,0.17,-1.75,Idon'tknow,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-181,CS1_Positive_CS2_Negative,0.59,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-190,CS2_Positive_CS1_Negative,-1.03,-8,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-195,CS1_Positive_CS2_Negative,-0.12,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-197,CS1_Positive_CS2_Negative,0.86,6.75,bothMoragandStruan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-202,CS2_Positive_CS1_Negative,0.19,3.25,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-204,CS2_Positive_CS1_Negative,0.13,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-210,CS1_Positive_CS2_Negative,0.17,1.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-213,CS1_Positive_CS2_Negative,0.57,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-222,CS2_Positive_CS1_Negative,0.48,-7.75,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-225,CS1_Positive_CS2_Negative,-0.57,-5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-227,CS1_Positive_CS2_Negative,-0.7,-4,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-239,CS2_Positive_CS1_Negative,0.53,-2,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-242,CS1_Positive_CS2_Negative,0.53,10,Morag,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-245,CS1_Positive_CS2_Negative,0.22,10,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-246,CS1_Positive_CS2_Negative,0.22,9.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-247,CS1_Positive_CS2_Negative,-0.57,-7,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-248,CS1_Positive_CS2_Negative,-0.13,9,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-254,CS2_Positive_CS1_Negative,-0.15,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-259,CS1_Positive_CS2_Negative,0.75,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-266,CS2_Positive_CS1_Negative,-0.02,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-272,CS2_Positive_CS1_Negative,0.22,0,bothMoragandStruan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-276,CS1_Positive_CS2_Negative,0.53,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-282,CS2_Positive_CS1_Negative,0.13,-10,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-283,CS2_Positive_CS1_Negative,-0.96,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-288,CS2_Positive_CS1_Negative,0.07,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-298,CS2_Positive_CS1_Negative,-0.47,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-299,CS2_Positive_CS1_Negative,-0.72,-1,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-303,CS2_Positive_CS1_Negative,1.01,0.75,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-29,CS2_Positive_CS1_Negative,1.2,10,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-49,CS1_Positive_CS2_Negative,0.92,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-134,CS1_Positive_CS2_Negative,0.11,7.5,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-194,CS1_Positive_CS2_Negative,-0.16,-8,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-218,CS2_Positive_CS1_Negative,-0.71,-4,bothMoragandStruan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-260,CS1_Positive_CS2_Negative,0.56,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-267,CS2_Positive_CS1_Negative,-0.51,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-279,CS1_Positive_CS2_Negative,0.17,7,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-57,CS2_Positive_CS1_Negative,0.38,0,neitherBrand,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
-131,CS1_Positive_CS2_Negative,0.01,8,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-117,CS1_Positive_CS2_Negative,0.15,10,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
-284,CS2_Positive_CS1_Negative,-0.31,-0.25,bothMoragandStruan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
-112,CS2_Positive_CS1_Negative,0.77,1.25,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-55,CS1_Positive_CS2_Negative,0.04,2.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-88,CS1_Positive_CS2_Negative,-0.04,-3.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-185,CS2_Positive_CS1_Negative,-0.69,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-216,CS1_Positive_CS2_Negative,0.19,-3.75,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-78,CS2_Positive_CS1_Negative,-0.39,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
-257,CS1_Positive_CS2_Negative,0,-0.75,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
-42,CS2_Positive_CS1_Negative,-1.2,-7.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
-124,CS2_Positive_CS1_Negative,0.24,-5.5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
-46,CS2_Positive_CS1_Negative,-0.57,-3,neitherBrand,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
-89,CS2_Positive_CS1_Negative,-0.25,1.25,Struan,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
-158,CS2_Positive_CS1_Negative,-0.04,-2,Struan,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE
-243,CS1_Positive_CS2_Negative,0.01,0.5,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE
-232,CS1_Positive_CS2_Negative,0.31,-1,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE
-263,CS1_Positive_CS2_Negative,-0.07,6,Morag,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE
-296,CS1_Positive_CS2_Negative,-0.6,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE
-115,CS1_Positive_CS2_Negative,0.55,0.5,neitherBrand,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
-32,CS2_Positive_CS1_Negative,-0.13,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
-177,CS1_Positive_CS2_Negative,0.64,1.75,Struan,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE
-240,CS2_Positive_CS1_Negative,0.11,-0.75,Morag,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE
+Participant,Age,Gender,source_valence_condition,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,intention,color_valence_contingency_memory,US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
+300,30,Male                                        ,CS2_Positive_CS1_Negative,0.35,3.75,bothMoragandStruan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+132,36,Female                                      ,CS1_Positive_CS2_Negative,-0.82,0.75,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+261,24,Female                                      ,CS1_Positive_CS2_Negative,0,-0.5,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+295,21,Male                                        ,CS1_Positive_CS2_Negative,0.47,8,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+93,25,Male                                        ,CS2_Positive_CS1_Negative,-0.18,-6.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+38,22,Male                                        ,CS1_Positive_CS2_Negative,0.16,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+74,29,Male                                        ,CS2_Positive_CS1_Negative,-1.01,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+156,36,Female                                      ,CS2_Positive_CS1_Negative,0.33,2.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+191,25,Female                                      ,CS2_Positive_CS1_Negative,0.09,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+285,30,Female                                      ,CS2_Positive_CS1_Negative,-0.49,-0.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+171,35,Male                                        ,CS2_Positive_CS1_Negative,0.01,0,Idon'tknow,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+278,29,Female                                      ,CS1_Positive_CS2_Negative,0.34,7.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+50,28,Female                                      ,CS1_Positive_CS2_Negative,-0.33,9.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+56,26,Female                                      ,CS1_Positive_CS2_Negative,-0.28,-4,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+219,31,Female                                      ,CS2_Positive_CS1_Negative,0.51,3,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+221,18,Male                                        ,CS2_Positive_CS1_Negative,-0.94,-10,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+244,21,Male                                        ,CS1_Positive_CS2_Negative,0.7,3.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+15,19,Male                                        ,CS2_Positive_CS1_Negative,0.93,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+27,28,Male                                        ,CS2_Positive_CS1_Negative,-0.94,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+37,35,Male                                        ,CS1_Positive_CS2_Negative,0.83,5.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+41,22,Female                                      ,CS2_Positive_CS1_Negative,-0.3,-7,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+44,18,Female                                      ,CS2_Positive_CS1_Negative,-1.15,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+47,31,Female                                      ,CS2_Positive_CS1_Negative,-0.33,2,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+72,31,Female                                      ,CS1_Positive_CS2_Negative,0.25,0,Idon'tknow,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+73,38,Male                                        ,CS2_Positive_CS1_Negative,-0.15,0.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+99,29,Female                                      ,CS1_Positive_CS2_Negative,1.06,10,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+105,18,Male                                        ,CS2_Positive_CS1_Negative,-0.61,4,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+107,31,Female                                      ,CS2_Positive_CS1_Negative,0.44,-1,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+110,27,Female                                      ,CS2_Positive_CS1_Negative,0.65,-10,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+129,29,Female                                      ,CS1_Positive_CS2_Negative,0.98,6.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+139,35,Female                                      ,CS2_Positive_CS1_Negative,-0.66,-9.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+143,23,Male                                        ,CS2_Positive_CS1_Negative,0.06,-3.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+150,28,Male                                        ,CS1_Positive_CS2_Negative,-0.04,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+152,40,Female                                      ,CS1_Positive_CS2_Negative,0.87,2,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+173,25,Male                                        ,CS2_Positive_CS1_Negative,-0.55,-10,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+175,22,Male                                        ,CS2_Positive_CS1_Negative,-0.79,-7.5,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+180,26,Male                                        ,CS1_Positive_CS2_Negative,0.17,-1.75,Idon'tknow,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+181,28,Male                                        ,CS1_Positive_CS2_Negative,0.59,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+190,38,Male                                        ,CS2_Positive_CS1_Negative,-1.03,-8,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+195,27,Male                                        ,CS1_Positive_CS2_Negative,-0.12,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+197,22,Male                                        ,CS1_Positive_CS2_Negative,0.86,6.75,bothMoragandStruan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+202,32,Female                                      ,CS2_Positive_CS1_Negative,0.19,3.25,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+204,31,Male                                        ,CS2_Positive_CS1_Negative,0.13,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+210,30,Male                                        ,CS1_Positive_CS2_Negative,0.17,1.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+213,30,Female                                      ,CS1_Positive_CS2_Negative,0.57,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+222,30,Female                                      ,CS2_Positive_CS1_Negative,0.48,-7.75,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+225,28,Male                                        ,CS1_Positive_CS2_Negative,-0.57,-5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+227,39,Female                                      ,CS1_Positive_CS2_Negative,-0.7,-4,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+239,27,Female                                      ,CS2_Positive_CS1_Negative,0.53,-2,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+242,27,Female                                      ,CS1_Positive_CS2_Negative,0.53,10,Morag,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+245,28,Female                                      ,CS1_Positive_CS2_Negative,0.22,10,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+246,30,Female                                      ,CS1_Positive_CS2_Negative,0.22,9.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+247,24,Female                                      ,CS1_Positive_CS2_Negative,-0.57,-7,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+248,27,Male                                        ,CS1_Positive_CS2_Negative,-0.13,9,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+254,36,Male                                        ,CS2_Positive_CS1_Negative,-0.15,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+259,31,Female                                      ,CS1_Positive_CS2_Negative,0.75,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+266,32,Female                                      ,CS2_Positive_CS1_Negative,-0.02,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+272,40,Female                                      ,CS2_Positive_CS1_Negative,0.22,0,bothMoragandStruan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+276,40,Male                                        ,CS1_Positive_CS2_Negative,0.53,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+282,34,Female                                      ,CS2_Positive_CS1_Negative,0.13,-10,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+283,40,Female                                      ,CS2_Positive_CS1_Negative,-0.96,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+288,18,Male                                        ,CS2_Positive_CS1_Negative,0.07,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+298,19,Female                                      ,CS2_Positive_CS1_Negative,-0.47,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+299,35,Female                                      ,CS2_Positive_CS1_Negative,-0.72,-1,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+303,27,Female                                      ,CS2_Positive_CS1_Negative,1.01,0.75,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+29,21,Male                                        ,CS2_Positive_CS1_Negative,1.2,10,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+49,37,Female                                      ,CS1_Positive_CS2_Negative,0.92,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+134,27,Male                                        ,CS1_Positive_CS2_Negative,0.11,7.5,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+194,36,Female                                      ,CS1_Positive_CS2_Negative,-0.16,-8,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+218,34,Female                                      ,CS2_Positive_CS1_Negative,-0.71,-4,bothMoragandStruan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+260,24,Male                                        ,CS1_Positive_CS2_Negative,0.56,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+267,22,Male                                        ,CS2_Positive_CS1_Negative,-0.51,-6.25,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+279,25,Female                                      ,CS1_Positive_CS2_Negative,0.17,7,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+57,22,Female                                      ,CS2_Positive_CS1_Negative,0.38,0,neitherBrand,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+131,20,Female                                      ,CS1_Positive_CS2_Negative,0.01,8,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+117,28,Female                                      ,CS1_Positive_CS2_Negative,0.15,10,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+284,21,Male                                        ,CS2_Positive_CS1_Negative,-0.31,-0.25,bothMoragandStruan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+112,20,Female                                      ,CS2_Positive_CS1_Negative,0.77,1.25,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+55,39,Female                                      ,CS1_Positive_CS2_Negative,0.04,2.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+88,35,Female                                      ,CS1_Positive_CS2_Negative,-0.04,-3.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+185,33,Male                                        ,CS2_Positive_CS1_Negative,-0.69,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+216,29,Female                                      ,CS1_Positive_CS2_Negative,0.19,-3.75,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+78,21,Female                                      ,CS2_Positive_CS1_Negative,-0.39,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
+257,24,Male                                        ,CS1_Positive_CS2_Negative,0,-0.75,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
+42,21,Female                                      ,CS2_Positive_CS1_Negative,-1.2,-7.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+124,35,Male                                        ,CS2_Positive_CS1_Negative,0.24,-5.5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+46,37,Female                                      ,CS2_Positive_CS1_Negative,-0.57,-3,neitherBrand,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+89,32,Female                                      ,CS2_Positive_CS1_Negative,-0.25,1.25,Struan,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+158,36,Female                                      ,CS2_Positive_CS1_Negative,-0.04,-2,Struan,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE
+243,33,Female                                      ,CS1_Positive_CS2_Negative,0.01,0.5,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE
+232,34,Male                                        ,CS1_Positive_CS2_Negative,0.31,-1,bothMoragandStruan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE
+263,24,Female                                      ,CS1_Positive_CS2_Negative,-0.07,6,Morag,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE
+296,28,Female                                      ,CS1_Positive_CS2_Negative,-0.6,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE
+115,18,Male                                        ,CS1_Positive_CS2_Negative,0.55,0.5,neitherBrand,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+32,30,Female                                      ,CS2_Positive_CS1_Negative,-0.13,0,bothMoragandStruan,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
+177,32,Female                                      ,CS1_Positive_CS2_Negative,0.64,1.75,Struan,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE
+240,32,Female                                      ,CS2_Positive_CS1_Negative,0.11,-0.75,Morag,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE

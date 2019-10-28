@@ -86,6 +86,8 @@ data_exp_1 <- read.csv("../experiment 1/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Color_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -114,7 +116,9 @@ data_exp_2 <- read.csv("../experiment 2/data/processed/data_processed.csv") %>%
          demand_IAT = ifelse(Demand_IAT == 1, TRUE, FALSE), 
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Color_Matching), " ", ""))) %>%
-  select(Participant, 
+  select(Participant,
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -144,6 +148,8 @@ data_exp_3 <- read.csv("../experiment 3/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Color_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -174,6 +180,8 @@ data_exp_4 <- read.csv("../experiment 4/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Color_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -204,6 +212,8 @@ data_exp_5 <- read.csv("../experiment 5/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Size_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -233,6 +243,8 @@ data_exp_6 <- read.csv("../experiment 6/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports_recoded == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Color_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          IAT_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -260,6 +272,8 @@ data_exp_7 <- read.csv("../experiment 7/data/processed/data_processed.csv") %>%
                                            ifelse(str_detect(as.character(Stimulus_Identity), "Chris_Bad_James_Good"), "CS1_Positive_CS2_Negative", as.character(Stimulus_Identity)))) %>%
   mutate(Bag_Matching = as.factor(str_replace_all(as.character(Bag_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          Bag_Matching,
          IAT_Score,
@@ -288,6 +302,8 @@ data_exp_8 <- read.csv("../experiment 8/data/processed/data_processed.csv") %>%
          demand_self_reports = ifelse(Demand_Self_Reports == 1, TRUE, FALSE)) %>%
   mutate(source_valence_condition = as.factor(str_replace_all(as.character(Size_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          EP_Score,
          EC_Effect_CS1_CS2_Difference_Score,
@@ -313,6 +329,8 @@ data_exp_9 <- read.csv("../experiment 9/data/processed/data_processed.csv") %>%
          source_valence_condition = Stimulus_Identity) %>%
   mutate(Bag_Matching = as.factor(str_replace_all(as.character(Bag_Matching), " ", ""))) %>%
   select(Participant, 
+         Age, 
+         Gender,
          source_valence_condition,
          Bag_Matching,
          IAT_Score,

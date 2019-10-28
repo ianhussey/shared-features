@@ -12,12 +12,6 @@ output:
     toc_float: yes
 ---
 
-# To do
-
-- add experiment 7 regular analysis
-- exp 9 sig from zero tests
-- add color memory sensitivity analysis 
-
 ```{r, include=FALSE}
 knitr::opts_chunk$set(message = FALSE,
                       warning = FALSE)
@@ -38,6 +32,10 @@ library(weights)
 library(sjPlot)
 library(nnet)
 library(metafor)
+library(car)
+library(lsr)
+library(knitr)
+library(kableExtra)
 
 ```
 
@@ -271,6 +269,25 @@ robust_test <- function(subset_test, original_test) {
 
 ## Experiment 1
 
+### Demographics
+
+```{r}
+
+data_exp_1 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_1 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+
 ### H1: IAT
 
 ```{r}
@@ -314,6 +331,25 @@ results_exp_1_h3 <- data_exp_1 %>%
 Data from the behavioural intentions question were entered into a multinomial logistic regression with CSI as the reference category. Only results from the CS1-CS2 comparison are relevant to the hypothesis and will be reported here. Results demonstrated that participants responses of CS1 relative to CS2 differed between the two conditions, congruent with training, OR = `r format(results_exp_1_h3$OR[results_exp_1_h3$var == "Struan"], nsmall = 2)`, 95% CI = [`r format(results_exp_1_h3$OR_ci_lwr[results_exp_1_h3$var == "Struan"], nsmall = 2)`, `r format(results_exp_1_h3$OR_ci_upr[results_exp_1_h3$var == "Struan"], nsmall = 2)`], p `r results_exp_1_h3$p[results_exp_1_h3$var == "Struan"]`.
 
 ## Experiment 2
+
+### Demographics
+
+```{r}
+
+data_exp_2 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_2 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
 
 ### H1: IAT
 
@@ -389,6 +425,25 @@ data_exp_2 %>%
 
 ## Experiment 3
 
+### Demographics
+
+```{r}
+
+data_exp_3 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_3 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+
 ### H1: IAT
 
 ```{r}
@@ -432,6 +487,25 @@ results_exp_3_h3 <- data_exp_3 %>%
 Data from the behavioural intentions question were entered into a multinomial logistic regression with CSI as the reference category. Only results from the CS1-CS2 comparison are relevant to the hypothesis and will be reported here. Results demonstrated that participants responses of CS1 relative to CS2 differed between the two conditions, congruent with training, OR = `r format(results_exp_3_h3$OR[results_exp_3_h3$var == "Struan"], nsmall = 2)`, 95% CI = [`r format(results_exp_3_h3$OR_ci_lwr[results_exp_3_h3$var == "Struan"], nsmall = 2)`, `r format(results_exp_3_h3$OR_ci_upr[results_exp_3_h3$var == "Struan"], nsmall = 2)`], p `r results_exp_3_h3$p[results_exp_3_h3$var == "Struan"]`.
 
 ## Experiment 4
+
+### Demographics
+
+```{r}
+
+data_exp_4 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_4 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
 
 ### H1: IAT
 
@@ -477,6 +551,25 @@ Data from the behavioural intentions question were entered into a multinomial lo
 
 ## Experiment 5
 
+### Demographics
+
+```{r}
+
+data_exp_5 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_5 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+
 ### H1: IAT
 
 ```{r}
@@ -520,6 +613,25 @@ results_exp_5_h3 <- data_exp_5 %>%
 Data from the behavioural intentions question were entered into a multinomial logistic regression with CSI as the reference category. Only results from the CS1-CS2 comparison are relevant to the hypothesis and will be reported here. Results demonstrated that participants responses of CS1 relative to CS2 differed between the two conditions, congruent with training, OR = `r format(results_exp_5_h3$OR[results_exp_5_h3$var == "Struan"], nsmall = 2)`, 95% CI = [`r format(results_exp_5_h3$OR_ci_lwr[results_exp_5_h3$var == "Struan"], nsmall = 2)`, `r format(results_exp_5_h3$OR_ci_upr[results_exp_5_h3$var == "Struan"], nsmall = 2)`], p `r results_exp_5_h3$p[results_exp_5_h3$var == "Struan"]`.
 
 ## Experiment 6
+
+### Demographics
+
+```{r}
+
+data_exp_6 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_6 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
 
 ### H1: IAT
 
@@ -565,14 +677,92 @@ Data from the behavioural intentions question were entered into a multinomial lo
 
 ## Experiment 7
 
-Experiment 7 requires a one-way ANOVA instead of t-tests and the behavorial intentions test needs to be adjusted. Otherwise similar to the other studies.
+### Demographics
 
-- use bag-matching for analyses on whether randomness instructions matter, and the other comparison
-- use source_valence_condition in the meta analysis for whehter the effect was shown. exclude bag matching condition 2, split up bag matching conditions 1 and 3 
+```{r}
 
-### Standard non-random instructions condition for meta analysis
+data_exp_7 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_7 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+
+### Comparing conditions
+
+Pairwise follow up t-tests using Bonferroni-Holm corrections for multiple testing. 
+
+Results are not parsed into text automatically given the analysis workflow differs from other experiments, and this would take more coding effort than its worth.
 
 #### H1: IAT
+
+```{r}
+
+# anova
+fit_exp_7_h1 <- aov(IAT_Score ~ Bag_Matching, 
+                    contrasts = "contr.sum",
+                    data = data_exp_7)
+
+Anova(fit_exp_7_h1, type = "III")
+
+# effect size
+etaSquared(fit_exp_7_h1, type = 2, anova = FALSE )
+
+# follow up t tests
+pairwise.t.test(data_exp_7$IAT_Score, 
+                data_exp_7$Bag_Matching, 
+                p.adj = "holm")
+
+# means by condition
+data_exp_7 %>%
+  group_by(Bag_Matching) %>%
+  dplyr::summarize(mean = mean(IAT_Score),
+                   se = plotrix::std.error(IAT_Score)) %>%
+  round_df(2)
+
+```
+
+#### H2: Self-report ratings
+
+```{r}
+
+# anova
+fit_exp_7_h2 <- aov(EC_Effect_CS1_CS2_Difference_Score ~ Bag_Matching, 
+                    contrasts = "contr.sum",
+                    data = data_exp_7)
+
+Anova(fit_exp_7_h2, type = "III")
+
+# effect size
+etaSquared(fit_exp_7_h2, type = 2, anova = FALSE )
+
+# follow up t tests
+pairwise.t.test(data_exp_7$EC_Effect_CS1_CS2_Difference_Score, 
+                data_exp_7$Bag_Matching, 
+                p.adj = "holm")
+
+# means by condition
+data_exp_7 %>%
+  group_by(Bag_Matching) %>%
+  dplyr::summarize(mean = mean(EC_Effect_CS1_CS2_Difference_Score),
+                   se = plotrix::std.error(EC_Effect_CS1_CS2_Difference_Score)) %>%
+  round_df(2)
+
+```
+
+### Individual conditions for meta analysis
+
+#### Standard non-random instructions condition
+
+##### H1: IAT
 
 ```{r}
 
@@ -588,7 +778,7 @@ results_exp_7nri_h1 <- data_exp_7nri %>%
 
 When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed an automatic relative preference for CS1 over CS2 on the IAT (M = `r format(results_exp_7nri_h1$summary_stats$mean[results_exp_7nri_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7nri_h1$summary_stats$sd[results_exp_7nri_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7nri_h1$summary_stats$mean[results_exp_7nri_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7nri_h1$summary_stats$sd[results_exp_7nri_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7nri_h1$t_test_output`, BF10 = `r format(results_exp_7nri_h1$bf10, nsmall = 2)`.
 
-#### H2: Self-report ratings
+##### H2: Self-report ratings
 
 ```{r}
 
@@ -601,9 +791,9 @@ results_exp_7nri_h2 <- data_exp_7nri %>%
 
 When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed a relative preference on the self-report ratings for CS1 over CS2 (M = `r format(results_exp_7nri_h2$summary_stats$mean[results_exp_7nri_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7nri_h2$summary_stats$sd[results_exp_7nri_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7nri_h2$summary_stats$mean[results_exp_7nri_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7nri_h2$summary_stats$sd[results_exp_7nri_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7nri_h2$t_test_output`, BF10 = `r format(results_exp_7nri_h2$bf10, nsmall = 2)`.
 
-### Random instructions condition for meta analysis
+#### Random instructions condition for meta analysis
 
-#### H1: IAT
+##### H1: IAT
 
 ```{r}
 
@@ -619,7 +809,7 @@ results_exp_7ri_h1 <- data_exp_7ri %>%
 
 When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed an automatic relative preference for CS1 over CS2 on the IAT (M = `r format(results_exp_7ri_h1$summary_stats$mean[results_exp_7ri_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7ri_h1$summary_stats$sd[results_exp_7ri_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7ri_h1$summary_stats$mean[results_exp_7ri_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7ri_h1$summary_stats$sd[results_exp_7ri_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7ri_h1$t_test_output`, BF10 = `r format(results_exp_7ri_h1$bf10, nsmall = 2)`.
 
-#### H2: Self-report ratings
+##### H2: Self-report ratings
 
 ```{r}
 
@@ -633,6 +823,25 @@ results_exp_7ri_h2 <- data_exp_7ri %>%
 When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed a relative preference on the self-report ratings for CS1 over CS2 (M = `r format(results_exp_7ri_h2$summary_stats$mean[results_exp_7ri_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7ri_h2$summary_stats$sd[results_exp_7ri_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7ri_h2$summary_stats$mean[results_exp_7ri_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7ri_h2$summary_stats$sd[results_exp_7ri_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7ri_h2$t_test_output`, BF10 = `r format(results_exp_7ri_h2$bf10, nsmall = 2)`.
 
 ## Experiment 8
+
+### Demographics
+
+```{r}
+
+data_exp_8 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_8 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
 
 ### H1: Evaluative Priming
 
@@ -678,20 +887,79 @@ Data from the behavioural intentions question were entered into a multinomial lo
 
 ## Experiment 9
 
+### Demographics
+
+```{r}
+
+data_exp_9 %>% 
+  dplyr::summarize(n = n(),
+                   age_mean = mean(Age),
+                   age_sd = sd(Age)) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+data_exp_9 %>% 
+  dplyr::count(Gender) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+
 ### H1: IAT
 
-XXXXXXXXXXX sig from zero tests needed
+```{r}
+
+t.test(data_exp_9$IAT_Score, alternative = "two.sided")
+
+data_exp_9 %>%
+  dplyr::summarize(d = round(mean(IAT_Score)/sd(IAT_Score), 2))
+
+# ggplot(data_exp_9, aes(IAT_Score)) +
+#   geom_density()
+
+```
 
 ### H2: Self-report ratings
 
-XXXXXXXXXXX sig from zero tests needed
+```{r}
 
+t.test(data_exp_9$EC_Effect_CS1_CS2_Difference_Score, alternative = "two.sided")
+
+data_exp_9 %>%
+  dplyr::summarize(d = round(mean(EC_Effect_CS1_CS2_Difference_Score)/sd(EC_Effect_CS1_CS2_Difference_Score), 2))
+
+# ggplot(data_exp_9, aes(EC_Effect_CS1_CS2_Difference_Score)) +
+#   geom_density()
+
+```
 
 # Meta analyses
 
+Meta analyses of experiments 1-8 (nb not 9, which contained no manipulations but acted as an extension of experiment 7).
+
 Random effects meta analyses were fitted using the metafor R package (Viechtbauer, 2010). The maximum liklihood estimator was used.  
 
-A separate meta analysis was fitted for each outcome variable (IAT, self reported ratings, behavioural intentions). Although multivariate meta analysis was a possible alternative, previous work has traditionally assessed these dependant variables separately. 
+A separate meta analysis was fitted for each outcome variable (IAT, self reported ratings, behavioural intentions). Although multivariate meta analysis was a possible alternative (and is conducted in a separate markdown script), previous work has traditionally assessed these dependant variables separately, so we will too.
+
+## Sample size
+
+```{r}
+
+bind_rows(data_exp_1,
+          data_exp_2,
+          data_exp_3,
+          data_exp_4,
+          data_exp_5,
+          data_exp_6,
+          data_exp_7,
+          data_exp_8) %>% 
+  dplyr::summarize(n = n()) %>%
+  round_df(2) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
 
 ## Meta analysed effect size
 
@@ -742,6 +1010,10 @@ results_for_meta_analysis_h1 <-
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2))
 
+results_for_meta_analysis_h1 %>%
+  select(Experiment, yi, sei) %>%
+  write_csv("../meta analysis data/results_for_meta_analysis_iat.csv")
+
 meta_results_h1 <- meta_analysis_workflow(data              = results_for_meta_analysis_h1,
                                           effect_size_label = "Cohen's d",
                                           exp_estimates     = FALSE,
@@ -754,7 +1026,7 @@ meta_results_h1 <- meta_analysis_workflow(data              = results_for_meta_a
 
 #### Outlier tests
 
-Undue [influence](https://rdrr.io/cran/metafor/man/influence.rma.uni.html) of one or more studies on either the meta analysed effect size or the heterogeneity among studies was then assessed.
+[Undue influence](https://rdrr.io/cran/metafor/man/influence.rma.uni.html) of one or more studies on either the meta analysed effect size or the heterogeneity among studies was then assessed.
 
 Note on influence metrics from the metafor package documentation:
 
@@ -782,9 +1054,6 @@ A sensitivity analysis therefore excluded Experiment 2 and re meta analysed.
 
 results_for_meta_analysis_h1_sensitivity <- results_for_meta_analysis_h1 %>%
   filter(Experiment != "Experiment 2")
-
-# save for vector plotting later
-write_csv(results_for_meta_analysis_h1_sensitivity, "../plots/results_for_meta_analysis_h1_sensitivity.csv")
 
 meta_results_h1_sensitivity <- 
   meta_analysis_workflow(data              = results_for_meta_analysis_h1_sensitivity,
@@ -836,6 +1105,10 @@ results_for_meta_analysis_h2 <-
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2))
 
+results_for_meta_analysis_h2 %>%
+  select(Experiment, yi, sei) %>%
+  write_csv("../meta analysis data/results_for_meta_analysis_self_report.csv")
+
 meta_results_h2 <- meta_analysis_workflow(data              = results_for_meta_analysis_h2,
                                           effect_size_label = "Cohen's d",
                                           exp_estimates     = FALSE,
@@ -866,9 +1139,6 @@ A sensitivity analysis excluded Experiment 2 and re meta analysed.
 
 results_for_meta_analysis_h2_sensitivity <- results_for_meta_analysis_h2 %>%
   filter(Experiment != "Experiment 2")
-
-# save for vector plotting later
-write_csv(results_for_meta_analysis_h2_sensitivity, "../plots/results_for_meta_analysis_h2_sensitivity.csv")
 
 meta_results_h2_sensitivity <- 
   meta_analysis_workflow(data              = results_for_meta_analysis_h2_sensitivity,
@@ -904,6 +1174,10 @@ results_for_meta_analysis_h3 <-
   mutate(yi  = logOR,
          sei = logOR_se)
 
+results_for_meta_analysis_h3 %>%
+  select(Experiment, yi, sei) %>%
+  write_csv("../meta analysis data/results_for_meta_analysis_behavioural_intentions.csv")
+
 meta_results_h3 <- meta_analysis_workflow(data = results_for_meta_analysis_h3,
                                           effect_size_label = "Odds Ratio",
                                           exp_estimates     = TRUE,
@@ -935,9 +1209,6 @@ A sensitivity analysis excluded Experiment 2 and re meta analysed.
 results_for_meta_analysis_h3_sensitivity <- results_for_meta_analysis_h3 %>%
   filter(Experiment != "Experiment 2")
 
-# save for vector plotting later
-write_csv(results_for_meta_analysis_h3_sensitivity, "../plots/results_for_meta_analysis_h3_sensitivity.csv")
-
 meta_results_h3_sensitivity <- 
   meta_analysis_workflow(data              = results_for_meta_analysis_h3_sensitivity,
                          effect_size_label = "Odds Ratio",
@@ -960,8 +1231,14 @@ Note that these robustness tests also take the influence tests into account by e
 
 # re run tests with desired subsets of participants
 ## exp 1
-results_exp_1_h1_contingency_memory <- data_exp_1 %>%
+results_exp_1_h1_us_contingency_memory <- data_exp_1 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = IAT_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_1_h1_color_valence_contingency_memory <- data_exp_1 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -985,8 +1262,14 @@ results_exp_1_h1_influence_aware <- data_exp_1 %>%
   t_test_analyses(.)
 
 ## exp 2
-results_exp_2_h1_contingency_memory <- data_exp_2 %>%
+results_exp_2_h1_us_contingency_memory <- data_exp_2 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = IAT_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_2_h1_color_valence_contingency_memory <- data_exp_2 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1010,8 +1293,14 @@ results_exp_2_h1_influence_aware <- data_exp_2 %>%
   t_test_analyses(.)
 
 ## exp 3
-results_exp_3_h1_contingency_memory <- data_exp_3 %>%
+results_exp_3_h1_us_contingency_memory <- data_exp_3 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = IAT_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_3_h1_color_valence_contingency_memory <- data_exp_3 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1035,8 +1324,14 @@ results_exp_3_h1_influence_aware <- data_exp_3 %>%
   t_test_analyses(.)
 
 ## exp 4
-results_exp_4_h1_contingency_memory <- data_exp_4 %>%
+results_exp_4_h1_us_contingency_memory <- data_exp_4 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = IAT_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_4_h1_color_valence_contingency_memory <- data_exp_4 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1060,8 +1355,14 @@ results_exp_4_h1_influence_aware <- data_exp_4 %>%
   t_test_analyses(.)
 
 ## exp 5
-results_exp_5_h1_contingency_memory <- data_exp_5 %>%
+results_exp_5_h1_us_contingency_memory <- data_exp_5 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = IAT_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_5_h1_color_valence_contingency_memory <- data_exp_5 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1106,7 +1407,7 @@ results_exp_6_h1_influence_aware <- data_exp_6 %>%
 
 
 ## exp 7 standard instructions
-results_exp_7nri_h1_contingency_memory <- data_exp_7nri %>%
+results_exp_7nri_h1_us_contingency_memory <- data_exp_7nri %>%
   filter(US_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
@@ -1132,7 +1433,7 @@ results_exp_7nri_h1_influence_aware <- data_exp_7nri %>%
 
 
 ## exp 7 random instructions
-results_exp_7ri_h1_contingency_memory <- data_exp_7ri %>%
+results_exp_7ri_h1_us_contingency_memory <- data_exp_7ri %>%
   filter(US_contingency_memory == TRUE) %>%
   mutate(DV = IAT_Score,
          IV = source_valence_condition) %>%
@@ -1157,34 +1458,57 @@ results_exp_7ri_h1_influence_aware <- data_exp_7ri %>%
          IV = source_valence_condition) %>%
   t_test_analyses(.)
 
-
-# contingency_memory
-results_for_meta_analysis_h1_contingency_memory <- 
+# US contingency_memory
+results_for_meta_analysis_h1_us_contingency_memory <- 
   data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", 
                             "Experiment 4", "Experiment 5",
                             "Experiment 7 (standard)", 
                             "Experiment 7 (random)"), 
-             cohens_d = c(results_exp_1_h1_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_2_h1_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_3_h1_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_4_h1_contingency_memory$cohens_d$estimate[[1]],
-                          results_exp_5_h1_contingency_memory$cohens_d$estimate[[1]],
-                          results_exp_7nri_h1_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_7ri_h1_contingency_memory$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_7nri_h1_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_7ri_h1_contingency_memory$cohens_d$conf.int[["lower"]]),
-             ci_upr = c(results_exp_1_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_2_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_3_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_4_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_5_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_7nri_h1_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_7ri_h1_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
+             cohens_d = c(results_exp_1_h1_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_2_h1_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_3_h1_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_4_h1_us_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_5_h1_us_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_7nri_h1_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_7ri_h1_us_contingency_memory$cohens_d$estimate[[1]]),
+             ci_lwr = c(results_exp_1_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_7nri_h1_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_7ri_h1_us_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_7nri_h1_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_7ri_h1_us_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
+  mutate(yi = cohens_d, 
+         sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
+  # remove exp 2 on the basis of the influence test 
+  filter(Experiment != "Experiment 2")
+
+# color valence contingency_memory
+results_for_meta_analysis_h1_color_valence_contingency_memory <- 
+  data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", 
+                            "Experiment 4", "Experiment 5"), 
+             cohens_d = c(results_exp_1_h1_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_2_h1_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_3_h1_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_4_h1_color_valence_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_5_h1_color_valence_contingency_memory$cohens_d$estimate[[1]]),
+             ci_lwr = c(results_exp_1_h1_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h1_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h1_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h1_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h1_color_valence_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h1_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h1_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h1_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h1_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h1_color_valence_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1296,8 +1620,15 @@ results_for_meta_analysis_h1_influence_aware <-
   filter(Experiment != "Experiment 2")
 
 # fit metas
-meta_results_h1_contingency_memory <- 
-  meta_analysis_workflow(data              = results_for_meta_analysis_h1_contingency_memory,
+meta_results_h1_us_contingency_memory <- 
+  meta_analysis_workflow(data              = results_for_meta_analysis_h1_us_contingency_memory,
+                         effect_size_label = "Cohen's d",
+                         exp_estimates     = FALSE,
+                         reference_line    = 0,
+                         plot = FALSE)
+
+meta_results_h1_color_valence_contingency_memory <- 
+  meta_analysis_workflow(data              = results_for_meta_analysis_h1_color_valence_contingency_memory,
                          effect_size_label = "Cohen's d",
                          exp_estimates     = FALSE,
                          reference_line    = 0,
@@ -1325,8 +1656,13 @@ meta_results_h1_influence_aware <-
                          plot = FALSE)
 
 # robustness strings
-robustness_contingency_memory_h1 <-
-  ifelse(robust_test(meta_results_h1_contingency_memory$meta_analysis_results, 
+robustness_us_contingency_memory_h1 <-
+  ifelse(robust_test(meta_results_h1_us_contingency_memory$meta_analysis_results, 
+                     meta_results_h1$meta_analysis_results),
+         "were", "were not")
+
+robustness_color_valence_contingency_memory_h1 <-
+  ifelse(robust_test(meta_results_h1_color_valence_contingency_memory$meta_analysis_results, 
                      meta_results_h1$meta_analysis_results),
          "were", "were not")
 
@@ -1347,7 +1683,8 @@ robustness_influence_aware_h1    <-
 
 ```
 
-- Across studies, results `r robustness_contingency_memory_h1` robust to including only participants who were contingency aware, p in subsample `r meta_results_h1_contingency_memory$meta_analysis_results$estimate[meta_results_h1_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_us_contingency_memory_h1` robust to including only participants who were US contingency aware, p in subsample `r meta_results_h1_us_contingency_memory$meta_analysis_results$estimate[meta_results_h1_us_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_color_valence_contingency_memory_h1` robust to including only participants who were color-valence contingency aware, p in subsample `r meta_results_h1_color_valence_contingency_memory$meta_analysis_results$estimate[meta_results_h1_color_valence_contingency_memory$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_demand_compliance_h1` robust to including only participants who were not demand compliant, p in subsample `r meta_results_h1_demand_compliance$meta_analysis_results$estimate[meta_results_h1_demand_compliance$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_hypothesis_aware_h1` robust to including only participants who were not hypothesis aware, p in subsample `r meta_results_h1_hypothesis_aware$meta_analysis_results$estimate[meta_results_h1_hypothesis_aware$meta_analysis_results$metric == "p"]`.
   - Note that this exclusion removed a particularly large proportion of participants from some studies.
@@ -1359,8 +1696,14 @@ robustness_influence_aware_h1    <-
 
 # re run tests with desired subsets of participants
 ## exp 1
-results_exp_1_h2_contingency_memory <- data_exp_1 %>%
+results_exp_1_h2_us_contingency_memory <- data_exp_1 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_1_h2_color_valence_contingency_memory <- data_exp_1 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1384,8 +1727,14 @@ results_exp_1_h2_influence_aware <- data_exp_1 %>%
   t_test_analyses(.)
 
 ## exp 2
-results_exp_2_h2_contingency_memory <- data_exp_2 %>%
+results_exp_2_h2_us_contingency_memory <- data_exp_2 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_2_h2_color_valence_contingency_memory <- data_exp_2 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1409,8 +1758,14 @@ results_exp_2_h2_influence_aware <- data_exp_2 %>%
   t_test_analyses(.)
 
 ## exp 3
-results_exp_3_h2_contingency_memory <- data_exp_3 %>%
+results_exp_3_h2_us_contingency_memory <- data_exp_3 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_3_h2_color_valence_contingency_memory <- data_exp_3 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1434,8 +1789,14 @@ results_exp_3_h2_influence_aware <- data_exp_3 %>%
   t_test_analyses(.)
 
 ## exp 4
-results_exp_4_h2_contingency_memory <- data_exp_4 %>%
+results_exp_4_h2_us_contingency_memory <- data_exp_4 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_4_h2_color_valence_contingency_memory <- data_exp_4 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1459,8 +1820,14 @@ results_exp_4_h2_influence_aware <- data_exp_4 %>%
   t_test_analyses(.)
 
 ## exp 5
-results_exp_5_h2_contingency_memory <- data_exp_5 %>%
+results_exp_5_h2_us_contingency_memory <- data_exp_5 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_5_h2_color_valence_contingency_memory <- data_exp_5 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1505,7 +1872,7 @@ results_exp_6_h2_influence_aware <- data_exp_6 %>%
 
 
 ## exp 7 standard instructions
-results_exp_7nri_h2_contingency_memory <- data_exp_7nri %>%
+results_exp_7nri_h2_us_contingency_memory <- data_exp_7nri %>%
   filter(US_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
@@ -1531,7 +1898,7 @@ results_exp_7nri_h2_influence_aware <- data_exp_7nri %>%
 
 
 ## exp 7 random instructions
-results_exp_7ri_h2_contingency_memory <- data_exp_7ri %>%
+results_exp_7ri_h2_us_contingency_memory <- data_exp_7ri %>%
   filter(US_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
@@ -1558,8 +1925,14 @@ results_exp_7ri_h2_influence_aware <- data_exp_7ri %>%
 
 
 ## exp 8
-results_exp_8_h2_contingency_memory <- data_exp_8 %>%
+results_exp_8_h2_us_contingency_memory <- data_exp_8 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
+         IV = source_valence_condition) %>%
+  t_test_analyses(.)
+
+results_exp_8_h2_color_valence_contingency_memory <- data_exp_8 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
   t_test_analyses(.)
@@ -1583,37 +1956,65 @@ results_exp_8_h2_influence_aware <- data_exp_8 %>%
   t_test_analyses(.)
 
 
-# contingency_memory
-results_for_meta_analysis_h2_contingency_memory <- 
+# US contingency_memory
+results_for_meta_analysis_h2_us_contingency_memory <- 
   data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", 
                             "Experiment 4", "Experiment 5", 
                             "Experiment 7 (standard)", 
                             "Experiment 7 (random)", 
                             "Experiment 8"), 
-             cohens_d = c(results_exp_1_h2_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_2_h2_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_3_h2_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_4_h2_contingency_memory$cohens_d$estimate[[1]],
-                          results_exp_5_h2_contingency_memory$cohens_d$estimate[[1]],
-                          results_exp_7nri_h2_contingency_memory$cohens_d$estimate[[1]], 
-                          results_exp_7ri_h2_contingency_memory$cohens_d$estimate[[1]],
-                          results_exp_8_h2_contingency_memory$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_7nri_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_7ri_h2_contingency_memory$cohens_d$conf.int[["lower"]],
-                        results_exp_8_h2_contingency_memory$cohens_d$conf.int[["lower"]]),
-             ci_upr = c(results_exp_1_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_2_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_3_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_4_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_5_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_7nri_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_7ri_h2_contingency_memory$cohens_d$conf.int[["upper"]],
-                        results_exp_8_h2_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
+             cohens_d = c(results_exp_1_h2_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_2_h2_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_3_h2_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_4_h2_us_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_5_h2_us_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_7nri_h2_us_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_7ri_h2_us_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_8_h2_us_contingency_memory$cohens_d$estimate[[1]]),
+             ci_lwr = c(results_exp_1_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_7nri_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_7ri_h2_us_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_8_h2_us_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_7nri_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_7ri_h2_us_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_8_h2_us_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
+  mutate(yi = cohens_d, 
+         sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
+  # remove exp 2 on the basis of the influence test 
+  filter(Experiment != "Experiment 2")
+
+# color valence contingency_memory
+results_for_meta_analysis_h2_color_valence_contingency_memory <- 
+  data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", 
+                            "Experiment 4", "Experiment 5", 
+                            "Experiment 8"), 
+             cohens_d = c(results_exp_1_h2_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_2_h2_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_3_h2_color_valence_contingency_memory$cohens_d$estimate[[1]], 
+                          results_exp_4_h2_color_valence_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_5_h2_color_valence_contingency_memory$cohens_d$estimate[[1]],
+                          results_exp_8_h2_color_valence_contingency_memory$cohens_d$estimate[[1]]),
+             ci_lwr = c(results_exp_1_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_2_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_3_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_4_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_5_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]],
+                        results_exp_8_h2_color_valence_contingency_memory$cohens_d$conf.int[["lower"]]),
+             ci_upr = c(results_exp_1_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_2_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_3_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_4_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_5_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]],
+                        results_exp_8_h2_color_valence_contingency_memory$cohens_d$conf.int[["upper"]])) %>%
   mutate(yi = cohens_d, 
          sei = (ci_upr - ci_lwr)/(1.96*2)) %>%
   # remove exp 2 on the basis of the influence test 
@@ -1737,8 +2138,15 @@ results_for_meta_analysis_h2_influence_aware <-
   filter(Experiment != "Experiment 2")
 
 # fit metas
-meta_results_h2_contingency_memory <- 
-  meta_analysis_workflow(data              = results_for_meta_analysis_h2_contingency_memory,
+meta_results_h2_us_contingency_memory <- 
+  meta_analysis_workflow(data              = results_for_meta_analysis_h2_us_contingency_memory,
+                         effect_size_label = "Cohen's d",
+                         exp_estimates     = FALSE,
+                         reference_line    = 0,
+                         plot = FALSE)
+
+meta_results_h2_color_valence_contingency_memory <- 
+  meta_analysis_workflow(data              = results_for_meta_analysis_h2_color_valence_contingency_memory,
                          effect_size_label = "Cohen's d",
                          exp_estimates     = FALSE,
                          reference_line    = 0,
@@ -1766,8 +2174,13 @@ meta_results_h2_influence_aware <-
                          plot = FALSE)
 
 # robustness strings
-robustness_contingency_memory_h2 <-
-  ifelse(robust_test(meta_results_h2_contingency_memory$meta_analysis_results, 
+robustness_us_contingency_memory_h2 <-
+  ifelse(robust_test(meta_results_h2_us_contingency_memory$meta_analysis_results, 
+                     meta_results_h2$meta_analysis_results),
+         "were", "were not")
+
+robustness_color_valence_contingency_memory_h2 <-
+  ifelse(robust_test(meta_results_h2_color_valence_contingency_memory$meta_analysis_results, 
                      meta_results_h2$meta_analysis_results),
          "were", "were not")
 
@@ -1788,7 +2201,8 @@ robustness_influence_aware_h2    <-
 
 ```
 
-- Across studies, results `r robustness_contingency_memory_h2` robust to including only participants who were contingency aware, p in subsample `r meta_results_h2_contingency_memory$meta_analysis_results$estimate[meta_results_h2_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_us_contingency_memory_h2` robust to including only participants who were US contingency aware, p in subsample `r meta_results_h2_us_contingency_memory$meta_analysis_results$estimate[meta_results_h2_us_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_color_valence_contingency_memory_h2` robust to including only participants who were color-valence contingency aware, p in subsample `r meta_results_h2_color_valence_contingency_memory$meta_analysis_results$estimate[meta_results_h2_color_valence_contingency_memory$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_demand_compliance_h2` robust to including only participants who were not demand compliant, p in subsample `r meta_results_h2_demand_compliance$meta_analysis_results$estimate[meta_results_h2_demand_compliance$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_hypothesis_aware_h2` robust to including only participants who were not hypothesis aware, p in subsample `r meta_results_h2_hypothesis_aware$meta_analysis_results$estimate[meta_results_h2_hypothesis_aware$meta_analysis_results$metric == "p"]`.
   - Note that this exclusion removed a particularly large proportion of participants from some studies.
@@ -1800,8 +2214,14 @@ robustness_influence_aware_h2    <-
 
 # re run tests with desired subsets of participants
 # exp 1
-results_exp_1_h3_contingency_memory <- data_exp_1 %>%
+results_exp_1_h3_us_contingency_memory <- data_exp_1 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_1_h3_color_valence_contingency_memory <- data_exp_1 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1819,8 +2239,14 @@ results_exp_1_h3_influence_aware <- data_exp_1 %>%
   multinominal_analysis()
 
 # exp 2
-results_exp_2_h3_contingency_memory <- data_exp_2 %>%
+results_exp_2_h3_us_contingency_memory <- data_exp_2 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_2_h3_color_valence_contingency_memory <- data_exp_2 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1838,8 +2264,14 @@ results_exp_2_h3_influence_aware <- data_exp_2 %>%
   multinominal_analysis()
 
 # exp 3
-results_exp_3_h3_contingency_memory <- data_exp_3 %>%
+results_exp_3_h3_us_contingency_memory <- data_exp_3 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_3_h3_color_valence_contingency_memory <- data_exp_3 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1857,8 +2289,14 @@ results_exp_3_h3_influence_aware <- data_exp_3 %>%
   multinominal_analysis()
 
 # exp 4
-results_exp_4_h3_contingency_memory <- data_exp_4 %>%
+results_exp_4_h3_us_contingency_memory <- data_exp_4 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_4_h3_color_valence_contingency_memory <- data_exp_4 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1876,8 +2314,14 @@ results_exp_4_h3_influence_aware <- data_exp_4 %>%
   multinominal_analysis()
 
 # exp 5
-results_exp_5_h3_contingency_memory <- data_exp_5 %>%
+results_exp_5_h3_us_contingency_memory <- data_exp_5 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_5_h3_color_valence_contingency_memory <- data_exp_5 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1908,8 +2352,14 @@ results_exp_6_h3_influence_aware <- data_exp_6 %>%
   multinominal_analysis()
 
 # exp 8
-results_exp_8_h3_contingency_memory <- data_exp_8 %>%
+results_exp_8_h3_us_contingency_memory <- data_exp_8 %>%
   filter(US_contingency_memory == TRUE) %>%
+  mutate(DV = intention,
+         IV = source_valence_condition) %>%
+  multinominal_analysis()
+
+results_exp_8_h3_color_valence_contingency_memory <- data_exp_8 %>%
+  filter(color_valence_contingency_memory == TRUE) %>%
   mutate(DV = intention,
          IV = source_valence_condition) %>%
   multinominal_analysis()
@@ -1926,27 +2376,49 @@ results_exp_8_h3_influence_aware <- data_exp_8 %>%
          IV = source_valence_condition) %>%
   multinominal_analysis()
 
-
-results_for_meta_analysis_h3_contingency_memory <- 
+# us contingency memory
+results_for_meta_analysis_h3_us_contingency_memory <- 
   data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", "Experiment 4", 
                             "Experiment 5", "Experiment 8"),
-             logOR = c(results_exp_1_h3_contingency_memory$logOR[results_exp_1_h3_contingency_memory$var == "Struan"], 
-                       results_exp_2_h3_contingency_memory$logOR[results_exp_2_h3_contingency_memory$var == "Struan"],
-                       results_exp_3_h3_contingency_memory$logOR[results_exp_3_h3_contingency_memory$var == "Struan"],
-                       results_exp_4_h3_contingency_memory$logOR[results_exp_4_h3_contingency_memory$var == "Struan"],
-                       results_exp_5_h3_contingency_memory$logOR[results_exp_5_h3_contingency_memory$var == "Struan"],
-                       results_exp_8_h3_contingency_memory$logOR[results_exp_8_h3_contingency_memory$var == "Struan"]),
-             logOR_se = c(results_exp_1_h3_contingency_memory$logOR_se[results_exp_1_h3_contingency_memory$var == "Struan"],
-                          results_exp_2_h3_contingency_memory$logOR_se[results_exp_2_h3_contingency_memory$var == "Struan"],
-                          results_exp_3_h3_contingency_memory$logOR_se[results_exp_3_h3_contingency_memory$var == "Struan"],
-                          results_exp_4_h3_contingency_memory$logOR_se[results_exp_4_h3_contingency_memory$var == "Struan"],
-                          results_exp_5_h3_contingency_memory$logOR_se[results_exp_5_h3_contingency_memory$var == "Struan"],
-                          results_exp_8_h3_contingency_memory$logOR_se[results_exp_8_h3_contingency_memory$var == "Struan"])) %>%
+             logOR = c(results_exp_1_h3_us_contingency_memory$logOR[results_exp_1_h3_us_contingency_memory$var == "Struan"], 
+                       results_exp_2_h3_us_contingency_memory$logOR[results_exp_2_h3_us_contingency_memory$var == "Struan"],
+                       results_exp_3_h3_us_contingency_memory$logOR[results_exp_3_h3_us_contingency_memory$var == "Struan"],
+                       results_exp_4_h3_us_contingency_memory$logOR[results_exp_4_h3_us_contingency_memory$var == "Struan"],
+                       results_exp_5_h3_us_contingency_memory$logOR[results_exp_5_h3_us_contingency_memory$var == "Struan"],
+                       results_exp_8_h3_us_contingency_memory$logOR[results_exp_8_h3_us_contingency_memory$var == "Struan"]),
+             logOR_se = c(results_exp_1_h3_us_contingency_memory$logOR_se[results_exp_1_h3_us_contingency_memory$var == "Struan"],
+                          results_exp_2_h3_us_contingency_memory$logOR_se[results_exp_2_h3_us_contingency_memory$var == "Struan"],
+                          results_exp_3_h3_us_contingency_memory$logOR_se[results_exp_3_h3_us_contingency_memory$var == "Struan"],
+                          results_exp_4_h3_us_contingency_memory$logOR_se[results_exp_4_h3_us_contingency_memory$var == "Struan"],
+                          results_exp_5_h3_us_contingency_memory$logOR_se[results_exp_5_h3_us_contingency_memory$var == "Struan"],
+                          results_exp_8_h3_us_contingency_memory$logOR_se[results_exp_8_h3_us_contingency_memory$var == "Struan"])) %>%
   mutate(yi  = logOR,
          sei = logOR_se) %>%
   # remove exp 2 on the basis of the influence test 
   filter(Experiment != "Experiment 2")
 
+# color valence contingency memory
+results_for_meta_analysis_h3_color_valence_contingency_memory <- 
+  data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", "Experiment 4", 
+                            "Experiment 5", "Experiment 8"),
+             logOR = c(results_exp_1_h3_color_valence_contingency_memory$logOR[results_exp_1_h3_color_valence_contingency_memory$var == "Struan"], 
+                       results_exp_2_h3_color_valence_contingency_memory$logOR[results_exp_2_h3_color_valence_contingency_memory$var == "Struan"],
+                       results_exp_3_h3_color_valence_contingency_memory$logOR[results_exp_3_h3_color_valence_contingency_memory$var == "Struan"],
+                       results_exp_4_h3_color_valence_contingency_memory$logOR[results_exp_4_h3_color_valence_contingency_memory$var == "Struan"],
+                       results_exp_5_h3_color_valence_contingency_memory$logOR[results_exp_5_h3_color_valence_contingency_memory$var == "Struan"],
+                       results_exp_8_h3_color_valence_contingency_memory$logOR[results_exp_8_h3_color_valence_contingency_memory$var == "Struan"]),
+             logOR_se = c(results_exp_1_h3_color_valence_contingency_memory$logOR_se[results_exp_1_h3_color_valence_contingency_memory$var == "Struan"],
+                          results_exp_2_h3_color_valence_contingency_memory$logOR_se[results_exp_2_h3_color_valence_contingency_memory$var == "Struan"],
+                          results_exp_3_h3_color_valence_contingency_memory$logOR_se[results_exp_3_h3_color_valence_contingency_memory$var == "Struan"],
+                          results_exp_4_h3_color_valence_contingency_memory$logOR_se[results_exp_4_h3_color_valence_contingency_memory$var == "Struan"],
+                          results_exp_5_h3_color_valence_contingency_memory$logOR_se[results_exp_5_h3_color_valence_contingency_memory$var == "Struan"],
+                          results_exp_8_h3_color_valence_contingency_memory$logOR_se[results_exp_8_h3_color_valence_contingency_memory$var == "Struan"])) %>%
+  mutate(yi  = logOR,
+         sei = logOR_se) %>%
+  # remove exp 2 on the basis of the influence test 
+  filter(Experiment != "Experiment 2")
+
+# hypothesis aware
 results_for_meta_analysis_h3_hypothesis_aware <- 
   data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", "Experiment 4", 
                             "Experiment 5", "Experiment 6", "Experiment 8"),
@@ -1969,6 +2441,7 @@ results_for_meta_analysis_h3_hypothesis_aware <-
   # remove exp 2 on the basis of the influence test 
   filter(Experiment != "Experiment 2")
 
+# influence aware
 results_for_meta_analysis_h3_influence_aware <- 
   data.frame(Experiment = c("Experiment 1", "Experiment 2", "Experiment 3", "Experiment 4", 
                             "Experiment 5", "Experiment 6", "Experiment 8"),
@@ -1992,8 +2465,15 @@ results_for_meta_analysis_h3_influence_aware <-
   filter(Experiment != "Experiment 2")
 
 # meta fits
-meta_results_h3_contingency_memory <- 
-  meta_analysis_workflow(data = results_for_meta_analysis_h3_contingency_memory,
+meta_results_h3_us_contingency_memory <- 
+  meta_analysis_workflow(data = results_for_meta_analysis_h3_us_contingency_memory,
+                         effect_size_label = "Odds Ratio",
+                         exp_estimates     = TRUE,
+                         reference_line    = 0,
+                         plot = FALSE)
+
+meta_results_h3_color_valence_contingency_memory <- 
+  meta_analysis_workflow(data = results_for_meta_analysis_h3_color_valence_contingency_memory,
                          effect_size_label = "Odds Ratio",
                          exp_estimates     = TRUE,
                          reference_line    = 0,
@@ -2014,8 +2494,13 @@ meta_results_h3_influence_aware <-
                          plot = FALSE)
 
 # robustness strings
-robustness_contingency_memory_h3 <-
-  ifelse(robust_test(meta_results_h3_contingency_memory$meta_analysis_results, 
+robustness_us_contingency_memory_h3 <-
+  ifelse(robust_test(meta_results_h3_us_contingency_memory$meta_analysis_results, 
+                     meta_results_h1$meta_analysis_results),
+         "were", "were not")
+
+robustness_color_valence_contingency_memory_h3 <-
+  ifelse(robust_test(meta_results_h3_color_valence_contingency_memory$meta_analysis_results, 
                      meta_results_h1$meta_analysis_results),
          "were", "were not")
 
@@ -2031,7 +2516,8 @@ robustness_influence_aware_h3    <-
 
 ```
 
-- Across studies, results `r robustness_contingency_memory_h3` robust to including only participants who were contingency aware, p in subsample `r meta_results_h3_contingency_memory$meta_analysis_results$estimate[meta_results_h3_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_us_contingency_memory_h3` robust to including only participants who were US contingency aware, p in subsample `r meta_results_h3_us_contingency_memory$meta_analysis_results$estimate[meta_results_h3_us_contingency_memory$meta_analysis_results$metric == "p"]`.
+- Across studies, results `r robustness_color_valence_contingency_memory_h3` robust to including only participants who were color-valence contingency aware, p in subsample `r meta_results_h3_color_valence_contingency_memory$meta_analysis_results$estimate[meta_results_h3_color_valence_contingency_memory$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_hypothesis_aware_h3` robust to including only participants who were not hypothesis aware, p in subsample `r meta_results_h3_hypothesis_aware$meta_analysis_results$estimate[meta_results_h3_hypothesis_aware$meta_analysis_results$metric == "p"]`.
 - Across studies, results `r robustness_influence_aware_h3` robust to including only participants who were not influence aware, p in subsample `r meta_results_h3_influence_aware$meta_analysis_results$estimate[meta_results_h3_influence_aware$meta_analysis_results$metric == "p"]`.
 
