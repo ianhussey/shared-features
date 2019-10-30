@@ -1,223 +1,488 @@
-Participant,Age,Gender,source_valence_condition,Bag_Matching,IAT_Score,EC_Effect_CS1_CS2_Difference_Score,US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
-894,36,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.405557843,0,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
-916,23,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.766350006,4,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-4,32,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.927575544,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-5,31,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.283666099,8.25,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-10,22,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.044198612,-2.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-22,18,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.079671243,3.75,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
-30,32,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.030130635,5.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-31,34,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.09610692,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-39,31,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.097465007,-4.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,TRUE
-43,31,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.231664018,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-52,19,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.736245919,0,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
-53,20,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.487858038,3.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-57,31,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.895848379,-1,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-58,29,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.18130258,0.5,TRUE,TRUE,NA,TRUE,TRUE,FALSE,FALSE
-78,41,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.643478025,8.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-82,18,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.078017635,-2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-89,24,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,-0.281045553,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-91,25,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.719757515,2.5,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
-97,24,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.405906145,5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-101,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.545235106,-1.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-102,36,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.293244692,1.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-113,36,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.620795172,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-132,21,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.530614095,-5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-133,39,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.566164076,-3,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-134,27,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,8.84299e-4,2.5,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-136,28,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.242915763,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-143,27,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.216733288,5.75,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-145,43,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.753629995,6.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-148,22,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.019939484,-0.75,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-155,24,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.673601816,-2,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-156,34,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.172269094,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-157,42,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.791531845,-2.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-160,42,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.425639388,-6.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-167,21,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.684988833,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-168,23,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.032429447,0.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-170,29,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.913213355,4.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-172,20,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.11500773,3,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
-173,42,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.054277129,-3.75,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-174,27,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.812080393,0,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-178,31,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.752322351,5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-179,40,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.254553581,-5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-182,34,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.023008369,-4.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-185,40,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.217449214,4,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-186,20,other   ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,-0.144173013,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-190,29,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.203451533,2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-195,21,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.308930738,5,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-203,24,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.226880097,-0.5,TRUE,FALSE,NA,TRUE,FALSE,FALSE,TRUE
-204,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.034093981,5.5,TRUE,TRUE,NA,FALSE,TRUE,FALSE,FALSE
-214,30,other   ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.088349094,3.25,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-216,22,other   ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.030531332,-3,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-220,31,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.387164392,2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-224,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.020088421,0,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-226,21,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.32884029,-3.5,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-229,31,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.577281844,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-232,46,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.512406183,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-237,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.008071505,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-239,25,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.428316805,-2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-242,31,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.064083832,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-245,25,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.174476603,2.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-249,19,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.018223213,2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-250,33,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.629087195,3.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-255,29,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.112678635,-2,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-256,33,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.125845843,-2.75,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-258,36,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.448190029,7.5,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-260,24,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.556830119,1,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-267,26,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.544720268,-1,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-278,26,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.063422454,1.75,TRUE,FALSE,NA,FALSE,TRUE,FALSE,FALSE
-280,20,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.352581473,-1,TRUE,FALSE,NA,FALSE,TRUE,FALSE,FALSE
-286,23,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.561734216,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-287,36,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.100880082,-3,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-288,21,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.118517087,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-289,33,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.757835787,4.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-290,21,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,-0.256290887,5.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-294,25,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.562725407,9.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-297,26,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.130929556,1.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-299,25,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.334023604,-6,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-307,28,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.235592616,2.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-318,30,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.361458854,2,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-325,40,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.146326196,-6,TRUE,TRUE,NA,TRUE,TRUE,FALSE,FALSE
-335,34,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.194108759,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-339,35,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.595795865,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-341,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.5729817,-6.25,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-343,22,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.399233047,-1,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-352,38,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.34698634,0.75,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-353,37,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.706140464,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-354,34,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.054837539,0.5,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-357,29,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.564213087,2.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-358,31,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.022473001,0.25,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-367,32,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.120214048,-1,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
-372,23,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.238156282,-0.5,TRUE,FALSE,NA,FALSE,FALSE,FALSE,TRUE
-373,22,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.75102897,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-375,39,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.074728026,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-377,46,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.628989559,7.25,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-379,38,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.201918159,3,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
-382,33,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.090140357,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-383,38,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.506411702,4.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-384,19,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.202690003,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-391,32,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.550942928,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-393,29,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.736774854,-1.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-407,30,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.366021553,7,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
-408,32,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.316450696,6,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
-412,31,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.209133888,2,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-416,45,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.217342338,6.25,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-419,46,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.070750792,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-422,27,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.417009359,-2,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-431,33,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.390255497,0,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE
-434,38,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.712451944,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-440,22,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.192764756,-0.75,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-443,39,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.020429511,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-444,24,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.727074981,-0.5,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-445,31,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.543226724,-6.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-451,27,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.875119777,0,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-454,31,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.181968972,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-456,22,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.150062129,0,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-457,27,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.644665866,7.25,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-458,19,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.522151582,1.5,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-462,23,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.995029607,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-463,20,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.784492595,-7.5,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-464,43,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.47729542,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-466,20,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.116805534,-2.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-467,43,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.704216103,-0.75,TRUE,TRUE,NA,FALSE,TRUE,FALSE,FALSE
-470,22,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.347066617,3,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-478,18,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.471704967,5.75,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
-480,27,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.062723993,1.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-481,28,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.845437329,6,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-484,19,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.403100812,1.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-490,38,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.295195559,3,TRUE,TRUE,NA,TRUE,TRUE,FALSE,FALSE
-493,21,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.066779605,5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-503,20,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.17819136,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-510,33,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.450904998,8.75,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-514,46,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.358617743,-2.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-515,19,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.124409348,-6.25,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-521,46,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,1.288418174,10,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-528,33,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.212193769,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-530,32,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,-0.018293075,1,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-532,18,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.50802467,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-535,24,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.977436213,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-538,20,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-1.000168694,-4.5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-539,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.447356888,-0.25,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-547,34,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.244958803,2.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-550,19,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.269150397,-6.25,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
-553,24,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.438800736,1.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-562,23,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.211043416,2,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-565,21,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.848100262,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-567,39,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.075523086,2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-568,38,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.858436103,-2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-571,19,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.146971959,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-572,23,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,-0.118243087,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-573,22,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.091147939,-2,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-579,38,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.513792206,5,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-581,20,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.506030964,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-598,21,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.814322664,-3.5,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-607,19,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.513434681,-1.75,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-620,24,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.533989347,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-622,44,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.421928067,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-623,26,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.36674258,-2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-625,29,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.59643661,2.5,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-627,26,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.256970351,5,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
-628,42,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.924834505,1.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-636,20,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.509286327,-4,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-646,21,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.514672014,8.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-647,27,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.754917156,6.75,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-656,35,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.198220697,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-659,29,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.583735903,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-660,28,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.177024079,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-661,26,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.506979781,0.75,TRUE,TRUE,NA,FALSE,TRUE,FALSE,FALSE
-662,28,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.042827783,-3,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-664,33,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.438164062,0,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-666,25,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.758425616,0,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-681,30,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.17969226,0.75,TRUE,TRUE,NA,FALSE,TRUE,FALSE,FALSE
-687,20,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.347392432,-1,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-698,20,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.556946879,5.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-700,28,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,-0.059129292,0,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-705,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.569689159,-5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-707,26,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.288868045,-6.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-708,21,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.043794349,-1,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-709,23,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.812993569,8.75,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-710,30,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.312860953,-5,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-712,30,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.922222497,2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-714,26,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,1.029222025,2.5,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-718,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.567725918,-0.75,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-724,38,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.376722083,4.5,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-736,36,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.353380396,-1,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-741,25,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.121497615,0,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-749,21,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.658784696,2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
-750,40,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.337879621,0,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE
-757,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.331677606,-1.75,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-759,39,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.621456357,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-766,45,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.195410459,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-770,21,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.65358811000000006,2.5,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-780,45,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.478994679,-5.75,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-782,36,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.27376898,0.5,TRUE,FALSE,NA,FALSE,TRUE,FALSE,FALSE
-791,33,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.124273663,0,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-796,19,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,-0.178260718,1.5,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
-803,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.113296146,-3.25,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-813,28,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.467333862,1.25,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-814,43,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.066989642,-0.75,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-818,19,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,-0.022552709,1,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
-820,34,female  ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.072321572,1,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-822,28,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.067801562,-0.75,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-823,20,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.149581747,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-824,22,male    ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,0.125949331,0,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
-825,22,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.641259891,1,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-827,29,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.337193708,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-831,24,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.141898816,-1.25,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-832,28,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.04163156,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-837,23,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.297843824,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-852,25,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.277141628,0,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-854,26,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.26243223,-2.75,TRUE,TRUE,NA,TRUE,FALSE,FALSE,FALSE
-868,31,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.69115262,7,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
-873,30,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.351469301,0,TRUE,FALSE,NA,TRUE,TRUE,FALSE,FALSE
-878,22,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.715533981,-4,TRUE,TRUE,NA,TRUE,TRUE,FALSE,FALSE
-881,36,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.949201348,7.75,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
-887,46,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,0.195957727,0,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-896,22,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Location_Condition_1,-0.103689027,-0.25,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
-898,40,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.052882563,-3.75,TRUE,FALSE,NA,TRUE,TRUE,FALSE,FALSE
-900,21,female  ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,-0.37017855,-5,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-902,34,male    ,No_Contingency                                                                                      ,No_Shared_Feature_Condition_2,0.114614702,-2,TRUE,FALSE,NA,FALSE,FALSE,FALSE,FALSE
-907,20,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Random_Condition_3,0.545112583,10,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-910,25,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.519737346,7.5,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
-911,32,female  ,CS2_Positive_CS1_Negative,Shared_Feature_Bag_Random_Condition_3,-0.072201809,0,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
-915,41,male    ,CS1_Positive_CS2_Negative,Shared_Feature_Bag_Location_Condition_1,0.493162011,2,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+Participant,Age,Gender,source_valence_condition,EP_Score,EC_Effect_CS1_CS2_Difference_Score,intention,color_valence_contingency_memory,US_contingency_memory,hypothesis_awareness,influence_awareness,reactance_IAT,reactance_self_reports,demand_IAT,demand_self_reports
+1095,27,male    ,CS2_Positive_CS1_Negative,-60.94379084967329,-1,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+104,25,male    ,CS2_Positive_CS1_Negative,159.43900543900543,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+572,23,male    ,CS2_Positive_CS1_Negative,48.17418300653594,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+52,28,male    ,CS2_Positive_CS1_Negative,19.32894736842104,4,neitherBrand,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+796,34,female  ,CS2_Positive_CS1_Negative,147.3761333480761,-0.25,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+680,18,female  ,CS2_Positive_CS1_Negative,4.352631578947353,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+276,21,male    ,CS2_Positive_CS1_Negative,68.64502923976602,-2,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+776,33,male    ,CS2_Positive_CS1_Negative,14.966666666666697,3.75,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+423,32,male    ,CS2_Positive_CS1_Negative,182.7088235294117,0.75,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+383,31,male    ,CS2_Positive_CS1_Negative,71.16372549019604,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+388,26,female  ,CS2_Positive_CS1_Negative,9.96052631578948,0,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+727,38,female  ,CS2_Positive_CS1_Negative,43.78625730994156,-1,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+119,24,female  ,CS2_Positive_CS1_Negative,-22.97647058823526,2.75,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+111,31,female  ,CS2_Positive_CS1_Negative,14.313888888888869,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1156,20,female  ,CS2_Positive_CS1_Negative,36.87258403361352,2,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+107,41,female  ,CS2_Positive_CS1_Negative,11.673684210526403,-6,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+308,22,female  ,CS2_Positive_CS1_Negative,-127.23392857142858,-0.25,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+780,24,female  ,CS2_Positive_CS1_Negative,-28.203216374269005,1,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+391,24,female  ,CS2_Positive_CS1_Negative,33.78040935672516,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+759,20,male    ,CS2_Positive_CS1_Negative,33.42724458204333,0.25,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+611,35,female  ,CS2_Positive_CS1_Negative,-29.550183150183102,0,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+948,30,male    ,CS2_Positive_CS1_Negative,-75.74463118580775,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+471,40,female  ,CS2_Positive_CS1_Negative,-80.39130116959063,3,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1259,21,female  ,CS2_Positive_CS1_Negative,-28.357757137942826,-1,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+68,31,male    ,CS2_Positive_CS1_Negative,-4.93596491228061,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+563,33,female  ,CS2_Positive_CS1_Negative,-129.8526315789473,-2,neitherBrand,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+376,34,female  ,CS2_Positive_CS1_Negative,-78.45156518747854,0,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+571,39,male    ,CS2_Positive_CS1_Negative,16.44824561403516,2,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+264,31,male    ,CS2_Positive_CS1_Negative,86.31111111111113,-3,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+220,25,male    ,CS2_Positive_CS1_Negative,-88.6494047619048,-1.25,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+467,24,female  ,CS2_Positive_CS1_Negative,51.16249999999991,-2.25,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+163,36,male    ,CS2_Positive_CS1_Negative,17.350000000000136,-4,neitherBrand,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+487,23,female  ,CS2_Positive_CS1_Negative,-109.29633699633689,5,Morag,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+903,20,female  ,CS2_Positive_CS1_Negative,55.07518159085498,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+56,20,male    ,CS2_Positive_CS1_Negative,24.088041795665617,0.25,Struan,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+800,44,female  ,CS2_Positive_CS1_Negative,13.363398692810506,-0.5,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE
+80,26,male    ,CS2_Positive_CS1_Negative,-93.62923976608187,0.25,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+124,22,male    ,CS2_Positive_CS1_Negative,-95.55835913312694,1,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+588,34,female  ,CS2_Positive_CS1_Negative,-4.5,-2.25,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+915,20,male    ,CS2_Positive_CS1_Negative,25.838854489163964,-4.75,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+463,30,male    ,CS2_Positive_CS1_Negative,18.809941520467873,-5,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+135,31,female  ,CS2_Positive_CS1_Negative,43.2830409356726,-1.75,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+528,21,male    ,CS2_Positive_CS1_Negative,-55.95526315789476,-4.25,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+343,33,female  ,CS2_Positive_CS1_Negative,54.51699346405235,-3,Struan,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE
+708,19,male    ,CS2_Positive_CS1_Negative,31.4444444444444,-3,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+995,35,female  ,CS2_Positive_CS1_Negative,54.081578947368484,0,Morag,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+771,36,male    ,CS2_Positive_CS1_Negative,-19.801388888888937,-1.75,neitherBrand,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+860,24,male    ,CS2_Positive_CS1_Negative,71.96535947712403,-0.25,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+275,22,male    ,CS2_Positive_CS1_Negative,31.88809523809516,0.5,neitherBrand,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1191,25,female  ,CS2_Positive_CS1_Negative,34.84915720674235,-0.25,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+911,29,female  ,CS2_Positive_CS1_Negative,48.45526315789482,-0.25,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+483,22,female  ,CS2_Positive_CS1_Negative,73.80735294117653,0,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+851,41,male    ,CS2_Positive_CS1_Negative,11.384210526315883,-2.5,neitherBrand,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+919,22,female  ,CS2_Positive_CS1_Negative,60.17476780185757,1,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+747,24,female  ,CS2_Positive_CS1_Negative,94.61331269349841,-2.25,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1180,43,male    ,CS2_Positive_CS1_Negative,-73.63137254901972,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+876,23,male    ,CS2_Positive_CS1_Negative,-5.599999999999909,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+983,30,male    ,CS2_Positive_CS1_Negative,6.8004901960783855,-3.75,Struan,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+923,27,male    ,CS2_Positive_CS1_Negative,-37.73684210526312,1.75,neitherBrand,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+191,22,female  ,CS2_Positive_CS1_Negative,-6.437908496732007,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1043,34,male    ,CS2_Positive_CS1_Negative,-21.92631578947362,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+259,33,male    ,CS2_Positive_CS1_Negative,169.6114035087719,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+668,21,female  ,CS2_Positive_CS1_Negative,-101.50000000000011,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+120,45,male    ,CS2_Positive_CS1_Negative,25.988888888888937,-9,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+1211,24,female  ,CS2_Positive_CS1_Negative,37.35913312693498,-9.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+452,28,female  ,CS2_Positive_CS1_Negative,24.888888888888914,-6,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+128,23,male    ,CS2_Positive_CS1_Negative,-25.478173374612993,0,Struan,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+792,44,female  ,CS2_Positive_CS1_Negative,27.30000000000001,1,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+455,22,female  ,CS2_Positive_CS1_Negative,-43.72368421052636,-6.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+115,24,male    ,CS2_Positive_CS1_Negative,53.43859649122811,-6.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+847,21,female  ,CS2_Positive_CS1_Negative,-52.18684210526311,-7.25,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+28,22,male    ,CS2_Positive_CS1_Negative,114.5526315789474,-9.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+691,26,female  ,CS2_Positive_CS1_Negative,-24.57894736842104,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+540,22,female  ,CS2_Positive_CS1_Negative,68.66052631578953,-4.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+432,20,male    ,CS2_Positive_CS1_Negative,-46.1444444444445,-7.25,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+96,27,male    ,CS2_Positive_CS1_Negative,-92.545238095238,-4.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+288,23,female  ,CS2_Positive_CS1_Negative,-2.6761904761904134,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+91,21,female  ,CS2_Positive_CS1_Negative,4.278947368421086,-6,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+839,36,male    ,CS2_Positive_CS1_Negative,36.13157894736844,-6,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+643,29,female  ,CS2_Positive_CS1_Negative,-20.760526315789434,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+583,27,female  ,CS2_Positive_CS1_Negative,-12.08169934640523,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+287,31,female  ,CS2_Positive_CS1_Negative,78.20928792569657,-6.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+200,38,female  ,CS2_Positive_CS1_Negative,-19.69210526315794,-6,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+707,18,male    ,CS2_Positive_CS1_Negative,58.51923076923083,-8.25,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+767,25,female  ,CS2_Positive_CS1_Negative,19.684726522187816,-2,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+168,37,female  ,CS2_Positive_CS1_Negative,2.0175438596492086,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+436,25,male    ,CS2_Positive_CS1_Negative,55.74736842105273,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+695,36,male    ,CS2_Positive_CS1_Negative,24.871929824561448,-6.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+808,28,male    ,CS2_Positive_CS1_Negative,-3.0973684210526358,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+368,42,male    ,CS2_Positive_CS1_Negative,-22.39783281733753,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+775,19,female  ,CS2_Positive_CS1_Negative,79.6817681458549,-9,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+404,32,female  ,CS2_Positive_CS1_Negative,13.059649122807059,-0.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+787,18,female  ,CS2_Positive_CS1_Negative,76.03880288957691,-4,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+148,18,female  ,CS2_Positive_CS1_Negative,26.550000000000068,0,Struan,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+880,38,male    ,CS2_Positive_CS1_Negative,0.8982456140350905,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1075,21,female  ,CS2_Positive_CS1_Negative,-17.779411764705856,-4,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+255,22,female  ,CS2_Positive_CS1_Negative,-29.289955280357844,-8.25,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+323,24,female  ,CS2_Positive_CS1_Negative,21.371052631579005,-5.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+515,18,female  ,CS2_Positive_CS1_Negative,36.74122807017545,-1.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+443,25,female  ,CS2_Positive_CS1_Negative,31.668421052631516,-1,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1188,20,male    ,CS2_Positive_CS1_Negative,-25.93627450980398,-4,Struan,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+943,34,female  ,CS2_Positive_CS1_Negative,72.44999999999999,-9.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1119,44,male    ,CS2_Positive_CS1_Negative,-163.72500000000002,-1,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+804,32,female  ,CS2_Positive_CS1_Negative,114.97163742690054,0,Struan,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+428,41,female  ,CS2_Positive_CS1_Negative,4.231617647058783,0,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+908,27,male    ,CS2_Positive_CS1_Negative,-2.8039215686275156,0,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+855,36,female  ,CS2_Positive_CS1_Negative,47.18333333333328,-1,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+456,25,female  ,CS2_Positive_CS1_Negative,2.6282051282050816,-0.5,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+319,23,female  ,CS2_Positive_CS1_Negative,17.26813186813183,0,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+499,32,male    ,CS2_Positive_CS1_Negative,54.70695187165768,-7.5,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1144,22,male    ,CS2_Positive_CS1_Negative,-13.748245614035113,-1.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1195,34,male    ,CS2_Positive_CS1_Negative,-34.45263157894732,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+444,30,female  ,CS2_Positive_CS1_Negative,37.39210526315799,-4.25,Struan,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+484,34,male    ,CS2_Positive_CS1_Negative,-5.585448916408723,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+828,43,male    ,CS2_Positive_CS1_Negative,-24.30964912280706,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+783,22,female  ,CS2_Positive_CS1_Negative,20.000000000000114,0,neitherBrand,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+180,34,female  ,CS2_Positive_CS1_Negative,20.640056022409,0.25,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+248,26,male    ,CS2_Positive_CS1_Negative,15.137426900584728,-9.25,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+551,25,male    ,CS2_Positive_CS1_Negative,-18.389473684210543,-2.5,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+336,32,female  ,CS2_Positive_CS1_Negative,-21.673976608187104,0,Struan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+395,41,female  ,CS2_Positive_CS1_Negative,31.900000000000034,-4,neitherBrand,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+363,26,female  ,CS2_Positive_CS1_Negative,-7.983333333333235,-9.75,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1007,29,female  ,CS2_Positive_CS1_Negative,-56.875,-4.25,Struan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+100,21,male    ,CS2_Positive_CS1_Negative,3.9835526315789593,-1.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+408,29,male    ,CS2_Positive_CS1_Negative,88.38591331269345,-8.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1031,23,male    ,CS2_Positive_CS1_Negative,65.78947368421052,0.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+16,31,male    ,CS2_Positive_CS1_Negative,34.8087719298245,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+223,21,female  ,CS2_Positive_CS1_Negative,79.89802631578948,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+655,19,female  ,CS2_Positive_CS1_Negative,-36.6649122807018,-5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+304,31,female  ,CS2_Positive_CS1_Negative,85.91904761904766,-7,Struan,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+48,39,male    ,CS2_Positive_CS1_Negative,-12.205263157894706,0,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+560,25,female  ,CS2_Positive_CS1_Negative,34.24270541549947,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+696,19,male    ,CS2_Positive_CS1_Negative,-24.76461988304095,-1.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+864,24,female  ,CS2_Positive_CS1_Negative,-40.747058823529414,-3,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1112,20,female  ,CS2_Positive_CS1_Negative,51.3397660818714,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+132,25,male    ,CS2_Positive_CS1_Negative,40.76436188510502,-4.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+884,18,male    ,CS2_Positive_CS1_Negative,-19.130650154798786,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+460,27,female  ,CS2_Positive_CS1_Negative,83.28224974200214,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+675,45,female  ,CS2_Positive_CS1_Negative,40.42105263157896,-2,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+684,26,male    ,CS2_Positive_CS1_Negative,245.6350877192982,-7,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+532,25,female  ,CS2_Positive_CS1_Negative,57.696491228070215,-5.75,neitherBrand,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+324,42,male    ,CS2_Positive_CS1_Negative,22.96695906432751,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+591,36,female  ,CS2_Positive_CS1_Negative,-19.623684210526392,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+807,25,female  ,CS2_Positive_CS1_Negative,98.77105263157887,-6.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+931,26,male    ,CS2_Positive_CS1_Negative,31.394117647058863,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+992,32,male    ,CS2_Positive_CS1_Negative,-30.39542483660125,-1.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+752,20,female  ,CS2_Positive_CS1_Negative,64.604248366013,-5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+512,25,female  ,CS2_Positive_CS1_Negative,-39.01954334365337,-6,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+896,42,female  ,CS2_Positive_CS1_Negative,-62.850000000000136,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1184,21,female  ,CS2_Positive_CS1_Negative,4.273684210526369,-1.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+507,32,female  ,CS2_Positive_CS1_Negative,9.460526315789423,-3.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+651,27,male    ,CS2_Positive_CS1_Negative,0.7526315789474438,-3.25,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+283,24,male    ,CS2_Positive_CS1_Negative,41.636842105263156,-5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1199,29,female  ,CS2_Positive_CS1_Negative,65.30665634674926,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1260,18,female  ,CS2_Positive_CS1_Negative,53.518055555555634,-5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1132,34,male    ,CS2_Positive_CS1_Negative,8.937499999999943,-5.25,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+520,36,male    ,CS2_Positive_CS1_Negative,-47.44210526315794,-7.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+339,22,male    ,CS2_Positive_CS1_Negative,13.969728242174142,-7.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+607,19,male    ,CS2_Positive_CS1_Negative,2.5439284485723874,-4.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+400,27,female  ,CS2_Positive_CS1_Negative,-7.891812865497059,-5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+868,35,female  ,CS2_Positive_CS1_Negative,10.060526315789502,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1136,40,male    ,CS2_Positive_CS1_Negative,-41.10789473684201,-9,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+744,22,female  ,CS2_Positive_CS1_Negative,68.41111111111115,-2,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+63,24,male    ,CS2_Positive_CS1_Negative,57.57070707070693,-5.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+523,25,male    ,CS2_Positive_CS1_Negative,78.36519607843144,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1131,24,male    ,CS2_Positive_CS1_Negative,42.774681802545615,-1,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+848,28,male    ,CS2_Positive_CS1_Negative,-69.26006191950466,-10,Struan,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE
+1027,26,female  ,CS2_Positive_CS1_Negative,65.67352941176466,-5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+552,29,female  ,CS2_Positive_CS1_Negative,-3.076023391812896,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+427,27,female  ,CS2_Positive_CS1_Negative,-33.784210526315974,-10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+555,19,male    ,CS2_Positive_CS1_Negative,-26.836842105263145,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1052,37,male    ,CS2_Positive_CS1_Negative,-37.137426900584785,4.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+1212,20,female  ,CS2_Positive_CS1_Negative,95.36633986928098,3.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+504,26,female  ,CS2_Positive_CS1_Negative,-22.611842105263122,-6,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+208,41,male    ,CS2_Positive_CS1_Negative,25.527485380116786,-6.25,Struan,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+639,27,male    ,CS2_Positive_CS1_Negative,-72.66140350877197,-0.25,Struan,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+127,18,male    ,CS2_Positive_CS1_Negative,60.03076923076924,-1.25,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+331,25,female  ,CS2_Positive_CS1_Negative,68.9333333333334,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+1063,22,female  ,CS2_Positive_CS1_Negative,5.665789473684185,-2.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+724,25,male    ,CS2_Positive_CS1_Negative,-4.797368421052624,-4,Struan,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+375,39,female  ,CS2_Positive_CS1_Negative,3.689181286549797,-3.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
+335,25,female  ,CS2_Positive_CS1_Negative,-46.383394383394375,-10,Struan,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE
+791,29,male    ,CS2_Positive_CS1_Negative,41.53092105263153,-2.5,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1047,18,female  ,CS2_Positive_CS1_Negative,-98.02678571428567,-5.5,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+260,20,female  ,CS2_Positive_CS1_Negative,94.3114379084966,-9,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+184,23,female  ,CS2_Positive_CS1_Negative,28.571052631578993,0,Morag,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+307,26,female  ,CS2_Positive_CS1_Negative,-34.26068111455106,-0.25,Morag,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+812,18,male    ,CS2_Positive_CS1_Negative,11.096581196581155,0,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+136,21,male    ,CS2_Positive_CS1_Negative,80.98710010319905,-4.25,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1175,24,female  ,CS2_Positive_CS1_Negative,-14.299999999999955,-6,neitherBrand,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+580,38,female  ,CS2_Positive_CS1_Negative,-29.47514619883043,-3,neitherBrand,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1083,18,male    ,CS2_Positive_CS1_Negative,-17.825000000000045,-5.5,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE
+959,25,female  ,CS2_Positive_CS1_Negative,-53.51372549019612,-10,Struan,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE
+527,18,male    ,CS2_Positive_CS1_Negative,6.636123680241212,-7,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+564,30,male    ,CS2_Positive_CS1_Negative,32.742105263157896,-10,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+635,30,male    ,CS2_Positive_CS1_Negative,-86.01111111111106,-2.75,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+47,20,male    ,CS2_Positive_CS1_Negative,-11.426973684210509,-9,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE
+627,23,male    ,CS2_Positive_CS1_Negative,126.90079365079362,-1,Struan,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+159,28,male    ,CS2_Positive_CS1_Negative,9.799999999999955,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+116,21,female  ,CS2_Positive_CS1_Negative,-0.9190058479531444,6,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+648,41,male    ,CS2_Positive_CS1_Negative,9.121052631578891,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+599,29,male    ,CS2_Positive_CS1_Negative,-68.21403508771925,3,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1004,40,female  ,CS2_Positive_CS1_Negative,-46.6131578947369,-4,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1240,25,female  ,CS2_Positive_CS1_Negative,122.66666666666663,-0.5,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+996,35,female  ,CS2_Positive_CS1_Negative,-109.94164332399635,0.25,Morag,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+108,33,female  ,CS2_Positive_CS1_Negative,-73.76923076923083,0,Morag,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+440,31,male    ,CS2_Positive_CS1_Negative,124.27380952380952,-2.25,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+904,18,female  ,CS2_Positive_CS1_Negative,17.813157894736833,4,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1028,21,female  ,CS2_Positive_CS1_Negative,0.1500000000000341,1,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+988,40,male    ,CS2_Positive_CS1_Negative,22.828947368420927,-0.5,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1104,25,female  ,CS2_Positive_CS1_Negative,-32.070384294068504,-3,Morag,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+859,29,male    ,CS2_Positive_CS1_Negative,21.453801169590633,-0.5,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+311,18,male    ,CS2_Positive_CS1_Negative,-72.54999999999995,2.25,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+123,22,male    ,CS2_Positive_CS1_Negative,-37.46218487394947,0,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+568,20,male    ,CS2_Positive_CS1_Negative,-54.09473684210536,2,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1244,32,female  ,CS2_Positive_CS1_Negative,16.570760233918122,-0.75,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+779,26,male    ,CS2_Positive_CS1_Negative,220.25090187590183,-3,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+99,33,female  ,CS2_Positive_CS1_Negative,-46.65488906088751,-1,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+971,34,female  ,CS2_Positive_CS1_Negative,-86.52368421052637,1,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+883,22,female  ,CS2_Positive_CS1_Negative,68.41315789473691,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1107,18,male    ,CS2_Positive_CS1_Negative,-90.56666666666672,7,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+763,19,female  ,CS2_Positive_CS1_Negative,-65.21842105263158,4.75,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1215,30,female  ,CS2_Positive_CS1_Negative,-78.10526315789468,1,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+72,21,female  ,CS2_Positive_CS1_Negative,-97.45701754385959,-2.5,neitherBrand,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+19,20,female  ,CS2_Positive_CS1_Negative,-85.38333333333333,5,Morag,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+243,23,male    ,CS2_Positive_CS1_Negative,-120.84829721362235,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+951,33,male    ,CS2_Positive_CS1_Negative,-113.03333333333342,0.25,Morag,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1216,26,male    ,CS2_Positive_CS1_Negative,11.136111111111177,1,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+464,33,male    ,CS2_Positive_CS1_Negative,-46.861111111111086,-6,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+51,40,female  ,CS2_Positive_CS1_Negative,-4.772514619883168,2,neitherBrand,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+947,44,female  ,CS2_Positive_CS1_Negative,-1.7191950464397223,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+843,35,male    ,CS2_Positive_CS1_Negative,-5.952747678018568,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+811,33,female  ,CS2_Positive_CS1_Negative,-53.99215686274505,1,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+152,22,female  ,CS2_Positive_CS1_Negative,-33.315497076023405,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+12,18,female  ,CS2_Positive_CS1_Negative,-19.430925352597228,1,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+359,33,male    ,CS2_Positive_CS1_Negative,-0.5263157894736423,3.75,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE
+1084,26,male    ,CS2_Positive_CS1_Negative,126.0233918128655,2.75,neitherBrand,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE
+171,22,male    ,CS2_Positive_CS1_Negative,21.529411764705856,-0.75,Morag,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+176,22,male    ,CS2_Positive_CS1_Negative,-57.17659958720344,4,Morag,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE
+39,23,male    ,CS2_Positive_CS1_Negative,49.44225146198835,0.5,neitherBrand,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE
+519,22,female  ,CS2_Positive_CS1_Negative,-36.59736842105258,1,neitherBrand,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+567,25,male    ,CS2_Positive_CS1_Negative,70.4649122807017,4.25,Morag,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE
+103,26,female  ,CS2_Positive_CS1_Negative,-43.655882352941205,4.25,Morag,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
+980,26,female  ,CS2_Positive_CS1_Negative,47.14999999999998,1,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+559,35,male    ,CS2_Positive_CS1_Negative,-18.735745614035068,1,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+399,44,male    ,CS2_Positive_CS1_Negative,3.2552631578946603,0,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+372,27,male    ,CS2_Positive_CS1_Negative,-92.0849673202614,-3.75,Struan,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+1222,30,female  ,CS1_Positive_CS2_Negative,11.816253869969046,0,neitherBrand,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+134,27,female  ,CS1_Positive_CS2_Negative,3.4253869969041943,2.25,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE
+1238,34,male    ,CS1_Positive_CS2_Negative,41.12638888888887,1.5,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+166,21,female  ,CS1_Positive_CS2_Negative,-34.14619883040939,0.75,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+966,20,male    ,CS1_Positive_CS2_Negative,-44.881684981685,8.5,Morag,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+558,18,male    ,CS1_Positive_CS2_Negative,72.20000000000005,-2,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+913,23,female  ,CS1_Positive_CS2_Negative,-8.00687134502914,0,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+461,37,female  ,CS1_Positive_CS2_Negative,-56.538888888888835,-0.25,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+358,32,male    ,CS1_Positive_CS2_Negative,45.4704334365324,0,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+650,26,male    ,CS1_Positive_CS2_Negative,44.9064425770307,1.5,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+373,38,female  ,CS1_Positive_CS2_Negative,0.10263157894735286,4.75,Morag,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1118,50,male    ,CS1_Positive_CS2_Negative,21.278947368420972,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+57,30,female  ,CS1_Positive_CS2_Negative,94.95789473684204,-0.25,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1089,38,male    ,CS1_Positive_CS2_Negative,10.413157894736798,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+173,29,male    ,CS1_Positive_CS2_Negative,-17.202631578947376,0,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1097,25,female  ,CS1_Positive_CS2_Negative,-27.529605263157805,-0.25,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+110,40,male    ,CS1_Positive_CS2_Negative,-40.33333333333337,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1257,34,male    ,CS1_Positive_CS2_Negative,49.65701754385975,-1,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+253,31,male    ,CS1_Positive_CS2_Negative,-38.14999999999998,2.25,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+645,38,female  ,CS1_Positive_CS2_Negative,-4.718055555555566,0,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+186,38,female  ,CS1_Positive_CS2_Negative,-51.85263157894747,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+894,36,male    ,CS1_Positive_CS2_Negative,-10.938961988304186,-4.5,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+753,22,male    ,CS1_Positive_CS2_Negative,-31.913157894736855,0.75,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+454,35,female  ,CS1_Positive_CS2_Negative,45.38596491228077,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+274,30,female  ,CS1_Positive_CS2_Negative,-29.555847953216357,2,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+282,44,male    ,CS1_Positive_CS2_Negative,-54.10526315789468,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1210,25,female  ,CS1_Positive_CS2_Negative,-59.35399159663859,-2.25,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+634,24,male    ,CS1_Positive_CS2_Negative,-64.74052287581696,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+258,36,female  ,CS1_Positive_CS2_Negative,-41.35603715170271,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+118,32,male    ,CS1_Positive_CS2_Negative,-8.431871345029208,0.25,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+630,42,female  ,CS1_Positive_CS2_Negative,-31.570175438596493,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1253,26,female  ,CS1_Positive_CS2_Negative,-40.70467836257308,-1.25,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+574,18,male    ,CS1_Positive_CS2_Negative,32.765789473684265,2.25,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+409,19,female  ,CS1_Positive_CS2_Negative,-45.80555555555554,1,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+949,30,male    ,CS1_Positive_CS2_Negative,36.74165806673557,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1249,33,male    ,CS1_Positive_CS2_Negative,-11.489473684210509,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+537,41,male    ,CS1_Positive_CS2_Negative,45.48888888888894,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+942,45,male    ,CS1_Positive_CS2_Negative,-28.846732026143854,-4,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1245,23,male    ,CS1_Positive_CS2_Negative,-57.42973856209153,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+970,18,female  ,CS1_Positive_CS2_Negative,-39.649071207430325,-6.25,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+254,25,male    ,CS1_Positive_CS2_Negative,-49.27485380116957,2,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+938,30,male    ,CS1_Positive_CS2_Negative,4.394736842105203,-4,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+506,36,male    ,CS1_Positive_CS2_Negative,-101.88235294117646,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+893,37,male    ,CS1_Positive_CS2_Negative,-1.0710526315789366,2,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+1258,26,male    ,CS1_Positive_CS2_Negative,47.84327485380118,0.25,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+909,36,male    ,CS1_Positive_CS2_Negative,-57.353801169590724,-0.25,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+350,25,female  ,CS1_Positive_CS2_Negative,76.13782249742007,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+878,31,male    ,CS1_Positive_CS2_Negative,-74.45000000000005,-1,neitherBrand,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1145,45,female  ,CS1_Positive_CS2_Negative,-20.800000000000068,10,Morag,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE
+994,37,male    ,CS1_Positive_CS2_Negative,-48.28792569659447,0.75,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+29,38,female  ,CS1_Positive_CS2_Negative,-91,-1,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+141,35,male    ,CS1_Positive_CS2_Negative,-52.155555555555566,2,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+961,27,female  ,CS1_Positive_CS2_Negative,-31.572755417956728,0,Morag,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+738,27,male    ,CS1_Positive_CS2_Negative,-5.558730158730157,3,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1058,32,male    ,CS1_Positive_CS2_Negative,17.51140350877199,4.25,neitherBrand,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
+441,37,female  ,CS1_Positive_CS2_Negative,6.246491228070113,-3,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1030,33,female  ,CS1_Positive_CS2_Negative,15.143567251461945,-5,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+958,38,male    ,CS1_Positive_CS2_Negative,91.07309941520464,0,Morag,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+957,19,male    ,CS1_Positive_CS2_Negative,13.792690058479593,-3,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+73,34,female  ,CS1_Positive_CS2_Negative,-70.09183006535955,1.5,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1038,18,male    ,CS1_Positive_CS2_Negative,5.449999999999989,-1.25,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+758,24,male    ,CS1_Positive_CS2_Negative,-6.969467787114809,0,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+661,20,male    ,CS1_Positive_CS2_Negative,-36.951625386996966,-1,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+530,43,male    ,CS1_Positive_CS2_Negative,-4.62916666666672,-1.25,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+77,33,female  ,CS1_Positive_CS2_Negative,-66.32352941176475,-5,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1178,21,female  ,CS1_Positive_CS2_Negative,-10.396929824561425,-5.75,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+901,27,female  ,CS1_Positive_CS2_Negative,11.045614035087738,-6.75,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+841,23,female  ,CS1_Positive_CS2_Negative,1.9368421052631106,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+149,42,female  ,CS1_Positive_CS2_Negative,38.50760233918129,-0.75,neitherBrand,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+337,29,female  ,CS1_Positive_CS2_Negative,33.02807017543853,1,neitherBrand,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1093,21,female  ,CS1_Positive_CS2_Negative,-57.065789473684276,0.5,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1037,35,male    ,CS1_Positive_CS2_Negative,74.98073615411079,-4.25,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+453,27,male    ,CS1_Positive_CS2_Negative,33.02882205513788,-1.75,Morag,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+890,33,male    ,CS1_Positive_CS2_Negative,95.51842105263154,-2.5,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+221,25,female  ,CS1_Positive_CS2_Negative,31.03421052631586,0,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+637,24,female  ,CS1_Positive_CS2_Negative,102.67222222222222,-8.25,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+749,25,female  ,CS1_Positive_CS2_Negative,-27.937518037517975,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+46,35,male    ,CS1_Positive_CS2_Negative,7.961111111111222,0,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+877,23,male    ,CS1_Positive_CS2_Negative,108.85855263157896,0,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+97,20,male    ,CS1_Positive_CS2_Negative,36.4218253968254,-4.75,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+293,19,male    ,CS1_Positive_CS2_Negative,37.17692307692312,-1.75,Morag,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+486,26,female  ,CS1_Positive_CS2_Negative,30.804502063983477,-2.75,neitherBrand,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1226,22,female  ,CS1_Positive_CS2_Negative,-69.36568627450981,-4.25,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1098,28,female  ,CS1_Positive_CS2_Negative,48.30789473684206,-2,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1078,22,female  ,CS1_Positive_CS2_Negative,-88.88888888888891,0,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+150,31,male    ,CS1_Positive_CS2_Negative,122.86578947368412,-4.25,Struan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+681,27,female  ,CS1_Positive_CS2_Negative,-45.27368421052637,-1,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+369,30,male    ,CS1_Positive_CS2_Negative,39.06274509803916,5.25,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1201,18,male    ,CS1_Positive_CS2_Negative,113.93508771929828,-2,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+990,18,male    ,CS1_Positive_CS2_Negative,16.006074008550854,-7.75,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+381,31,male    ,CS1_Positive_CS2_Negative,-62.641025641025635,1.75,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+693,26,male    ,CS1_Positive_CS2_Negative,142.7054487179488,-5.25,Struan,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+782,26,male    ,CS1_Positive_CS2_Negative,22.94427244582039,3.75,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+813,21,female  ,CS1_Positive_CS2_Negative,-119.65847953216371,-5,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
+881,44,male    ,CS1_Positive_CS2_Negative,-208.2527056277056,-1,Struan,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+1230,20,male    ,CS1_Positive_CS2_Negative,16.897832817337417,1.75,Struan,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE
+401,20,male    ,CS1_Positive_CS2_Negative,34.269005847953224,1,Struan,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1162,27,male    ,CS1_Positive_CS2_Negative,49.575219298245656,-1.5,Morag,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+589,29,male    ,CS1_Positive_CS2_Negative,68.7964912280703,0.25,Struan,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+586,18,female  ,CS1_Positive_CS2_Negative,-28.096835225318046,0,neitherBrand,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+169,36,female  ,CS1_Positive_CS2_Negative,-3.6631578947367984,2,Morag,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+1217,22,female  ,CS1_Positive_CS2_Negative,-97.56111111111113,7.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+325,34,female  ,CS1_Positive_CS2_Negative,-110.75024509803916,-2.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+313,33,male    ,CS1_Positive_CS2_Negative,137.1169590643275,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+246,24,female  ,CS1_Positive_CS2_Negative,32.36959064327482,1,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+93,38,male    ,CS1_Positive_CS2_Negative,-41.959722222222126,8,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+845,21,female  ,CS1_Positive_CS2_Negative,-37.50438596491233,3.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+1025,23,male    ,CS1_Positive_CS2_Negative,-6.389181286549729,8,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1105,23,female  ,CS1_Positive_CS2_Negative,-73.98888888888894,7,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1254,24,male    ,CS1_Positive_CS2_Negative,13.21491228070181,0,Morag,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+769,36,male    ,CS1_Positive_CS2_Negative,-10.87115583075331,3.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+385,40,female  ,CS1_Positive_CS2_Negative,-53.307894736842115,4,Morag,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+14,30,male    ,CS1_Positive_CS2_Negative,-15.783333333333417,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+886,38,female  ,CS1_Positive_CS2_Negative,-36.38355263157894,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+598,18,male    ,CS1_Positive_CS2_Negative,-17.00328517371861,3.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1237,25,female  ,CS1_Positive_CS2_Negative,-64.67105263157902,0,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+602,29,male    ,CS1_Positive_CS2_Negative,22.523684210526312,-0.25,Struan,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+78,26,female  ,CS1_Positive_CS2_Negative,-17.73157894736846,3.25,Morag,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+821,22,male    ,CS1_Positive_CS2_Negative,18.323976608187195,8.25,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1090,19,female  ,CS1_Positive_CS2_Negative,-18.01666666666665,0.75,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+470,36,female  ,CS1_Positive_CS2_Negative,-55.98742690058475,1,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+205,38,male    ,CS1_Positive_CS2_Negative,91.42105263157896,9,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+326,24,male    ,CS1_Positive_CS2_Negative,98.22631578947369,2.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+514,26,male    ,CS1_Positive_CS2_Negative,13.020588235294099,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1197,29,male    ,CS1_Positive_CS2_Negative,-4.689473684210554,7.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+393,21,male    ,CS1_Positive_CS2_Negative,-16.561519607843138,10,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1174,21,female  ,CS1_Positive_CS2_Negative,-110.10000000000002,4.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+842,21,female  ,CS1_Positive_CS2_Negative,-4.452356381149002,3.75,Morag,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1250,29,female  ,CS1_Positive_CS2_Negative,-51.12368421052628,5.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+341,44,female  ,CS1_Positive_CS2_Negative,-24.049999999999955,7.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+257,36,female  ,CS1_Positive_CS2_Negative,-53.27777777777783,6.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+529,19,female  ,CS1_Positive_CS2_Negative,-3.3406593406593856,4,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+94,27,male    ,CS1_Positive_CS2_Negative,-11.963157894736753,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+562,26,male    ,CS1_Positive_CS2_Negative,114.94152046783631,2,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+234,22,female  ,CS1_Positive_CS2_Negative,-11.926023391812862,2,Struan,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+345,30,male    ,CS1_Positive_CS2_Negative,-80.6035087719298,-1.25,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+670,39,male    ,CS1_Positive_CS2_Negative,50.975877192982466,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+346,19,female  ,CS1_Positive_CS2_Negative,-9.800000000000011,2.5,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+702,32,female  ,CS1_Positive_CS2_Negative,-114.22514619883043,0,neitherBrand,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+801,20,female  ,CS1_Positive_CS2_Negative,-20.74473684210534,2.75,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+838,24,female  ,CS1_Positive_CS2_Negative,55.14509803921561,0,Morag,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+417,26,male    ,CS1_Positive_CS2_Negative,1.2429824561402256,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+510,26,male    ,CS1_Positive_CS2_Negative,11.960526315789423,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+613,31,female  ,CS1_Positive_CS2_Negative,-85.6483918128655,9.5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1126,34,male    ,CS1_Positive_CS2_Negative,-22.538888888888778,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+102,22,female  ,CS1_Positive_CS2_Negative,35.30000000000007,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+338,24,female  ,CS1_Positive_CS2_Negative,-2.927192982456063,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+653,28,female  ,CS1_Positive_CS2_Negative,28.402836134453764,0.25,neitherBrand,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+422,21,male    ,CS1_Positive_CS2_Negative,-17.087426900584774,-6,Struan,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+362,29,male    ,CS1_Positive_CS2_Negative,-115.20850533195733,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+677,30,male    ,CS1_Positive_CS2_Negative,-5.32368421052638,9.25,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+746,23,male    ,CS1_Positive_CS2_Negative,-30.757894736842104,0,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+701,32,female  ,CS1_Positive_CS2_Negative,44.38421052631588,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+210,29,female  ,CS1_Positive_CS2_Negative,-104.90359477124184,0,neitherBrand,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1149,37,male    ,CS1_Positive_CS2_Negative,-7.5763157894737105,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+466,37,female  ,CS1_Positive_CS2_Negative,-38.968421052631584,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+830,20,female  ,CS1_Positive_CS2_Negative,-33.379084967320296,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+757,43,male    ,CS1_Positive_CS2_Negative,12.54707602339181,0,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+969,21,male    ,CS1_Positive_CS2_Negative,-120.83090815273476,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+349,18,female  ,CS1_Positive_CS2_Negative,15.752046783625701,0,Struan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+522,35,female  ,CS1_Positive_CS2_Negative,13.75,3.5,Struan,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+870,28,male    ,CS1_Positive_CS2_Negative,-95.4921052631579,10,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+209,18,male    ,CS1_Positive_CS2_Negative,-13.052631578947398,-5,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1213,19,male    ,CS1_Positive_CS2_Negative,55.31274509803916,-5,Struan,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+1018,26,female  ,CS1_Positive_CS2_Negative,1.7236842105263008,1.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+786,21,male    ,CS1_Positive_CS2_Negative,-31.194444444444457,2.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+482,31,male    ,CS1_Positive_CS2_Negative,10.25870743034045,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+190,22,female  ,CS1_Positive_CS2_Negative,56.73538011695905,7.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+357,18,female  ,CS1_Positive_CS2_Negative,-9.058771929824559,3.5,Struan,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1138,22,female  ,CS1_Positive_CS2_Negative,-2.1783625730994345,5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+45,28,female  ,CS1_Positive_CS2_Negative,-65.79093567251459,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+281,21,female  ,CS1_Positive_CS2_Negative,-2.315497076023462,4.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+321,23,male    ,CS1_Positive_CS2_Negative,15.607017543859797,8,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+394,18,male    ,CS1_Positive_CS2_Negative,-47.489473684210566,7.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1021,29,male    ,CS1_Positive_CS2_Negative,-29.047368421052624,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1157,45,male    ,CS1_Positive_CS2_Negative,-44.873684210526335,6.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+449,32,male    ,CS1_Positive_CS2_Negative,37.38947368421054,5,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1102,18,female  ,CS1_Positive_CS2_Negative,16.3368421052632,5.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1041,36,female  ,CS1_Positive_CS2_Negative,3.759064327485248,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+937,37,female  ,CS1_Positive_CS2_Negative,-69.69473684210516,4.75,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+905,19,female  ,CS1_Positive_CS2_Negative,-112.53508771929819,7.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+434,45,female  ,CS1_Positive_CS2_Negative,-21.15789473684208,10,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+425,29,male    ,CS1_Positive_CS2_Negative,25.01284829721351,9.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+989,20,female  ,CS1_Positive_CS2_Negative,175.1414141414142,8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+50,18,female  ,CS1_Positive_CS2_Negative,-51.30409356725147,2.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+822,37,female  ,CS1_Positive_CS2_Negative,18.592982456140362,8.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+669,33,male    ,CS1_Positive_CS2_Negative,-68.90691434468533,10,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+778,30,female  ,CS1_Positive_CS2_Negative,-22.089473684210475,3,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1013,21,male    ,CS1_Positive_CS2_Negative,-52.68363003095976,6.25,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+649,37,male    ,CS1_Positive_CS2_Negative,101.73245614035079,1,Morag,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+722,33,female  ,CS1_Positive_CS2_Negative,104.88421052631583,8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+806,18,male    ,CS1_Positive_CS2_Negative,48.077485380116855,5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+1165,29,male    ,CS1_Positive_CS2_Negative,-173.98333333333323,8.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+921,44,female  ,CS1_Positive_CS2_Negative,30.355555555555497,8.75,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+462,27,female  ,CS1_Positive_CS2_Negative,91.22126696832584,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+433,38,male    ,CS1_Positive_CS2_Negative,-49.627941176470586,6.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+789,19,female  ,CS1_Positive_CS2_Negative,-53.54215686274517,8,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+954,43,male    ,CS1_Positive_CS2_Negative,-47.165789473684185,1,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+473,18,male    ,CS1_Positive_CS2_Negative,5.875,6,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+70,30,male    ,CS1_Positive_CS2_Negative,-10.621052631578891,6,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+829,18,male    ,CS1_Positive_CS2_Negative,109.78890056022408,-8,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+161,21,male    ,CS1_Positive_CS2_Negative,32.29236694677877,7.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1057,33,male    ,CS1_Positive_CS2_Negative,44.066154970760294,4.75,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+633,23,male    ,CS1_Positive_CS2_Negative,28.021052631578925,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+390,21,female  ,CS1_Positive_CS2_Negative,53.79736842105268,9.5,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+862,24,female  ,CS1_Positive_CS2_Negative,55.90694874440999,6.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+109,35,male    ,CS1_Positive_CS2_Negative,1.2058479532163915,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+445,24,male    ,CS1_Positive_CS2_Negative,54.22686618507049,7,neitherBrand,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+218,41,female  ,CS1_Positive_CS2_Negative,27.62222222222215,-6.75,Struan,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1034,34,female  ,CS1_Positive_CS2_Negative,-86.6583333333333,4.5,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+561,28,male    ,CS1_Positive_CS2_Negative,0.6131578947369007,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+478,27,female  ,CS1_Positive_CS2_Negative,20.273684210526312,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
+1246,28,female  ,CS1_Positive_CS2_Negative,58.60743034055736,10,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
+101,44,male    ,CS1_Positive_CS2_Negative,-50.950000000000045,0,Morag,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+154,18,male    ,CS1_Positive_CS2_Negative,42.440643274853755,0,neitherBrand,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+354,31,female  ,CS1_Positive_CS2_Negative,11.371052631578948,2,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+269,42,female  ,CS1_Positive_CS2_Negative,-79.34084967320268,7.75,Morag,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+706,43,female  ,CS1_Positive_CS2_Negative,-136.51461988304106,3.5,Morag,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE
+642,38,female  ,CS1_Positive_CS2_Negative,8.38596491228077,9,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+374,37,female  ,CS1_Positive_CS2_Negative,-130.12506449948398,6.25,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+790,23,female  ,CS1_Positive_CS2_Negative,40.21699346405239,6,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+317,35,male    ,CS1_Positive_CS2_Negative,30.284300494826766,6.5,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+62,21,male    ,CS1_Positive_CS2_Negative,-29.53520811833505,3,Morag,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+690,23,female  ,CS1_Positive_CS2_Negative,35.10268317853456,8,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+114,26,male    ,CS1_Positive_CS2_Negative,19.550000000000068,2,Morag,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+318,32,male    ,CS1_Positive_CS2_Negative,-154.18830409356735,10,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+1069,35,female  ,CS1_Positive_CS2_Negative,-50.01842105263154,10,Morag,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE
+262,22,male    ,CS1_Positive_CS2_Negative,-41.150000000000034,0,Struan,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+525,38,male    ,CS1_Positive_CS2_Negative,-110.98067165462669,4.75,Struan,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+810,23,male    ,CS1_Positive_CS2_Negative,13.1388888888888,8,Morag,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+249,22,male    ,CS1_Positive_CS2_Negative,-61.05555555555554,0.25,Struan,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE
+673,32,male    ,CS1_Positive_CS2_Negative,-41.49122807017545,10,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+286,36,female  ,CS1_Positive_CS2_Negative,-5.280873753010042,-1,neitherBrand,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+729,21,male    ,CS1_Positive_CS2_Negative,-6.009868421052602,10,Morag,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+805,33,male    ,CS1_Positive_CS2_Negative,-16.924320605435128,5,Morag,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+1242,26,female  ,CS1_Positive_CS2_Negative,-23.867251461988303,0,neitherBrand,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+834,53,female  ,CS1_Positive_CS2_Negative,-18.995604395604403,2,Struan,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+1045,19,female  ,CS1_Positive_CS2_Negative,-32.652046783625735,0,Struan,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+594,31,female  ,CS1_Positive_CS2_Negative,-21.855263157894683,-3.5,Struan,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+770,36,male    ,CS1_Positive_CS2_Negative,-11.833333333333371,-0.25,Morag,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
