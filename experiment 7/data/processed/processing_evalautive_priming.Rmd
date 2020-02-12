@@ -70,15 +70,22 @@ data_ep_with_completeness %>%
   count(complete_ep_data) 
 
 # do remaining exclusions
-data_ep_exclusions <- data_ep_with_completeness %>%
+data_ep_temp <- data_ep_with_completeness %>%
   # retain only complete
-  filter(complete_ep_data == TRUE) %>%
+  filter(complete_ep_data == TRUE) 
+
+data_ep_errors <- data_ep_temp %>%
   # remove error trials
-  filter(correct == 1) %>%
+  filter(correct == 1) 
+
+data_ep_exclusions <- data_ep_errors %>%
   # remove short and long trials
   filter(latency >= 300 & latency <= 1000)
 
 ```
+
+- `r round((nrow(data_ep_temp)-nrow(data_ep_errors))/nrow(data_ep_temp), 4)*100`% of trials were incorrect and were removed
+- `r round((nrow(data_ep_errors)-nrow(data_ep_exclusions))/nrow(data_ep_errors), 4)*100`% of correct trials were either <300 ms or >1000 ms and were removed.
 
 # Calculate EP scores 
 

@@ -731,7 +731,7 @@ data_exp_7 %>%
 
 ```
 
-### BF analyses of Evaluative Priming(preregistered)
+### H1: Evaluative Priming (Sequential BF)
 
 #### N = 300
 
@@ -830,30 +830,23 @@ data.frame(sample_500) %>%
 
 ```
 
-### Combined frequentist and BF analyses (not preregistered, included for consistency across studies)
-
-All use the final analytic sample.
-
-#### H1: Evaluative Priming
-
-Unlike the above tests which were used for sample size determination via optional stopping, these analyses are consistent with the anlayses of the IATs and self-reports, and behavioural intentions in the other studies. Specficially, 1) a difference score was first calculated for each participant between their mean RT on congruent trials vs incongruent trials, 2) this difference score was then inverted (ie multiplied by -1) for one stimulus valence condition. These difference scores were then compared between conditions. As such, the current analyses test whether there is a difference in EP effect between source valence conditions, whereas the above one provided a more classic test of the EP effect (congruent vs incongruent trials) while remaining agnostic to the source valence condition (i.e., integrating this condition into the scoring of [in]congruence rather than the analysis). As such, the BF provided by the two analyses may differ.  
+Frequentist analysis of the final sample for reader familiarity
 
 ```{r}
 
-results_exp_7_h1 <- data_exp_7 %>%
-  mutate(ep_mean_rt_difference = ifelse(source_valence_condition == "CS2_Positive_CS1_Negative", ep_mean_rt_difference*-1, 
-                                        ifelse(source_valence_condition == "CS1_Positive_CS2_Negative", ep_mean_rt_difference, NA))) %>%
-  select(ep_mean_rt_difference, source_valence_condition) %>%
-  na.omit() %>%
-  mutate(DV = ep_mean_rt_difference,
-         IV = source_valence_condition) %>%
-  t_test_analyses(.)
-  
+t.test(x = data_500$value[data_500$key == "ep_mean_rt_inconsistent"],
+       y = data_500$value[data_500$key == "ep_mean_rt_consistent"],
+       paired = TRUE)
+
+effsize::cohen.d(d = data_500$value,
+                 f = fct_rev(data_500$key),
+                 paired = TRUE)
+
 ```
 
-When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed an automatic relative preference for CS1 over CS2 on the IAT (M = `r format(results_exp_7_h1$summary_stats$mean[results_exp_7_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7_h1$summary_stats$sd[results_exp_7_h1$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7_h1$summary_stats$mean[results_exp_7_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7_h1$summary_stats$sd[results_exp_7_h1$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7_h1$t_test_output`, BF10 = `r format(results_exp_7_h1$bf10, nsmall = 2)`.
+### H2: Self-report ratings
 
-#### H2: Self-report ratings
+Using the final analytic sample.
 
 ```{r}
 
@@ -868,7 +861,9 @@ results_exp_7_h2 <- data_exp_7 %>%
 
 When CS1 eventually shared a color with positive words and CS2 shared a color with negative words, participants showed a relative preference on the self-report ratings for CS1 over CS2 (M = `r format(results_exp_7_h2$summary_stats$mean[results_exp_7_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`, SD = `r format(results_exp_7_h2$summary_stats$sd[results_exp_7_h2$summary_stats$IV == "CS1_Positive_CS2_Negative"], nsmall = 2)`), whereas when CS1 eventually shared a color with negative words and CS2 shared a color with positive words, they demonstrated a relative preference for CS2 over CS1 (M = `r format(results_exp_7_h2$summary_stats$mean[results_exp_7_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`, SD = `r format(results_exp_7_h2$summary_stats$sd[results_exp_7_h2$summary_stats$IV == "CS2_Positive_CS1_Negative"], nsmall = 2)`), `r results_exp_7_h2$t_test_output`, BF10 = `r format(results_exp_7_h2$bf10, nsmall = 2)`.
 
-#### H3: Behavioural intentions
+### H3: Behavioural intentions
+
+Using the final analytic sample.
 
 ```{r echo=TRUE, results='hide'}
 
