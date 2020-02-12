@@ -1,0 +1,129 @@
+---
+title: "Processing Evaluative Priming data"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes 
+    toc_float: yes
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(message=FALSE,
+                      warning=FALSE)
+```
+
+# Dependencies
+
+```{r}
+
+library(foreign)
+library(tidyverse)
+#library(Hmisc)
+#library(car)
+library(readxl)
+
+```
+
+# Read in and combine EPT data files
+
+```{r}
+
+# there were two different EP data files based on task order. join these together. 
+data_ep_before <- read_excel("../raw/study_7_ep_task_before_19_08_02.xlsx")
+data_ep_after <- read_excel("../raw/study_7_ep_task_after_19_08_02.xlsx")
+
+data_ep_raw <- 
+  # combine raw data files
+  rbind(data_ep_before, data_ep_after) %>%
+  # select variables of interest
+  select(subject, blocknum, trialnum, blockcode, trialcode, correct, latency) %>%
+  # remove practice blocks
+  filter(!str_detect(blockcode, "practice"))
+
+data_ep_raw %>%
+  distinct(subject) %>%
+  count()
+
+```
+
+# Exclusions
+
+exclude participants with less than 80 trials, exclude error trials, exclude practice blocks
+
+```{r}
+
+# check if each participant has the right N trials
+data_ep_with_completeness <- data_ep_raw %>%
+  # count trials in test blocks
+  count(subject) %>%
+  # label as complete or incomplete
+  mutate(complete_ep_data = ifelse(n == 80, TRUE, FALSE)) %>%
+  right_join(data_ep_raw, by = "subject")
+
+# print Ns for complete and incomplete
+data_ep_with_completeness %>% 
+  distinct(subject, .keep_all = TRUE) %>%
+  count(complete_ep_data) 
+
+# do remaining exclusions
+data_ep_exclusions <- data_ep_with_completeness %>%
+  # retain only complete
+  filter(complete_ep_data == TRUE) %>%
+  # remove error trials
+  filter(correct == 1) %>%
+  # remove short and long trials
+  filter(latency >= 300 & latency <= 1000)
+
+```
+
+# Calculate EP scores 
+
+```{r}
+
+data_ep_scores <- data_ep_exclusions %>%
+  
+  # create experimental condition (i.e, source stimulus valence), which was set in the experiment based on the participant code
+  mutate(condition = subject %% 4, # modulus of the participant code / 4
+         condition = ifelse(condition == 0, 4, condition), # change condition 0 to 4 
+         # inspection of the inquisit files shows that condition 1 and 2 were morag good, and 3 and 4 morag bad
+         source_stimulus_valence = ifelse(condition %in% c(1, 2), "morag good / struan bad", 
+                                          ifelse(condition %in% c(3, 4), "morag bad / struan good", NA)))  %>%
+  
+  # create trial types
+  separate(trialcode, into = c("CS", "US"), sep = "_", extra = "drop") %>%
+  mutate(prime_target_type = paste(CS, US, sep = "_")) %>%
+  select(-US, -CS) %>%
+  
+  # label trials as consistent vs inconsistent
+  mutate(trial_type = ifelse((source_stimulus_valence == "morag good / struan bad" & 
+                                prime_target_type %in% c("Morag_Positive", "Struan_Negative")) |
+                               (source_stimulus_valence == "morag bad / struan good" & 
+                                  prime_target_type %in% c("Morag_Negative", "Struan_Positive")), "consistent", 
+                             ifelse((source_stimulus_valence == "morag bad / struan good" & 
+                                       prime_target_type %in% c("Morag_Positive", "Struan_Negative")) |
+                                      (source_stimulus_valence == "morag good / struan bad" & 
+                                         prime_target_type %in% c("Morag_Negative", "Struan_Positive")), "inconsistent", NA))) %>%
+
+  # caluate EP scores
+  group_by(subject, trial_type) %>%                               
+  summarise(mean_rt = round(mean(latency), 0)) %>%
+  ungroup() %>%
+  spread(key = trial_type, value = mean_rt) %>%
+  rename(ep_mean_rt_consistent = consistent,
+         ep_mean_rt_inconsistent = inconsistent) %>%
+  mutate(ep_mean_rt_difference = round(ep_mean_rt_inconsistent - ep_mean_rt_consistent, 0))
+
+```
+
+# Write to disk
+
+```{r}
+
+write_csv(data_ep_scores, path = "processed_ep_data.csv")
+
+```
+

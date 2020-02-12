@@ -12,6 +12,12 @@ output:
     toc_float: yes
 ---
 
+For each study, the raw inquisit data files (xlsx files in the data/raw folder) were processed into a SPSS .sav files by Sean/Simone. This was done manually/in SPSS and no code/syntax to reproduce this processing is available, although it was carefully rechecked in each case. 
+
+The processing.Rmd file in the analysis folder converts all these .sav files first to .csv format (which are saved to the data/processed folders in each experiment) as "data_spss_converted_to_csv.csv". This processing.Rmd script then tidied each data file's names and applied the exclusion criteria. Each experiment's to-be-analyzed data was then saved to the data/processed folder as data_for_analysis.csv.  
+
+In the case of experiment 7, a reviewer's comment required us to reprocess the evaluative priming data. An R script was written for this, which is present in data/processed (i.e., processing_evalautive_priming.Rmd). In order to integrate the manually processed data .sav file with the newer and more reproducible EP data processed via R script, the overall project's data processing script (found at analysis/processing.Rmd and which produces data/processed/processed_ep_data.csv) first reads in the .sav file, discards the columns referring to EP scores, then reads in the newly produced EP scores from processed_ep_data.csv and combines these two files. The resultant data_processed.csv file for experiment 7 therefore represents a combination of the manually and code-based processing of the data for that study. 
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(message = FALSE,
                       warning = FALSE)
@@ -61,18 +67,18 @@ input_data_exp_9 <-
   read.spss("../experiment 9/data/processed/Shared_Features_Study_9_FINAL.sav", to.data.frame = TRUE)
 
 
-write_csv(input_data_exp_1, "../experiment 1/data/processed/data_processed.csv")
-write_csv(input_data_exp_2, "../experiment 2/data/processed/data_processed.csv")
-write_csv(input_data_exp_3, "../experiment 3/data/processed/data_processed.csv")
-write_csv(input_data_exp_4, "../experiment 4/data/processed/data_processed.csv")
-write_csv(input_data_exp_5, "../experiment 5/data/processed/data_processed.csv")
-write_csv(input_data_exp_6, "../experiment 6/data/processed/data_processed.csv")
-write_csv(input_data_exp_7, "../experiment 7/data/processed/data_processed.csv")
-write_csv(input_data_exp_8, "../experiment 8/data/processed/data_processed.csv")
-write_csv(input_data_exp_9, "../experiment 9/data/processed/data_processed.csv")
+write_csv(input_data_exp_1, "../experiment 1/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_2, "../experiment 2/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_3, "../experiment 3/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_4, "../experiment 4/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_5, "../experiment 5/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_6, "../experiment 6/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_7, "../experiment 7/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_8, "../experiment 8/data/processed/data_spss_converted_to_csv.csv")
+write_csv(input_data_exp_9, "../experiment 9/data/processed/data_spss_converted_to_csv.csv")
 
 # tidy data
-data_exp_1 <- read.csv("../experiment 1/data/processed/data_processed.csv") %>%
+data_exp_1 <- read.csv("../experiment 1/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -103,7 +109,7 @@ data_exp_1 <- read.csv("../experiment 1/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_2 <- read.csv("../experiment 2/data/processed/data_processed.csv") %>%
+data_exp_2 <- read.csv("../experiment 2/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -134,7 +140,7 @@ data_exp_2 <- read.csv("../experiment 2/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_3 <- read.csv("../experiment 3/data/processed/data_processed.csv") %>%
+data_exp_3 <- read.csv("../experiment 3/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -165,7 +171,7 @@ data_exp_3 <- read.csv("../experiment 3/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_4 <- read.csv("../experiment 4/data/processed/data_processed.csv") %>%
+data_exp_4 <- read.csv("../experiment 4/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -196,7 +202,7 @@ data_exp_4 <- read.csv("../experiment 4/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_5 <- read.csv("../experiment 5/data/processed/data_processed.csv") %>%
+data_exp_5 <- read.csv("../experiment 5/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -229,7 +235,7 @@ data_exp_5 <- read.csv("../experiment 5/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_6 <- read.csv("../experiment 6/data/processed/data_processed.csv") %>%
+data_exp_6 <- read.csv("../experiment 6/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -260,7 +266,9 @@ data_exp_6 <- read.csv("../experiment 6/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   na.omit()
 
-data_exp_7 <- read.csv("../experiment 7/data/processed/data_processed.csv") %>%
+data_exp_7 <- read.csv("../experiment 7/data/processed/data_spss_converted_to_csv.csv") %>%
+  # remove the variables associated by the evaluative priming task which were calculated by hand in the SPSS file. 
+  select(-EP_Morag_Score, -EP_Struan_Score, -EP_Score, -Reversed_EP_Score) %>%
   mutate(intention = str_remove_all(Intentions_response, " "),
          intention = str_remove_all(intention, "Iwouldtry"),
          intention = as.factor(intention),
@@ -277,7 +285,6 @@ data_exp_7 <- read.csv("../experiment 7/data/processed/data_processed.csv") %>%
          Age, 
          Gender,
          source_valence_condition,
-         EP_Score,
          EC_Effect_CS1_CS2_Difference_Score,
          intention,
          color_valence_contingency_memory,
@@ -289,9 +296,11 @@ data_exp_7 <- read.csv("../experiment 7/data/processed/data_processed.csv") %>%
          demand_IAT,
          demand_self_reports) %>%
   # exclude participants with partial data
-  na.omit()
+  na.omit() %>%
+  # replace the EP variables with the EP scores calculated via the R script, which is more reproducible
+  full_join(read.csv("../experiment 7/data/processed/processed_ep_data.csv"), by = c("Participant" = "subject"))
 
-data_exp_8 <- read.csv("../experiment 8/data/processed/data_processed.csv") %>%
+data_exp_8 <- read.csv("../experiment 8/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(US_contingency_memory = ifelse(US_Contingency_Awareness_recoded == 1, TRUE, FALSE),
          hypothesis_awareness = ifelse(Hypothesis_Awareness_recoded == 1, TRUE, FALSE),
          influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
@@ -319,7 +328,7 @@ data_exp_8 <- read.csv("../experiment 8/data/processed/data_processed.csv") %>%
   # exclude participants with partial data
   drop_na(-influence_awareness)
 
-data_exp_9 <- read.csv("../experiment 9/data/processed/data_processed.csv") %>%
+data_exp_9 <- read.csv("../experiment 9/data/processed/data_spss_converted_to_csv.csv") %>%
   mutate(US_contingency_memory = ifelse(US_Contingency_Awareness_recoded == 1, TRUE, FALSE),
          influence_awareness = ifelse(Influence_Awareness_recoded == 1, TRUE, FALSE),
          reactance_IAT = ifelse(Reactance_IAT == 1, TRUE, FALSE), 

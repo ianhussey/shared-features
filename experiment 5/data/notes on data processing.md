@@ -1,0 +1,3 @@
+For each study, the raw inquisit data files (xlsx files in the `data/raw` folder) were processed into a SPSS .sav files by Sean/Simone. This was done manually/in SPSS and no code/syntax to reproduce this processing is available, although it was carefully rechecked in each case. 
+
+The processing.Rmd file in the analysis folder converts all these .sav files first to .csv format (which are saved to the `data/processed` folders in each experiment) as "data_spss_converted_to_csv.csv". This processing.Rmd script then tidied each data file's names and applied the exclusion criteria. Each experiment's to-be-analyzed data was then saved to the `data/processed` folder as data_for_analysis.csv.  
