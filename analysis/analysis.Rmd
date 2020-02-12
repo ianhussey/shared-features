@@ -1085,6 +1085,16 @@ Note that not all variables were collected in all subsets, so sample sizes for s
 
 ```{r}
 
+total_n_across_studies <- 
+  nrow(data_exp_1) + 
+  nrow(data_exp_2) +
+  nrow(data_exp_3) +
+  nrow(data_exp_4) +
+  nrow(data_exp_5) +
+  nrow(data_exp_6) +
+  nrow(data_exp_7) +
+  nrow(data_exp_8)
+
 data_combined <- 
   bind_rows(mutate(data_exp_1, experiment = 1),
             mutate(data_exp_2, experiment = 2),
@@ -1208,6 +1218,8 @@ temp_1_by_exp %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
 
 ```
+
+Total N in all studies (for reporting in abstract) = `r total_n_across_studies`.
 
 ## Meta analysed effect size
 
