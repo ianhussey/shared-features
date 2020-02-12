@@ -16,7 +16,7 @@ meta_analysis_workflow <- function(data,
     rma(yi = yi, 
         sei = sei,
         data = data,
-        slab = Experiment)
+        slab = str_remove_all(Experiment, "Experiment "))
   
   p_value <- apa_p_value(fitted_model$pval)
   
@@ -165,3 +165,5 @@ meta_results_h3_sensitivity <-
                          at = c(log(1), log(3), log(10), log(30), log(100)))
 
 ```
+
+Run this script, then make your viewer pain tall and narrow sized, then open and run open plots_2.R. Save the plot as a 5' by 10' pdf. 
