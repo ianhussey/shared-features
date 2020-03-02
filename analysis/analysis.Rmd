@@ -164,6 +164,12 @@ multinominal_analysis <- function(data) {
 }
 
 # meta analysis workflow ------
+add_heterogeneity_metrics_to_forest <- function(fit) {
+    bquote(paste("RE Model (", 
+                 italic('I')^"2", " = ", .(formatC(format(round(fit$I2, 1), nsmall = 1))),
+                 "%, ", italic('H')^"2", " = ", .(formatC(format(round(fit$H2, 1), nsmall = 1))), ")"))
+}
+
 meta_analysis_workflow <- function(data, 
                                    effect_size_label, 
                                    reference_line, 
@@ -238,7 +244,8 @@ meta_analysis_workflow <- function(data,
                           xlab = effect_size_label,
                           addcred = TRUE,
                           atransf = transformation,
-                          refline = reference_line)
+                          refline = reference_line,
+                          mlab = add_heterogeneity_metrics_to_forest(fitted_model))
   } else {
     forest_plot <- NULL
   }
@@ -272,7 +279,7 @@ robust_test <- function(subset_test, original_test) {
 
 
 # moderator meta analysis workflow ------
-moderator_meta_analysis_workflow <- function(data, 
+multilevel_moderator_meta_analysis_workflow <- function(data, 
                                              effect_size_label = "Cohen's d") {
   require(timesavers)
   require(tidyverse)
@@ -280,12 +287,13 @@ moderator_meta_analysis_workflow <- function(data,
   
   # fit random effects model 
   fitted_model <- 
-    rma(yi = yi, 
-        sei = sei,
-        data = data,
-        mods = ~ exclude,
-        slab = paste(Experiment, ifelse(exclude == TRUE, "excluded", "retained"), sep = " - "))
-
+    rma.mv(yi = yi, 
+           V = sei^2,
+           mods = ~ exclude,
+           random =  ~as.factor(exclude) | Experiment,
+           data = data,
+           slab = paste(Experiment, ifelse(exclude == TRUE, "excluded", "retained"), sep = " - "))
+  
   # summarize moderator results
   mod_meta_analysis_results_text <- 
     paste0("QM(df = 1) = ", round(fitted_model$QM, 2), 
@@ -440,8 +448,12 @@ Experiment 3 was informed by the unexpected results of experiment 2, which promp
 
 ```{r}
 
-data_exp_2 %>%
+p1 <- 
+  data_exp_2 %>%
   select(Participant, source_valence_condition, IAT_Score, EC_Effect_CS1_CS2_Difference_Score) %>%
+  mutate(source_valence_condition = dplyr::recode(source_valence_condition,
+                                                  CS1_Positive_CS2_Negative = "Morag positive & Struan negative",
+                                                  CS2_Positive_CS1_Negative = "Morag negative & Struan positive")) %>%
   rename(`IAT D score` = IAT_Score,
          `Ratings difference score` = EC_Effect_CS1_CS2_Difference_Score) %>%
   gather(dv_modality, dv_score, c(`IAT D score`, `Ratings difference score`)) %>%
@@ -455,6 +467,8 @@ data_exp_2 %>%
         panel.border = element_blank()) +
   xlab("") +
   ylab("Probability density")
+
+p1
 
 ```
 
@@ -2750,28 +2764,28 @@ results_for_meta_analysis_h1_reactance_IAT_excluded <-
 
 # fit metas
 mod_meta_results_h1_us_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_us_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_us_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h1_us_contingency_memory_excluded,
                                                               by = "Experiment"), 
                                                     results_for_meta_analysis_h1_us_contingency_memory_excluded),
                                    effect_size_label = "Cohen's d")
 
 mod_meta_results_h1_color_valence_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_color_valence_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_color_valence_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h1_color_valence_contingency_memory_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h1_color_valence_contingency_memory_excluded),
                                    effect_size_label = "Cohen's d")
 
 mod_meta_results_h1_demand_compliance <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_demand_compliance, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_demand_compliance, exclude = FALSE),
                                                               results_for_meta_analysis_h1_demand_compliance_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h1_demand_compliance_excluded),
                                    effect_size_label = "Cohen's d")
 
 mod_meta_results_h1_reactance <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_reactance_IAT, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h1_reactance_IAT, exclude = FALSE),
                                                               results_for_meta_analysis_h1_reactance_IAT_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h1_reactance_IAT_excluded),
@@ -2816,7 +2830,7 @@ results_exp_1_h2_demand_compliance_excluded <- data_exp_1 %>%
          IV = source_valence_condition) %>%
   t_test_analyses(.)
 
-results_exp_1_h2_reactance_self_reports_excluded <- data_exp_1 %>%
+results_exp_1_h2_reactance_excluded <- data_exp_1 %>%
   filter(reactance_self_reports == TRUE) %>%
   mutate(DV = EC_Effect_CS1_CS2_Difference_Score,
          IV = source_valence_condition) %>%
@@ -3116,7 +3130,7 @@ results_for_meta_analysis_h2_reactance_self_reports_excluded <-
                             "Experiment 7",
                             "Experiment 8 (standard)", 
                             "Experiment 8 (random)"), 
-             cohens_d = c(results_exp_1_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]], 
+             cohens_d = c(results_exp_1_h2_reactance_excluded$cohens_d$estimate[[1]], 
                           results_exp_2_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]], 
                           results_exp_3_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]], 
                           results_exp_4_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]],
@@ -3125,7 +3139,7 @@ results_for_meta_analysis_h2_reactance_self_reports_excluded <-
                           results_exp_7_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]],
                           results_exp_8nri_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]], 
                           results_exp_8ri_h2_reactance_self_reports_excluded$cohens_d$estimate[[1]]),
-             ci_lwr = c(results_exp_1_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
+             ci_lwr = c(results_exp_1_h2_reactance_excluded$cohens_d$conf.int[["lower"]],
                         results_exp_2_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
                         results_exp_3_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
                         results_exp_4_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
@@ -3134,7 +3148,7 @@ results_for_meta_analysis_h2_reactance_self_reports_excluded <-
                         results_exp_7_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
                         results_exp_8nri_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]],
                         results_exp_8ri_h2_reactance_self_reports_excluded$cohens_d$conf.int[["lower"]]),
-             ci_upr = c(results_exp_1_h2_reactance_self_reports_excluded$cohens_d$conf.int[["upper"]],
+             ci_upr = c(results_exp_1_h2_reactance_excluded$cohens_d$conf.int[["upper"]],
                         results_exp_2_h2_reactance_self_reports_excluded$cohens_d$conf.int[["upper"]],
                         results_exp_3_h2_reactance_self_reports_excluded$cohens_d$conf.int[["upper"]],
                         results_exp_4_h2_reactance_self_reports_excluded$cohens_d$conf.int[["upper"]],
@@ -3151,28 +3165,28 @@ results_for_meta_analysis_h2_reactance_self_reports_excluded <-
 
 # fit metas
 mod_meta_results_h2_us_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_us_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_us_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h2_us_contingency_memory_excluded,
                                                               by = "Experiment"), 
                                                     results_for_meta_analysis_h2_us_contingency_memory_excluded),
                                    effect_size_label = "Cohen's d")
 
 mod_meta_results_h2_color_valence_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_color_valence_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_color_valence_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h2_color_valence_contingency_memory_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h2_color_valence_contingency_memory_excluded),
                                    effect_size_label = "Cohen's d")
 
 mod_meta_results_h2_demand_compliance <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_demand_compliance, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_demand_compliance, exclude = FALSE),
                                                               results_for_meta_analysis_h2_demand_compliance_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h2_demand_compliance_excluded), 
                                    effect_size_label = "Cohen's d")
 
-mod_meta_results_h2_reactance_self_reports <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_reactance_self_reports, exclude = FALSE),
+mod_meta_results_h2_reactance <- 
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h2_reactance_self_reports, exclude = FALSE),
                                                               results_for_meta_analysis_h2_reactance_self_reports_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h2_reactance_self_reports_excluded), 
@@ -3182,7 +3196,7 @@ mod_meta_results_h2_reactance_self_reports <-
 forest(mod_meta_results_h2_us_contingency_memory$fitted_model)
 forest(mod_meta_results_h2_color_valence_contingency_memory$fitted_model)
 forest(mod_meta_results_h2_demand_compliance$fitted_model)
-forest(mod_meta_results_h2_reactance_self_reports$fitted_model)
+forest(mod_meta_results_h2_reactance$fitted_model)
 
 ```
 
@@ -3191,7 +3205,7 @@ Moderation by:
 - US contingency memory (TRUE were excluded): `r mod_meta_results_h2_us_contingency_memory$mod_meta_analysis_results_text`
 - color-valence contingency memory (TRUE were excluded): `r mod_meta_results_h2_color_valence_contingency_memory$mod_meta_analysis_results_text`
 - demand compliance (FALSE were excluded): `r mod_meta_results_h2_demand_compliance$mod_meta_analysis_results_text`
-- reactance (FALSE were excluded): `r mod_meta_results_h2_reactance_self_reports$mod_meta_analysis_results_text`
+- reactance (FALSE were excluded): `r mod_meta_results_h2_reactance$mod_meta_analysis_results_text`
 
 ### H3: Behavioural intentions
 
@@ -3322,14 +3336,14 @@ results_for_meta_analysis_h3_color_valence_contingency_memory_excluded <-
 
 # meta fits
 mod_meta_results_h3_us_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h3_us_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h3_us_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h3_us_contingency_memory_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h3_us_contingency_memory_excluded),
                                    effect_size_label = "Odds Ratio")
 
 mod_meta_results_h3_color_valence_contingency_memory <- 
-  moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h3_color_valence_contingency_memory, exclude = FALSE),
+  multilevel_moderator_meta_analysis_workflow(data = bind_rows(semi_join(mutate(results_for_meta_analysis_h3_color_valence_contingency_memory, exclude = FALSE),
                                                               results_for_meta_analysis_h3_color_valence_contingency_memory_excluded,
                                                               by = "Experiment"),
                                                     results_for_meta_analysis_h3_color_valence_contingency_memory_excluded),
@@ -3346,3 +3360,267 @@ Moderation by:
 - US contingency memory (TRUE were excluded): `r mod_meta_results_h3_us_contingency_memory$mod_meta_analysis_results_text`
 - color-valence contingency memory (TRUE were excluded): `r mod_meta_results_h3_color_valence_contingency_memory$mod_meta_analysis_results_text`
 
+### ES across moderation analyses
+
+```{r}
+
+effect_sizes_by_subgroup <- 
+  
+  bind_rows(
+    # IATs
+    (data.frame(moderator = c("us_contingency_memory AWARE",
+                              "color_valence_contingency_memory AWARE",
+                              "demand_NONcompliance",
+                              "NONreactant"), 
+                es_robustness = c(mod_meta_results_h1_us_contingency_memory$fitted_model$b[1],
+                                  mod_meta_results_h1_color_valence_contingency_memory$fitted_model$b[1],
+                                  mod_meta_results_h1_demand_compliance$fitted_model$b[1],
+                                  mod_meta_results_h1_reactance$fitted_model$b[1]),
+                ci_lower_robustness = c(mod_meta_results_h1_us_contingency_memory$fitted_model$ci.lb[1],
+                                        mod_meta_results_h1_color_valence_contingency_memory$fitted_model$ci.lb[1],
+                                        mod_meta_results_h1_demand_compliance$fitted_model$ci.lb[1],
+                                        mod_meta_results_h1_reactance$fitted_model$ci.lb[1]),
+                ci_upper_robustness = c(mod_meta_results_h1_us_contingency_memory$fitted_model$ci.ub[1],
+                                        mod_meta_results_h1_color_valence_contingency_memory$fitted_model$ci.ub[1],
+                                        mod_meta_results_h1_demand_compliance$fitted_model$ci.ub[1],
+                                        mod_meta_results_h1_reactance$fitted_model$ci.ub[1]),
+                es_excluded = c(sum(mod_meta_results_h1_us_contingency_memory$fitted_model$b),
+                                sum(mod_meta_results_h1_color_valence_contingency_memory$fitted_model$b),
+                                sum(mod_meta_results_h1_demand_compliance$fitted_model$b),
+                                sum(mod_meta_results_h1_reactance$fitted_model$b)),
+                ci_lower_excluded = c(sum(mod_meta_results_h1_us_contingency_memory$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h1_color_valence_contingency_memory$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h1_demand_compliance$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h1_reactance$fitted_model$ci.lb)),
+                ci_upper_excluded = c(sum(mod_meta_results_h1_us_contingency_memory$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h1_color_valence_contingency_memory$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h1_demand_compliance$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h1_reactance$fitted_model$ci.ub))) %>%
+       mutate(DV = "IAT",
+              es = "d")),
+    
+    # Self reported evlautions
+    (data.frame(moderator = c("us_contingency_memory AWARE",
+                              "color_valence_contingency_memory AWARE",
+                              "demand_NONcompliance",
+                              "NONreactant"), 
+                es_robustness = c(mod_meta_results_h2_us_contingency_memory$fitted_model$b[1],
+                                  mod_meta_results_h2_color_valence_contingency_memory$fitted_model$b[1],
+                                  mod_meta_results_h2_demand_compliance$fitted_model$b[1],
+                                  mod_meta_results_h2_reactance$fitted_model$b[1]),
+                ci_lower_robustness = c(mod_meta_results_h2_us_contingency_memory$fitted_model$ci.lb[1],
+                                        mod_meta_results_h2_color_valence_contingency_memory$fitted_model$ci.lb[1],
+                                        mod_meta_results_h2_demand_compliance$fitted_model$ci.lb[1],
+                                        mod_meta_results_h2_reactance$fitted_model$ci.lb[1]),
+                ci_upper_robustness = c(mod_meta_results_h2_us_contingency_memory$fitted_model$ci.ub[1],
+                                        mod_meta_results_h2_color_valence_contingency_memory$fitted_model$ci.ub[1],
+                                        mod_meta_results_h2_demand_compliance$fitted_model$ci.ub[1],
+                                        mod_meta_results_h2_reactance$fitted_model$ci.ub[1]),
+                es_excluded = c(sum(mod_meta_results_h2_us_contingency_memory$fitted_model$b),
+                                sum(mod_meta_results_h2_color_valence_contingency_memory$fitted_model$b),
+                                sum(mod_meta_results_h2_demand_compliance$fitted_model$b),
+                                sum(mod_meta_results_h2_reactance$fitted_model$b)),
+                ci_lower_excluded = c(sum(mod_meta_results_h2_us_contingency_memory$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h2_color_valence_contingency_memory$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h2_demand_compliance$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h2_reactance$fitted_model$ci.lb)),
+                ci_upper_excluded = c(sum(mod_meta_results_h2_us_contingency_memory$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h2_color_valence_contingency_memory$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h2_demand_compliance$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h2_reactance$fitted_model$ci.ub))) %>%
+       mutate(DV = "self reported evaluations",
+              es = "d")),
+    
+    
+    # Behavioural intentions
+    (data.frame(moderator = c("us_contingency_memory AWARE",
+                              "color_valence_contingency_memory AWARE"), 
+                es_robustness = c(mod_meta_results_h3_us_contingency_memory$fitted_model$b[1],
+                                  mod_meta_results_h3_color_valence_contingency_memory$fitted_model$b[1]),
+                ci_lower_robustness = c(mod_meta_results_h3_us_contingency_memory$fitted_model$ci.lb[1],
+                                        mod_meta_results_h3_color_valence_contingency_memory$fitted_model$ci.lb[1]),
+                ci_upper_robustness = c(mod_meta_results_h3_us_contingency_memory$fitted_model$ci.ub[1],
+                                        mod_meta_results_h3_color_valence_contingency_memory$fitted_model$ci.ub[1]),
+                es_excluded = c(sum(mod_meta_results_h3_us_contingency_memory$fitted_model$b),
+                                sum(mod_meta_results_h3_color_valence_contingency_memory$fitted_model$b)),
+                ci_lower_excluded = c(sum(mod_meta_results_h3_us_contingency_memory$fitted_model$ci.lb),
+                                      sum(mod_meta_results_h3_color_valence_contingency_memory$fitted_model$ci.lb)),
+                ci_upper_excluded = c(sum(mod_meta_results_h3_us_contingency_memory$fitted_model$ci.ub),
+                                      sum(mod_meta_results_h3_color_valence_contingency_memory$fitted_model$ci.ub))) %>%
+       mutate(DV = "behvioural intentions",
+              es = "OR"))
+    
+  ) %>%
+  round_df(2) %>%
+  select(DV, 
+         moderator,
+         es, 
+         es_robustness,
+         ci_lower_robustness,
+         ci_upper_robustness,
+         es_excluded,
+         ci_lower_excluded,
+         ci_upper_excluded)
+
+effect_sizes_by_subgroup %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+    
+```
+
+### Sample sizes for moderation analyses
+
+```{r}
+
+combined_data <- bind_rows(mutate(data_exp_1, experiment = "1"), 
+                           #mutate(data_exp_2, experiment = "2"),  # excluded by robustness tests
+                           mutate(data_exp_3, experiment = "3"), 
+                           mutate(data_exp_4, experiment = "4"), 
+                           mutate(data_exp_5, experiment = "5"), 
+                           mutate(data_exp_6, experiment = "6"), 
+                           mutate(data_exp_7, experiment = "7"), 
+                           mutate(data_exp_8ri, experiment = "8ri"), 
+                           mutate(data_exp_8nri, experiment = "8nri"))
+
+# n per cells
+n_per_cell <- 
+  
+  bind_rows(
+    
+    # IATs
+    
+    # US_contingency_memory
+    (combined_data %>%
+       # EXCLUDE CONDITIONS THAT HAD INADEQUATE N TO CALCULATE ES IN METAS ABOVE
+       filter((!experiment %in% c("8nri") & US_contingency_memory == TRUE) |
+                US_contingency_memory == FALSE) %>%  
+       select(IAT_Score, source_valence_condition, US_contingency_memory) %>%
+       drop_na() %>%
+       count(US_contingency_memory) %>%
+       mutate(moderator = "US_contingency_memory",
+              DV = "IAT") %>%
+       spread(US_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`)),
+    
+    # color_valence_contingency_memory
+    (combined_data %>%
+       select(IAT_Score, source_valence_condition, color_valence_contingency_memory) %>%
+       drop_na() %>%
+       count(color_valence_contingency_memory) %>%
+       mutate(moderator = "color_valence_contingency_memory",
+              DV = "IAT") %>%
+       spread(color_valence_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`)),
+    
+    # demand_IAT
+    (combined_data %>%
+       # EXCLUDE CONDITIONS THAT HAD INADEQUATE N TO CALCULATE ES IN METAS ABOVE
+       filter((!experiment %in% c("6", "8ri", "8nri") & demand_IAT == TRUE) |
+                demand_IAT == FALSE) %>%  
+       select(IAT_Score, source_valence_condition, demand_IAT) %>%
+       drop_na() %>%
+       count(demand_IAT) %>%
+       mutate(moderator = "demand",
+              DV = "IAT") %>%
+       spread(demand_IAT, n) %>%
+       rename(n_robustness_subset = `FALSE`,
+              n_excluded_subset = `TRUE`)),
+    
+    # reactance_IAT
+    (combined_data %>%
+       select(IAT_Score, source_valence_condition, reactance_IAT) %>%
+       drop_na() %>%
+       count(reactance_IAT) %>%
+       mutate(moderator = "reactance",
+              DV = "IAT") %>%
+       spread(reactance_IAT, n) %>%
+       rename(n_robustness_subset = `FALSE`,
+              n_excluded_subset = `TRUE`)),
+    
+    
+    
+    # Self reported evaluations
+    
+    # US_contingency_memory
+    (combined_data %>%
+       # EXCLUDE CONDITIONS THAT HAD INADEQUATE N TO CALCULATE ES IN METAS ABOVE
+       filter((!experiment %in% c("8nri") & US_contingency_memory == TRUE) |
+                US_contingency_memory == FALSE) %>%  
+       select(EC_Effect_CS1_CS2_Difference_Score, source_valence_condition, US_contingency_memory) %>%
+       drop_na() %>%
+       count(US_contingency_memory) %>%
+       mutate(moderator = "US_contingency_memory",
+              DV = "self reported evaluations") %>%
+       spread(US_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`)),
+    
+    # color_valence_contingency_memory
+    (combined_data %>%
+       select(EC_Effect_CS1_CS2_Difference_Score, source_valence_condition, color_valence_contingency_memory) %>%
+       drop_na() %>%
+       count(color_valence_contingency_memory) %>%
+       mutate(moderator = "color_valence_contingency_memory",
+              DV = "self reported evaluations") %>%
+       spread(color_valence_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`)),
+    
+    # demand_self_reports
+    (combined_data %>%
+       select(EC_Effect_CS1_CS2_Difference_Score, source_valence_condition, demand_self_reports) %>%
+       drop_na() %>%
+       count(demand_self_reports) %>%
+       mutate(moderator = "demand",
+              DV = "self reported evaluations") %>%
+       spread(demand_self_reports, n) %>%
+       rename(n_robustness_subset = `FALSE`,
+              n_excluded_subset = `TRUE`)),
+    
+    # reactance_self_reports
+    (combined_data %>%
+       select(EC_Effect_CS1_CS2_Difference_Score, source_valence_condition, reactance_self_reports) %>%
+       drop_na() %>%
+       count(reactance_self_reports) %>%
+       mutate(moderator = "reactance",
+              DV = "self reported evaluations") %>%
+       spread(reactance_self_reports, n) %>%
+       rename(n_robustness_subset = `FALSE`,
+              n_excluded_subset = `TRUE`)),
+    
+    
+    # behavioural intentions
+    
+    # US_contingency_memory
+    (combined_data %>%
+       select(intention, source_valence_condition, US_contingency_memory) %>%
+       drop_na() %>%
+       count(US_contingency_memory) %>%
+       mutate(moderator = "US_contingency_memory",
+              DV = "behavioural intentions") %>%
+       spread(US_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`)),
+    
+    # color_valence_contingency_memory
+    (combined_data %>%
+       select(intention, source_valence_condition, color_valence_contingency_memory) %>%
+       drop_na() %>%
+       count(color_valence_contingency_memory) %>%
+       mutate(moderator = "color_valence_contingency_memory",
+              DV = "behavioural intentions") %>%
+       spread(color_valence_contingency_memory, n) %>%
+       rename(n_robustness_subset = `TRUE`,
+              n_excluded_subset = `FALSE`))
+    
+  ) %>%
+  select(DV, moderator, n_robustness_subset, n_excluded_subset)
+
+# print
+n_per_cell %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
