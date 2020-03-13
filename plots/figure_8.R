@@ -63,7 +63,7 @@ invisible(dev.off())
 # grid::grid.newpage()
 # p1
 
-pdf("forest_plots.pdf",
+pdf("figure_8",
     width = 5.7, 
     height = 10)
 p1

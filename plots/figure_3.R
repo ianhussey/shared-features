@@ -35,7 +35,7 @@ invisible(dev.off())
 # grid::grid.newpage()
 # p1
 
-pdf("density_plots.pdf",
+pdf("figure_3.pdf",
     width = 7, 
     height = 6)
 p1
