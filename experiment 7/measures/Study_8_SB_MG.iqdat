@@ -1,0 +1,4 @@
+date	time	group	subject	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	windowcenter	trialduration	trialtimeout	blocktimeout	response	correct	latency	inwindow	stimulusnumber1	stimulusitem1	stimulusvpos1	stimulushpos1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusvpos2	stimulushpos2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusvpos3	stimulushpos3	stimulusonset3
+082719	13:57:19	1	1	4.0.10.0	2	1	SF_Training_Block_1	SF_Training_Trial_MORAG_CS1_2_Small	750	0	0	5500	0	0	0	0	4259	0	1	MORAG	50pct	30pct	491	6	SMILE	60pct	70pct	491	2	MISERY	40pct	70pct	491
+082719	13:57:19	1	1	4.0.10.0	2	2	SF_Training_Block_1	SF_Training_Trial_MORAG_CS1_1_Small	750	0	0	5500	0	0	0	0	4259	0	1	MORAG	50pct	30pct	491	3	JOY	40pct	70pct	491	6	HATE	60pct	70pct	491
+082719	13:57:19	1	1	4.0.10.0	2	3	SF_Training_Block_1	SF_Training_Trial_MORAG_CS1_1_Big	750	0	0	5500	0	0	Ctrl+'Q'	1	1750	0	1	MORAG	50pct	30pct	491	3	JOY	40pct	70pct	491	6	HATE	60pct	70pct	491

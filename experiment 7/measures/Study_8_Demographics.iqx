@@ -1,0 +1,126 @@
+﻿************************************************
+EXPERIMENTAL SCRIPT FOR ASKING DEMOGRAPHICS 
+************************************************
+Author: Sean Hughes
+Code review: 
+Last updated: 29-07-2019
+
+*************************************************
+Overview
+*************************************************
+Script provides the code for the second part of most experiments: demographics questions
+
+*************************************************
+Experiment Defaults and general design
+*************************************************
+
+<defaults>
+/ canvassize = (75%, 75%)
+/ windowsize = (75%, 75%)
+/ screencolor = white
+/ txcolor = black
+/ fontstyle = ("Arial", 4%)
+/ inputdevice = mouse
+</defaults>
+
+<expt>
+/ blocks = [1 = block1]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = begin)
+</variables>
+
+*************************************************
+Experiment Blocks
+*************************************************
+
+<block begin>
+/ preinstructions = (WelcomeInstructions)
+/ trials = [1 = info_1; 2= info_2; 3 = info_3; 4 = info_4]
+/ postinstructions = (waitinstruct)
+</block>
+
+*************************************************
+Experiment trials: questionnaire
+*************************************************
+
+<surveypage info_1>
+/questions = [1=age]
+/ showpagenumbers = false 
+/ showquestionnumbers = false
+/ branch = [if (textbox.age.response < 18 || textbox.age.response > 80) surveypage.info_1]
+</surveypage>
+
+<surveypage info_2>
+/questions = [1= gender]
+/ showpagenumbers = false 
+/showquestionnumbers = false
+</surveypage>
+
+<surveypage info_3>
+/questions = [1=Country]
+/ showpagenumbers = false 
+/showquestionnumbers = false
+</surveypage>
+
+<surveypage info_4>
+/questions = [1=ProlificCode]
+/ showpagenumbers = false 
+/showquestionnumbers = false
+</surveypage>
+
+*************************************************
+Demographic questions
+*************************************************
+
+<textbox age>
+/ caption = "What is your age:"
+</textbox>
+
+<dropdown gender>
+/ caption = "What is your gender"
+/ options = ("male", "female")
+</dropdown>
+
+<textbox Country>
+/ caption = "What is your country of residence"
+/ position = (10%,10%)
+/ textboxsize = (45, 20)
+</textbox>
+
+<textbox ProlificCode>
+/ caption = " Please enter your prolific ID here 
+(if you cannot remember it please quit the experiment now 
+and retrieve it before continuing). Otherwise you cannot be paid."
+/ position = (10%,10%)
+/ textboxsize = (45, 20)
+/ multiline = true
+</textbox>
+
+
+*************************************************
+Experiment instructions
+*************************************************
+
+<instruct>  
+/ font = ("Arial", -20, 800, 0, 49)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ lastlabel = "Press the spacebar to continue"
+/ prevlabel = "Press the 't' key to go back"
+/ prevkey = ("t")
+</instruct>
+
+<page WelcomeInstructions>
+^^Welcome to this experiment.
+^^Before you start, please have your Prolific ID ready [It can be found in your account info]
+^^
+</page>
+
+<page waitinstruct>
+^Thank you.
+^^Now press the spacebar to start the experiment. 
+^^Note that once you press the spacebar, the stimuli for the experiment will need to be uploaded. 
+^^This might take 1-2 minutes so please be patient.
+</page>

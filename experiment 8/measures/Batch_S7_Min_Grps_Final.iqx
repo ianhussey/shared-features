@@ -1,0 +1,380 @@
+﻿***************************************************************************************
+***************************************************************************************
+			BATCH FOR SHARED FEATURES STUDY 7 (Minimal Groups Paradigm) (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 26/07/2019
+***************************************************************************************
+
+Condition 1: Bag Info
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects= (1 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Bad_James_Good.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C1_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Bad_James_Good.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C1_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Bad_James_Good.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C1_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Bad_James_Good.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C1_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Good_James_Bad.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C1_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Good_James_Bad.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C1_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Good_James_Bad.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C1_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C1_Chris_Good_James_Bad.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C1_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+
+Condition 2: No Bag Info
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(9 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(10 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(11 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(12 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(13 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(14 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(15 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(16 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+Condition 3: Bag Info Unrelated
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(17 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Bad_James_Good.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C3_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(18 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Bad_James_Good.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C3_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(19 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Bad_James_Good.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C3_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(20 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Bad_James_Good.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C3_Expl_Q_Chris_Bad_James_Good.iqx"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(21 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Good_James_Bad.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C3_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(22 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Good_James_Bad.iqx"
+/ file="Study_7_Stimulus_Ratings_Before.iqx"
+/ file="Study_7_IAT_After.iqx"
+/ file="C3_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(23 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Good_James_Bad.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C3_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(24 of 24)
+/ groupassignment = subjectnumber
+/ file="Study_7_consent.iqx"
+/ file="Study_7_Demographics.iqx"
+/ file="C3_Chris_Good_James_Bad.iqx"
+/ file="Study_7_IAT_Before.iqx"
+/ file="Study_7_Stimulus_Ratings_After.iqx"
+/ file="C3_Expl_Q_Chris_Good_James_Bad.iqx"
+</batch>

@@ -1,0 +1,480 @@
+﻿************************************************
+Shared features (Experiment 6: Control for 'Odd one Out' Alternative Explaination)
+
+Code by Sean Hughes (sean.hughes@ugent.be) and Ian Hussey (ian.hussey@ugent.be)
+************************************************
+
+************************************************
+defaults
+************************************************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = black
+/ txcolor = white
+/ txbgcolor = black
+/ fontstyle = ("Arial", 5%)
+/ inputdevice = keyboard
+/ validkeys = (" ", "t")
+/ halign = center
+/ valign = center
+</defaults>
+
+<values>
+/ errors_in_block_counter = 0
+</values>
+
+************************************************
+stimuli exemplars
+************************************************
+
+<item stimulus_source_positive_1>
+/ 1 = "LOVE"
+/ 2 = "HAPPY"
+/ 3 = "BEAUTIFUL"
+</item>
+
+<item stimulus_source_positive_2>
+/ 1 = "PEACE"
+/ 2 = "FRIENDSHIP"
+/ 3 = "SUCCESS"
+</item>
+
+<item stimulus_source_negative_1>
+/ 1 = "AGONY"
+/ 2 = "MURDER"
+/ 3 = "VOMIT"
+</item>
+
+<item stimulus_source_negative_2>
+/ 1 = "DISEASE" 
+/ 2 = "TORTURE"
+/ 3 = "CANCER"
+</item>
+
+<item stimulus_neutral_target_1>
+/ 1 =  "MORAG"
+</item>
+
+<item stimulus_neutral_target_2>
+/ 1 =  "STRUAN"
+</item>
+
+<item stimulus_neutral_filler_1>
+/ 1 = "TABLE"
+/ 2 = "BUILDING"
+/ 3 = "GLASS"
+</item>
+
+<item stimulus_neutral_filler_2>
+/ 1 = "STREET"
+/ 2 = "NUMBER"
+/ 3 = "BOWL"
+</item>
+
+************************************************
+instructions
+************************************************
+
+<instruct>
+/ fontstyle = ("Arial", 2.5%)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press the 't' key to go back"
+/ prevkey = ("t")
+/ windowsize = (50%, 50%)
+</instruct>
+
+<page instructions>
+^^ In the next part of the experiment you are going to see a new word on the screen (i.e., MORAG or STRUAN). 
+
+^^ This new word (MORAG or STRUAN) will appear together with other words.
+
+^^ These words will appear in certain colors.
+
+^^ **PLEASE PAY CLOSE ATTENTION TO THE COLORS OF THE WORDS** 
+ 
+^^ You will be asked some questions about this later on.**
+</page>
+
+<page Instructions_1>
+^^ Thank you. We will do this task a second time. 
+
+^^ Please press the space bar to continue.
+</page>
+
+<page Instructions_2>
+^^ Thank you. We will do this task one final time. 
+
+^^ Please press the space bar to continue.
+</page>
+
+************************************************
+stimuli
+************************************************
+
+# h positions
+<list h_position_stimulus_source_positive_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+</list>
+
+<list h_position_stimulus_source_positive_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue)
+</list>
+
+<list h_position_stimulus_source_negative_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue)
+</list>
+
+<list h_position_stimulus_source_negative_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue, 
+       list.h_position_stimulus_source_negative_1.currentvalue)
+</list>
+
+<list h_position_stimulus_neutral_target_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue, 
+       list.h_position_stimulus_source_negative_1.currentvalue,
+       list.h_position_stimulus_source_negative_2.currentvalue)
+</list>
+
+<list h_position_stimulus_neutral_target_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue, 
+       list.h_position_stimulus_source_negative_1.currentvalue,
+       list.h_position_stimulus_source_negative_2.currentvalue,
+       list.h_position_stimulus_neutral_target_1.currentvalue)
+</list>
+
+<list h_position_stimulus_neutral_filler_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue, 
+       list.h_position_stimulus_source_negative_1.currentvalue,
+       list.h_position_stimulus_source_negative_2.currentvalue,
+       list.h_position_stimulus_neutral_target_1.currentvalue,
+       list.h_position_stimulus_neutral_target_2.currentvalue)
+</list>
+
+<list h_position_stimulus_neutral_filler_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.h_position_stimulus_source_positive_1.currentvalue, 
+       list.h_position_stimulus_source_positive_2.currentvalue, 
+       list.h_position_stimulus_source_negative_1.currentvalue,
+       list.h_position_stimulus_source_negative_2.currentvalue,
+       list.h_position_stimulus_neutral_target_1.currentvalue,
+       list.h_position_stimulus_neutral_target_2.currentvalue,
+       list.h_position_stimulus_neutral_filler_1.currentvalue)
+</list>
+
+# v positions
+<list v_position_stimulus_source_positive_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+</list>
+
+<list v_position_stimulus_source_positive_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue)
+</list>
+
+<list v_position_stimulus_source_negative_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue)
+</list>
+
+<list v_position_stimulus_source_negative_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue, 
+       list.v_position_stimulus_source_negative_1.currentvalue)
+</list>
+
+<list v_position_stimulus_neutral_target_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue, 
+       list.v_position_stimulus_source_negative_1.currentvalue,
+       list.v_position_stimulus_source_negative_2.currentvalue)
+</list>
+
+<list v_position_stimulus_neutral_target_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue, 
+       list.v_position_stimulus_source_negative_1.currentvalue,
+       list.v_position_stimulus_source_negative_2.currentvalue,
+       list.v_position_stimulus_neutral_target_1.currentvalue)
+</list>
+
+<list v_position_stimulus_neutral_filler_1>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue, 
+       list.v_position_stimulus_source_negative_1.currentvalue,
+       list.v_position_stimulus_source_negative_2.currentvalue,
+       list.v_position_stimulus_neutral_target_1.currentvalue,
+       list.v_position_stimulus_neutral_target_2.currentvalue)
+</list>
+
+<list v_position_stimulus_neutral_filler_2>
+/ items=[10%; 15%; 20%; 25%; 30%; 35%; 40%; 45%; 50%; 55%; 60%; 65%; 70%; 75%; 80%; 85%; 90%]
+/ selectionmode=random
+/ not=(list.v_position_stimulus_source_positive_1.currentvalue, 
+       list.v_position_stimulus_source_positive_2.currentvalue, 
+       list.v_position_stimulus_source_negative_1.currentvalue,
+       list.v_position_stimulus_source_negative_2.currentvalue,
+       list.v_position_stimulus_neutral_target_1.currentvalue,
+       list.v_position_stimulus_neutral_target_2.currentvalue,
+       list.v_position_stimulus_neutral_filler_1.currentvalue)
+</list>
+
+<list color_list>
+/ items = (lime, lime, fuchsia, fuchsia, yellow, yellow, deepskyblue, deepskyblue)
+</list>
+
+
+# stimuli - in all white
+
+<text stimulus_source_positive_1>
+/ items = stimulus_source_positive_1
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_source_positive_1
+/ vposition = v_position_stimulus_source_positive_1
+</text>
+
+<text stimulus_source_positive_2>
+/ items = stimulus_source_positive_2
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_source_positive_2
+/ vposition = v_position_stimulus_source_positive_2
+</text>
+
+<text stimulus_source_negative_1>
+/ items = stimulus_source_negative_1
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_source_negative_1
+/ vposition = v_position_stimulus_source_negative_1
+</text>
+
+<text stimulus_source_negative_2>
+/ items = stimulus_source_negative_2
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_source_negative_2
+/ vposition = v_position_stimulus_source_negative_2
+</text>
+
+<text stimulus_neutral_target_1>
+/ items = stimulus_neutral_target_1
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_neutral_target_1
+/ vposition = v_position_stimulus_neutral_target_1
+</text>
+
+<text stimulus_neutral_target_2>
+/ items = stimulus_neutral_target_2
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_neutral_target_2
+/ vposition = v_position_stimulus_neutral_target_2
+</text>
+
+<text stimulus_neutral_filler_1>
+/ items = stimulus_neutral_filler_1
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_neutral_filler_1
+/ vposition = v_position_stimulus_neutral_filler_1
+</text>
+
+<text stimulus_neutral_filler_2>
+/ items = stimulus_neutral_filler_2
+/ select = noreplacenorepeat
+/ hposition = h_position_stimulus_neutral_filler_2
+/ vposition = v_position_stimulus_neutral_filler_2
+</text>
+
+# stimuli - colored
+
+<text stimulus_source_positive_1_colored>
+/ items = stimulus_source_positive_1
+/ select = text.stimulus_source_positive_1.currentindex
+/ hposition = text.stimulus_source_positive_1.hposition
+/ vposition = text.stimulus_source_positive_1.vposition
+</text>
+
+<text stimulus_source_positive_2_colored>
+/ items = stimulus_source_positive_2
+/ select = text.stimulus_source_positive_2.currentindex
+/ hposition = text.stimulus_source_positive_2.hposition
+/ vposition = text.stimulus_source_positive_2.vposition
+</text>
+
+<text stimulus_source_negative_1_colored>
+/ items = stimulus_source_negative_1
+/ select = text.stimulus_source_negative_1.currentindex
+/ hposition = text.stimulus_source_negative_1.hposition
+/ vposition = text.stimulus_source_negative_1.vposition
+</text>
+
+<text stimulus_source_negative_2_colored>
+/ items = stimulus_source_negative_2
+/ select = text.stimulus_source_negative_2.currentindex
+/ hposition = text.stimulus_source_negative_2.hposition
+/ vposition = text.stimulus_source_negative_2.vposition
+</text>
+
+<text stimulus_neutral_target_1_colored>
+/ items = stimulus_neutral_target_1
+/ select = text.stimulus_neutral_target_1.currentindex
+/ hposition = text.stimulus_neutral_target_1.hposition
+/ vposition = text.stimulus_neutral_target_1.vposition
+</text>
+
+<text stimulus_neutral_target_2_colored>
+/ items = stimulus_neutral_target_2
+/ select = text.stimulus_neutral_target_2.currentindex
+/ hposition = text.stimulus_neutral_target_2.hposition
+/ vposition = text.stimulus_neutral_target_2.vposition
+</text>
+
+<text stimulus_stimulus_neutral_filler_1_colored>
+/ items = stimulus_neutral_filler_1
+/ select = text.stimulus_neutral_filler_1.currentindex
+/ hposition = text.stimulus_neutral_filler_1.hposition
+/ vposition = text.stimulus_neutral_filler_1.vposition
+</text>
+
+<text stimulus_neutral_filler_2_colored>
+/ items = stimulus_neutral_filler_2
+/ select = text.stimulus_neutral_filler_2.currentindex
+/ hposition = text.stimulus_neutral_filler_2.hposition
+/ vposition = text.stimulus_neutral_filler_2.vposition
+</text>
+
+************************************************
+trials
+************************************************
+
+<trial trial_target_1_positive_1> 
+/ ontrialbegin = [text.stimulus_source_positive_1_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_1_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_positive_1_colored, stimulus_neutral_target_1_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_1_positive_2> 
+/ ontrialbegin = [text.stimulus_source_positive_2_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_1_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_positive_2_colored, stimulus_neutral_target_1_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_1_negative_1> 
+/ ontrialbegin = [text.stimulus_source_negative_1_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_1_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_negative_1_colored, stimulus_neutral_target_1_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_1_negative_2> 
+/ ontrialbegin = [text.stimulus_source_negative_2_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_1_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_negative_2_colored, stimulus_neutral_target_1_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_2_positive_1> 
+/ ontrialbegin = [text.stimulus_source_positive_1_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_2_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_positive_1_colored, stimulus_neutral_target_2_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_2_positive_2> 
+/ ontrialbegin = [text.stimulus_source_positive_2_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_2_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_positive_2_colored, stimulus_neutral_target_2_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_2_negative_1> 
+/ ontrialbegin = [text.stimulus_source_negative_1_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_2_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_negative_1_colored, stimulus_neutral_target_2_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+<trial trial_target_2_negative_2> 
+/ ontrialbegin = [text.stimulus_source_negative_2_colored.textcolor=list.color_list.nextvalue]
+/ ontrialbegin = [text.stimulus_neutral_target_2_colored.textcolor=list.color_list.nextvalue]
+/ stimulustimes = [   0 = sequence(stimulus_source_positive_1, stimulus_source_positive_2, stimulus_source_negative_1, stimulus_source_negative_2, stimulus_neutral_target_1, stimulus_neutral_target_2, stimulus_neutral_filler_1, stimulus_neutral_filler_2); 
+                   3000 = stimulus_source_negative_2_colored, stimulus_neutral_target_2_colored]
+/ pretrialpause =  1000
+/ trialduration = 6000
+</trial>
+
+************************************************
+blocks
+************************************************  
+
+<block target_1_positive_target_2_negative_Block_1>
+/ preinstructions = (instructions)
+/ trials = [1-16 = noreplacenorepeat(trial_target_1_positive_1, trial_target_1_positive_2, trial_target_2_negative_1, trial_target_2_negative_2)]
+</block>
+
+<block target_1_positive_target_2_negative_Block_2>
+/ preinstructions = (instructions_1)
+/ trials = [1-16 = noreplacenorepeat(trial_target_1_positive_1, trial_target_1_positive_2, trial_target_2_negative_1, trial_target_2_negative_2)]
+</block>
+
+<block target_1_positive_target_2_negative_Block_3>
+/ preinstructions = (instructions_2)
+/ trials = [1-16 = noreplacenorepeat(trial_target_1_positive_1, trial_target_1_positive_2, trial_target_2_negative_1, trial_target_2_negative_2)]
+</block>
+
+************************************************
+experiment conditions
+************************************************
+
+odd and even numbers used for IAT block order, so counterbalance that with this task's factors
+
+<expt>
+/ subjects = (1 of 1)
+/ blocks = [1 = target_1_positive_target_2_negative_Block_1; 2 = target_1_positive_target_2_negative_Block_2; 3 = target_1_positive_target_2_negative_Block_3]
+</expt>

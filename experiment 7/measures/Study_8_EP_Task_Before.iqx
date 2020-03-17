@@ -1,0 +1,937 @@
+﻿***************************************************************************************
+***************************************************************************************
+											SCRIPT OVERVIEW (Evaluative Priming Task)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 18/07/2019
+***************************************************************************************
+***************************************************************************************
+
+*************************General Variables****************************
+**********************************************************************
+
+<text wrong>
+/ items = wrong
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = RED
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_1>
+/ items = Positive_Target_1
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_2>
+/ items = Positive_Target_2
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_3>
+/ items = Positive_Target_3
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_4>
+/ items = Positive_Target_4
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_5>
+/ items = Positive_Target_5
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_6>
+/ items = Positive_Target_6
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_7>
+/ items = Positive_Target_7
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_8>
+/ items = Positive_Target_8
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_9>
+/ items = Positive_Target_9
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Positive_Target_10>
+/ items = Positive_Target_10
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_1>
+/ items = Negative_Target_1
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_2>
+/ items = Negative_Target_2
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_3>
+/ items = Negative_Target_3
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_4>
+/ items = Negative_Target_4
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_5>
+/ items = Negative_Target_5
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_6>
+/ items = Negative_Target_6
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_7>
+/ items = Negative_Target_7
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_8>
+/ items = Negative_Target_8
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_9>
+/ items = Negative_Target_9
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<text Negative_Target_10>
+/ items = Negative_Target_10
+/ select = noreplace
+/ hjustify = center
+/ vjustify = center
+/ size = (30%, 30%)
+/position = (50%,50%)
+/color = WHITE
+/ fontstyle = ("Arial", 6%, true)
+</text>
+
+<item wrong>
+/1 = "Wrong!"
+</item>
+
+<item Positive_Target_1>
+/1 = "Fantastic"
+</item>
+
+<item Positive_Target_2>
+/1 = "Great"
+</item>
+
+<item Positive_Target_3>
+/1 = "Nice"
+</item>
+
+<item Positive_Target_4>
+/1 = "Good"
+</item>
+
+<item Positive_Target_5>
+/1 = "Pleasant"
+</item>
+
+<item Positive_Target_6>
+/1 = "Attractive"
+</item>
+
+<item Positive_Target_7>
+/1 = "Delight"
+</item>
+
+<item Positive_Target_8>
+/1 = "Smile"
+</item>
+
+<item Positive_Target_9>
+/1 = "Trust"
+</item>
+
+<item Positive_Target_10>
+/1 = "Positive"
+</item>
+
+<item Negative_Target_1>
+/1 = "Terrible"
+</item>
+
+<item Negative_Target_2>
+/1 = "Disgusting"
+</item>
+
+<item Negative_Target_3>
+/1 = "Nasty"
+</item>
+
+<item Negative_Target_4>
+/1 = "Horrible"
+</item>
+
+<item Negative_Target_5>
+/1 = "Sick"
+</item>
+
+<item Negative_Target_6>
+/1 = "Abuse"
+</item>
+
+<item Negative_Target_7>
+/1 = "Failure"
+</item>
+
+<item Negative_Target_8>
+/1 = "Grief"
+</item>
+
+<item Negative_Target_9>
+/1 = "Negative"
+</item>
+
+<item Negative_Target_10>
+/1 = "Pain"
+</item>
+
+<item Struan>
+/1 = "Struan_1.jpg"
+/2 = "Struan_2.jpg"
+/3 = "Struan_3.jpg"
+/4 = "Struan_4.jpg"
+</item>
+
+<item Morag>
+/1 = "Morag_1.jpg"
+/2 = "Morag_2.jpg"
+/3 = "Morag_3.jpg"
+/4 = "Morag_4.jpg"
+</item>
+
+***********************************
+text and pictures
+***********************************
+
+<text spacebar>
+/ items = ("[Press the spacebar to continue]")
+/ position = (50%, 90%)
+/ valign = bottom
+</text>s
+
+<text bad.label>
+/ items = ("Bad")
+/ valign = bottom
+/ halign = right
+/ position = (85%, 85%)
+/ txcolor = (255,255,255)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text good.label>
+/ items = ("Good")
+/ valign = bottom
+/ halign = left
+/ position = (15%, 85%)
+/ txcolor = (255,255,255)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text fixation>
+/items = ("+")
+/ color = (255, 255, 255)
+/ fontstyle = ("Arial", 8%)
+</text>
+
+<text ready.txt>
+/items = ("[Press 'E' or 'I' to start.]")
+/fontstyle = ("Arial", 5%)
+/ color = WHITE
+</text>
+
+<picture Struan>
+/ items = Struan
+/ select = noreplace
+</picture>
+
+<picture Morag>
+/ items = Morag
+/select = noreplace
+</picture>
+
+<picture example.pic>
+/ items = ("example.jpg")
+/size = (50%, 50%)
+/position = (50%, 65%)
+</picture>
+
+<picture stimuli>
+/ items = ("stimuli.jpg")
+/select = noreplace
+/position = (50%, 70%)
+</picture>
+
+<shape blank>
+/ shape = rectangle
+/ color = (0,0,0)
+/ size = (30%, 30%)
+</shape>
+
+***********************************************************************
+Task instruction stimuli
+***********************************************************************
+
+#1. first instructions about EPT
+
+<trial instructions.EPT.start.trial2>
+/stimulustimes = [1=instructions.EPT.text.start, stimuli, spacebar]
+/ correctresponse = (57)
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<text instructions.EPT.text.start>
+/ items = ("In the next task, you will be presented with a series of words to quickly evaluate as either 'Good' or 'Bad'. You should try to do this as quickly as you can while making as few mistakes as possible.
+
+You will also see the words 'STRUAN' and 'MORAG' presented before the words. You can watch those words, but your task is simply to respond to the good and bad words. 
+
+THIS PART OF THE STUDY WILL TAKE AROUND 4 MINUTES TO COMPLETE. PLEASE STICK WITH IT AND TRY YOUR BEST HERE. 
+
+The following is a list of the words that you will categorize." )
+
+/ hjustify = left
+/ size = (70%, 70%)
+</text>
+
+#3. second instructions about EPT
+
+<trial instructions.EPT.trial2>
+/stimulustimes = [1=instructions.EPT.trial2, spacebar]
+/ correctresponse = (57)
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<text instructions.EPT.trial2>
+/ items = ("Remember:
+
+Press 'e'  if you see a good word. 
+Press 'i'  if you see a bad word.
+
+Please do not press the 'e' and 'i' buttons randomly. Instead use them to evaluate the good and bad words that appear. Thank you!
+
+Please start when ready." )
+/ hjustify = left
+/ size = (90%, 90%)
+</text>
+
+#4. end instructions EPT
+
+<trial instructions.EPT.end.trial2>
+/stimulustimes = [1=instructions.EPT.text.end, spacebar]
+/ correctresponse = (57)
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<text instructions.EPT.text.end>
+/ items = ("Thank you for finishing this task. 
+
+Please continue.")
+/ hjustify = left
+/ size = (90%, 80%)
+</text>
+
+***********************************************************************
+PRACTICE TRIALS
+***********************************************************************
+<trial ready>
+/ stimulustimes = [1=ready.txt]
+/ correctresponse = (18, 23)
+/ posttrialpause = 1000
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial Practice_Positive_Trial_STRUAN>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250= Positive_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Practice_Positive_Trial_MORAG>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Practice_Negative_Trial_STRUAN>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Practice_Negative_Trial_MORAG>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+***********************************************************************
+TEST TRIALS
+***********************************************************************
+
+<trial Struan_Positive_Trial_1>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_1>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_1>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_1>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_1]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_2>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_2]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_2>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_2]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_2>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_2]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_2>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_2]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_3>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_3]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_3>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_3]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_3>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_3]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_3>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_3]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_4>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_4]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_4>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_4]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_4>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_4]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_4>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_4]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_5>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_5]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_5>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_5]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_5>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_5]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_5>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_5]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_6>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_6]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_6>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_6]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_6>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_6]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_6>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_6]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_7>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_7]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_7>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_7]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_7>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_7]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_7>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_7]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_8>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_8]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_8>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_8]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_8>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_8]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_8>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_8]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_9>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_9]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_9>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_9]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_9>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_9]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_9>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_9]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Positive_Trial_10>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Positive_Target_10]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Struan_Negative_Trial_10>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Struan; 1200=blank; 1250=Negative_Target_10]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Positive_Trial_10>
+/ validresponse = (18, 23)
+/ correctresponse = (18)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Positive_Target_10]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+<trial Morag_Negative_Trial_10>
+/ validresponse = (18, 23)
+/ correctresponse = (23)
+/ stimulustimes = [0= fixation; 500=blank; 1000 = Morag; 1200=blank; 1250=Negative_Target_10]
+/ timeout = 3250
+/ errormessage = true(wrong, 250)
+/ posttrialpause = (500+rand(0,1000))
+</trial>
+
+
+
+
+***********************************************************************
+Blocks
+***********************************************************************
+<block Evaluative_Priming_Task_.instructions.block>
+/ trials = [1=instructions.EPT.start.trial2; 2=instructions.EPT.trial2]
+/ recorddata = false
+</block>
+
+<block Evaluative_Priming_Task_.practice.block>
+/ bgstim = (good.label, bad.label)
+/ trials = [1= ready; 2-9= noreplacenorepeat(Practice_Positive_Trial_STRUAN, Practice_Positive_Trial_MORAG, Practice_Negative_Trial_STRUAN, Practice_Negative_Trial_MORAG)]
+</block>
+
+<block Evaluative_Priming_Task_.data.block>
+/ bgstim = (good.label, bad.label)
+/ trials = [1-80 = noreplacenorepeat(Struan_Positive_Trial_1, Morag_Positive_Trial_1, Struan_Negative_Trial_1, Morag_Negative_Trial_1,
+Struan_Positive_Trial_2, Morag_Positive_Trial_2, Struan_Negative_Trial_2, Morag_Negative_Trial_2, 
+Struan_Positive_Trial_3, Morag_Positive_Trial_3, Struan_Negative_Trial_3, Morag_Negative_Trial_3,
+Struan_Positive_Trial_4, Morag_Positive_Trial_4, Struan_Negative_Trial_4, Morag_Negative_Trial_4,
+Struan_Positive_Trial_5, Morag_Positive_Trial_5, Struan_Negative_Trial_5, Morag_Negative_Trial_5,
+Struan_Positive_Trial_6, Morag_Positive_Trial_6, Struan_Negative_Trial_6, Morag_Negative_Trial_6,
+Struan_Positive_Trial_7, Morag_Positive_Trial_7, Struan_Negative_Trial_7, Morag_Negative_Trial_7,
+Struan_Positive_Trial_8, Morag_Positive_Trial_8, Struan_Negative_Trial_8, Morag_Negative_Trial_8,
+Struan_Positive_Trial_9, Morag_Positive_Trial_9, Struan_Negative_Trial_9, Morag_Negative_Trial_9,
+Struan_Positive_Trial_10, Morag_Positive_Trial_10, Struan_Negative_Trial_10, Morag_Negative_Trial_10)]
+</block>
+
+<block Evaluative_Priming_Task_.end.block>
+/ trials = [1 = instructions.EPT.end.trial2]
+/ recorddata = false
+</block>
+
+**************
+experiment
+**************
+<defaults>
+/ canvassize = (100%, 100%)
+/ fontstyle = ("Arial", 3%)
+/ screencolor = black
+/ txbgcolor = black
+/ txcolor = white
+</defaults>
+
+<expt>
+/ blocks = [1=Evaluative_Priming_Task_.instructions.block; 2=Evaluative_Priming_Task_.practice.block;3=Evaluative_Priming_Task_.data.block; 4=Evaluative_Priming_Task_.end.block]
+</expt>

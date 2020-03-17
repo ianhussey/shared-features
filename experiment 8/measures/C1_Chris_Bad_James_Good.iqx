@@ -1,0 +1,415 @@
+﻿************************************************
+Shared features (Experiment 7: Minimal Groups Paradigm)
+
+Code by Sean Hughes (sean.hughes@ugent.be)
+************************************************
+
+************************************************
+defaults
+************************************************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = white
+/ txcolor = black
+/ txbgcolor = white
+/ fontstyle = ("Arial", 5%)
+/ inputdevice = keyboard
+/ validkeys = (" ", "t")
+/ halign = center
+/ valign = center
+</defaults>
+
+************************************************
+Stimuli
+************************************************
+
+<picture James>
+/ numitems = 1
+/ items = ("James.jpg")
+/ position = (50%, 50%)
+</picture>
+
+<picture Chris>
+/ numitems = 1
+/ items = ("Chris.jpg")
+/ position = (50%, 50%)
+</picture>
+
+<text Positive_Stimulus>
+/ numitems = 10
+/ position = (50%, 50%)
+/ fontstyle = ("Arial", 6%, true)
+/ items = (" Fantastic", "Wonderful", "Honest", "Kind", "Brave", "Amazing", "Nice", "Pleasant", "Selfless", "Great")
+/ txcolor = dodgerblue
+/ select = replacenorepeat
+</text>
+
+<text Negative_Stimulus>
+/ numitems = 10
+/ fontstyle = ("Arial", 6%, true)
+/ items = (" Horrible", " Nasty", " Violent", " Terrible", " Hated", " Disgusting", " Mean", " Unpleasant", " Stupid", "Bully")
+/ position = (50%, 50%)
+/ txcolor = dodgerblue
+</text>
+
+<text Bag_1>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 1:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_2>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 2:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_3>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 3:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_4>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 4:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_5>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 5:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_6>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 6:")
+/ position = (50%, 30%)
+</text>
+
+<picture White_Square>
+/ numitems = 1
+/ items = ("White_Square.jpg")
+/ position = (50%, 50%)
+</picture>
+
+
+************************************************
+instructions
+************************************************
+
+<instruct>
+/ fontstyle = ("Arial", 2.5%)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press the 't' key to go back"
+/ prevkey = ("t")
+/ windowsize = (50%, 50%)
+</instruct>
+
+<page instructions>
+^^ PART 1 OF THE EXPERIMENT
+</page>
+
+<page instructions_1>
+^^ The computer will now pull a word or image from two bags: Bag 1 & Bag 2. 
+
+^^ We will tell you what word or image was pulled from Bag 1 or Bag 2. 
+
+^^ **IMPORTANT: PLEASE PAY ATTENTION TO THE WORDS AND IMAGES PULLED FROM EACH BAG** 
+ 
+^^ You will be asked questions about this later on.**
+</page>
+
+<page Instructions_2>
+^^ Thank you. We will do this task again. 
+
+^^ The computer will now pull a word or image from two bags: Bag 3 & Bag 4. 
+
+^^ We will tell you what word or image was pulled from Bag 3 or Bag 4. 
+
+^^ **IMPORTANT: PLEASE PAY ATTENTION TO THE WORDS AND IMAGES PULLED FROM EACH BAG** 
+ 
+^^ You will be asked questions about this later on.**
+</page>
+
+<page Instructions_3>
+^^ Thank you. We will do this task one last time. 
+
+^^ The computer will now pull a word or image from two bags: Bag 5 & Bag 6. 
+
+^^ We will tell you what word or image was pulled from Bag 5 or Bag 6. 
+
+^^ **IMPORTANT: PLEASE PAY ATTENTION TO THE WORDS AND IMAGES PULLED FROM EACH BAG** 
+ 
+^^ You will be asked questions about this later on.**
+</page>
+
+************************************************
+
+************************************************
+Block 1: Trials
+************************************************
+
+<trial James_Positive_Chris_Negative_Trial_1>
+/ stimulustimes = [1 = Bag_1, James; 4000 = White_Square; 6000 = Bag_2, Chris; 10000 = White_Square; 12000 = Bag_1, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_2>
+/ stimulustimes = [1 = Bag_1, James; 4000 = White_Square; 6000 = Bag_2, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_1, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_2, Chris]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_3>
+/ stimulustimes = [1 = Bag_1, James; 4000 = White_Square; 6000 = Bag_1, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_2, Chris; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_4>
+/ stimulustimes = [1 = Bag_2, Chris; 4000 = White_Square; 6000 = Bag_1, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_1, James; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_5>
+/ stimulustimes = [1 = Bag_2, Chris; 4000 = White_Square; 6000 = Bag_1, James; 10000 = White_Square; 12000 = Bag_1, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_6>
+/ stimulustimes = [1 = Bag_2, Chris; 4000 = White_Square; 6000 = Bag_2, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_1, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_1, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_7>
+/ stimulustimes = [1 = Bag_1, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_2, Chris; 10000 = White_Square; 12000 = Bag_1, James; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_8>
+/ stimulustimes = [1 = Bag_1, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_1, James; 10000 = White_Square; 12000 = Bag_2, Chris; 16000 = White_Square; 18000 = Bag_2, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_9>
+/ stimulustimes = [1 = Bag_1, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_2, Chris; 10000 = White_Square; 12000 = Bag_2, Negative_Stimulus; 16000 = White_Square; 18000 = Bag_1, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_10>
+/ stimulustimes = [1 = Bag_2, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_1, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_2, Chris; 16000 = White_Square; 18000 = Bag_1, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_11>
+/ stimulustimes = [1 = Bag_2, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_2, Chris; 10000 = White_Square; 12000 = Bag_1, James; 16000 = White_Square; 18000 = Bag_1, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_12>
+/ stimulustimes = [1 = Bag_2, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_1, James; 10000 = White_Square; 12000 = Bag_2, Chris; 16000 = White_Square; 18000 = Bag_1, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+************************************************
+Block 2: Trials
+************************************************
+
+<trial James_Positive_Chris_Negative_Trial_13>
+/ stimulustimes = [1 = Bag_3, James; 4000 = White_Square; 6000 = Bag_4, Chris; 10000 = White_Square; 12000 = Bag_3, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_14>
+/ stimulustimes = [1 = Bag_3, James; 4000 = White_Square; 6000 = Bag_4, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_3, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_4, Chris]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_15>
+/ stimulustimes = [1 = Bag_3, James; 4000 = White_Square; 6000 = Bag_3, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_4, Chris; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_16>
+/ stimulustimes = [1 = Bag_4, Chris; 4000 = White_Square; 6000 = Bag_3, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_3, James; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_17>
+/ stimulustimes = [1 = Bag_4, Chris; 4000 = White_Square; 6000 = Bag_3, James; 10000 = White_Square; 12000 = Bag_3, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_18>
+/ stimulustimes = [1 = Bag_4, Chris; 4000 = White_Square; 6000 = Bag_4, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_3, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_3, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_19>
+/ stimulustimes = [1 = Bag_3, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_4, Chris; 10000 = White_Square; 12000 = Bag_3, James; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_20>
+/ stimulustimes = [1 = Bag_3, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_3, James; 10000 = White_Square; 12000 = Bag_4, Chris; 16000 = White_Square; 18000 = Bag_4, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_21>
+/ stimulustimes = [1 = Bag_3, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_4, Chris; 10000 = White_Square; 12000 = Bag_4, Negative_Stimulus; 16000 = White_Square; 18000 = Bag_3, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_22>
+/ stimulustimes = [1 = Bag_4, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_3, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_4, Chris; 16000 = White_Square; 18000 = Bag_3, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_23>
+/ stimulustimes = [1 = Bag_4, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_4, Chris; 10000 = White_Square; 12000 = Bag_3, James; 16000 = White_Square; 18000 = Bag_3, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_24>
+/ stimulustimes = [1 = Bag_4, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_3, James; 10000 = White_Square; 12000 = Bag_4, Chris; 16000 = White_Square; 18000 = Bag_3, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+
+************************************************
+Block 3: Trials
+************************************************
+
+<trial James_Positive_Chris_Negative_Trial_25>
+/ stimulustimes = [1 = Bag_5, James; 4000 = White_Square; 6000 = Bag_6, Chris; 10000 = White_Square; 12000 = Bag_5, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_26>
+/ stimulustimes = [1 = Bag_5, James; 4000 = White_Square; 6000 = Bag_6, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_5, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_6, Chris]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_27>
+/ stimulustimes = [1 = Bag_5, James; 4000 = White_Square; 6000 = Bag_5, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_6, Chris; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_28>
+/ stimulustimes = [1 = Bag_6, Chris; 4000 = White_Square; 6000 = Bag_5, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_5, James; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_29>
+/ stimulustimes = [1 = Bag_6, Chris; 4000 = White_Square; 6000 = Bag_5, James; 10000 = White_Square; 12000 = Bag_5, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_30>
+/ stimulustimes = [1 = Bag_6, Chris; 4000 = White_Square; 6000 = Bag_6, Negative_Stimulus; 10000 = White_Square; 12000 = Bag_5, Positive_Stimulus; 16000 = White_Square; 18000 = Bag_5, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_31>
+/ stimulustimes = [1 = Bag_5, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_6, Chris; 10000 = White_Square; 12000 = Bag_5, James; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_32>
+/ stimulustimes = [1 = Bag_5, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_5, James; 10000 = White_Square; 12000 = Bag_6, Chris; 16000 = White_Square; 18000 = Bag_6, Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_33>
+/ stimulustimes = [1 = Bag_5, Positive_Stimulus; 4000 = White_Square; 6000 = Bag_6, Chris; 10000 = White_Square; 12000 = Bag_6, Negative_Stimulus; 16000 = White_Square; 18000 = Bag_5, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_34>
+/ stimulustimes = [1 = Bag_6, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_5, Positive_Stimulus; 10000 = White_Square; 12000 = Bag_6, Chris; 16000 = White_Square; 18000 = Bag_5, James]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_35>
+/ stimulustimes = [1 = Bag_6, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_6, Chris; 10000 = White_Square; 12000 = Bag_5, James; 16000 = White_Square; 18000 = Bag_5, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+<trial James_Positive_Chris_Negative_Trial_36>
+/ stimulustimes = [1 = Bag_6, Negative_Stimulus; 4000 = White_Square; 6000 = Bag_5, James; 10000 = White_Square; 12000 = Bag_6, Chris; 16000 = White_Square; 18000 = Bag_5, Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 22000
+</trial>
+
+************************************************
+blocks
+************************************************  
+
+<block James_Good_Chris_Bad_1>
+/ preinstructions = (instructions, instructions_1)
+/ trials = [1-3 = noreplacenorepeat(James_Positive_Chris_Negative_Trial_1,James_Positive_Chris_Negative_Trial_2, James_Positive_Chris_Negative_Trial_3, James_Positive_Chris_Negative_Trial_4, James_Positive_Chris_Negative_Trial_5, James_Positive_Chris_Negative_Trial_6, James_Positive_Chris_Negative_Trial_7, James_Positive_Chris_Negative_Trial_8, James_Positive_Chris_Negative_Trial_9, James_Positive_Chris_Negative_Trial_10, James_Positive_Chris_Negative_Trial_11, James_Positive_Chris_Negative_Trial_12)]
+</block>
+
+<block James_Good_Chris_Bad_2>
+/ preinstructions = (instructions_2)
+/ trials = [1-3 = noreplacenorepeat(James_Positive_Chris_Negative_Trial_13,James_Positive_Chris_Negative_Trial_14, James_Positive_Chris_Negative_Trial_15, James_Positive_Chris_Negative_Trial_16, James_Positive_Chris_Negative_Trial_17, James_Positive_Chris_Negative_Trial_18, James_Positive_Chris_Negative_Trial_19, James_Positive_Chris_Negative_Trial_20, James_Positive_Chris_Negative_Trial_21, James_Positive_Chris_Negative_Trial_22, James_Positive_Chris_Negative_Trial_23, James_Positive_Chris_Negative_Trial_24)]
+</block>
+
+<block James_Good_Chris_Bad_3>
+/ preinstructions = (instructions_3)
+/ trials = [1-3 = noreplacenorepeat(James_Positive_Chris_Negative_Trial_25,James_Positive_Chris_Negative_Trial_26, James_Positive_Chris_Negative_Trial_27, James_Positive_Chris_Negative_Trial_28, James_Positive_Chris_Negative_Trial_29, James_Positive_Chris_Negative_Trial_30, James_Positive_Chris_Negative_Trial_31, James_Positive_Chris_Negative_Trial_32, James_Positive_Chris_Negative_Trial_33, James_Positive_Chris_Negative_Trial_34, James_Positive_Chris_Negative_Trial_35, James_Positive_Chris_Negative_Trial_36)]
+</block>
+
+
+************************************************
+experiment conditions
+************************************************
+
+<expt>
+/ subjects = (1 of 1)
+/ blocks = [1 = James_Good_Chris_Bad_1; 2 = James_Good_Chris_Bad_2; 3 = James_Good_Chris_Bad_3]
+</expt>

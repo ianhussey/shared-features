@@ -1,0 +1,212 @@
+﻿************************************************
+Shared features (Experiment 9: Minimal Groups Paradigm Replication)
+
+Code by Sean Hughes (sean.hughes@ugent.be)
+************************************************
+
+************************************************
+defaults
+************************************************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = white
+/ txcolor = black
+/ txbgcolor = white
+/ fontstyle = ("Arial", 5%)
+/ inputdevice = keyboard
+/ validkeys = (" ", "t")
+/ halign = center
+/ valign = center
+</defaults>
+
+************************************************
+Stimuli
+************************************************
+
+<picture James>
+/ numitems = 1
+/ items = ("James.jpg")
+/ position = (50%, 50%)
+</picture>
+
+<picture Chris>
+/ numitems = 1
+/ items = ("Chris.jpg")
+/ position = (50%, 50%)
+</picture>
+
+<text Positive_Stimulus>
+/ numitems = 10
+/ position = (50%, 50%)
+/ fontstyle = ("Arial", 6%, true)
+/ items = (" Fantastic", "Wonderful", "Honest", "Kind", "Brave", "Amazing", "Nice", "Pleasant", "Selfless", "Great")
+/ txcolor = dodgerblue
+/ select = replacenorepeat
+</text>
+
+<text Negative_Stimulus>
+/ numitems = 10
+/ fontstyle = ("Arial", 6%, true)
+/ items = (" Horrible", " Nasty", " Violent", " Terrible", " Hated", " Disgusting", " Mean", " Unpleasant", " Stupid", "Bully")
+/ position = (50%, 50%)
+/ txcolor = dodgerblue
+</text>
+
+<text Bag_1>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 1:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_2>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 2:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_3>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 3:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_4>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 4:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_5>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from BAG 5:")
+/ position = (50%, 30%)
+</text>
+
+<text Bag_6>
+/ numitems = 5
+/ fontstyle = ("Arial", 4%, false, true)
+/ items = ("Pulled from Bag 6:")
+/ position = (50%, 30%)
+</text>
+
+<picture White_Square>
+/ numitems = 1
+/ items = ("White_Square.jpg")
+/ position = (50%, 50%)
+</picture>
+
+
+************************************************
+instructions
+************************************************
+
+<instruct>
+/ fontstyle = ("Arial", 2.5%)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Press the spacebar to continue"
+/ prevlabel = "Press the 't' key to go back"
+/ prevkey = ("t")
+/ windowsize = (50%, 50%)
+</instruct>
+
+<page instructions>
+^^ PART 1 OF THE EXPERIMENT
+</page>
+
+<page instructions_1>
+^^ The computer will show you a word or image. 
+
+^^ PLEASE PAY ATTENTION TO THE WORDS AND IMAGES THAT APPEAR
+ 
+^^ You will be asked questions about these later on.**
+</page>
+
+<page Instructions_2>
+^^ Thank you. We will do Part 1 of the experiment again. 
+
+^^ The computer will show you a word or image. 
+
+^^ PLEASE PAY ATTENTION TO THE WORDS AND IMAGES THAT APPEAR
+ 
+^^ You will be asked questions about these later on.**
+</page>
+
+<page Instructions_3>
+^^ Thank you. We will Part 1 of the experiment one last time. 
+
+^^ The computer will show you a word or image. 
+
+^^ PLEASE PAY ATTENTION TO THE WORDS AND IMAGES THAT APPEAR
+ 
+^^ You will be asked questions about these later on.**
+</page>
+
+************************************************
+
+************************************************
+Trials
+************************************************
+
+<trial James>
+/ stimulustimes = [1 = James]
+/ validresponse = (57)
+/ trialduration = 4000
+/ posttrialpause = 2000
+</trial>
+
+<trial Chris>
+/ stimulustimes = [1 = Chris]
+/ validresponse = (57)
+/ trialduration = 4000
+/ posttrialpause = 2000
+</trial>
+
+<trial Positive>
+/ stimulustimes = [1 = Positive_Stimulus]
+/ validresponse = (57)
+/ trialduration = 4000
+/ posttrialpause = 2000
+</trial>
+
+<trial Negative>
+/ stimulustimes = [1 = Negative_Stimulus]
+/ validresponse = (57)
+/ trialduration = 4000
+/ posttrialpause = 2000
+</trial>
+
+************************************************
+blocks
+************************************************  
+
+<block Block_1>
+/ preinstructions = (instructions, instructions_1)
+/ trials = [1-12 = noreplace(James, Chris, Positive, Negative)]
+</block>
+
+<block Block_2>
+/ preinstructions = (instructions_2)
+/ trials = [1-12 = noreplace(James, Chris, Positive, Negative)]
+</block>
+
+<block Block_3>
+/ preinstructions = (instructions_3)
+/ trials = [1-12 = noreplace(James, Chris, Positive, Negative)]
+</block>
+
+
+************************************************
+experiment conditions
+************************************************
+
+<expt>
+/ subjects = (1 of 1)
+/ blocks = [1 = Block_1; 2 = Block_2; 3 = Block_3]
+</expt>

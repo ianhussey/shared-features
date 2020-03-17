@@ -1,0 +1,43 @@
+﻿***************************************************************************************
+***************************************************************************************
+			BATCH FOR SHARED FEATURES STUDY 9 (Minimal Groups Paradigm) (REPLICATION OF THE NO CONTIGUITY CONDITION FROM EXPERIMENT 7)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 22/10/2019
+***************************************************************************************
+
+Condition 2: No Bag Info
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 2)
+/ groupassignment = subjectnumber
+/ file="Study_9_consent.iqx"
+/ file="Study_9_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_9_Stimulus_Ratings_Before.iqx"
+/ file="Study_9_IAT_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 2)
+/ groupassignment = subjectnumber
+/ file="Study_9_consent.iqx"
+/ file="Study_9_Demographics.iqx"
+/ file="C2_Acquisition_Phase.iqx"
+/ file="Study_9_IAT_Before.iqx"
+/ file="Study_9_Stimulus_Ratings_After.iqx"
+/ file="C2_Expl_Q.iqx"
+</batch>

@@ -1,0 +1,321 @@
+﻿Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 07/02/2018
+***************************************************************************************
+***************************************************************************************
+
+**************************************
+***final questions***
+**************************************
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3; 4 = block4; 5 = block5; 6 = block6; 7 = block7; 8 = block8]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = US_Awareness; block2 = Shared_Features_AwarenessCS_US; block3 = Stimulus_Relation; block4 = Writing_Down_Contingencies; block5 = influence_awareness; block6 = Demand; block7 = Reactance; Block8 = issues)
+</variables>
+
+<defaults>
+/ canvasSize = (100%, 100%)
+/ screencolor = white
+/ txcolor = black
+/ fontstyle = ("Arial", 20%)
+/ inputdevice = mouse
+</defaults>
+
+
+******************************************************************************************************************************************************
+Relational Information
+
+<survey Stimulus_Relation>
+/ pages = [1 = Stimulus_Relation] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage Stimulus_Relation>
+/caption = "In Part 1 of the experiment we told you about the relationship between the words and images that were pulled from the bags. What did we tell you?"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Stimulus_Relation]
+</surveypage>
+
+<radiobuttons Stimulus_Relation>
+/options = ("That the words and images pulled from the two bags were RELATED", "That the words and images pulled from the two bags were UNRELATED", "I don't remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+******************************************************************************************************************************************************
+US Awareness
+
+<survey US_Awareness>
+/ pages = [1 = US_Awareness] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage US_Awareness>
+/caption = "In Part 1 of the experiment the computer pulled words and images from two different bags. Did the words that were pulled from the bags...?"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=US_awareness]
+</surveypage>
+
+<radiobuttons US_Awareness>
+/options = ("always have a positive meaning", "always have a negative meaning", "have different meanings (e.g., some positive, some negative)", "I don't remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<image Words_1>
+/ items = ("Words_1.jpg")
+/ position = (5%, 40%)
+</image>
+
+<image Words_2>
+/ items = ("Words_2.jpg")
+/ position = (5%, 40%)
+</image>
+
+<image Chris>
+/ items = ("Chris.jpg")
+/ position = (50%, 30%)
+</image>
+
+<image James>
+/ items = ("James.jpg")
+/ position = (50%, 30%)
+</image>
+
+<image Bags>
+/ items = ("Bags.jpg")
+/ position = (5%, 30%)
+</image>
+
+**********************************************************
+Contingency Awareness 
+
+<survey Shared_Features_AwarenessCS_US>
+/ pages = [1 = Shared_Features_Awarenesscontingency_Chris; 2 =  Shared_Features_Awarenesscontingency_James] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+<surveypage Shared_Features_Awarenesscontingency_Chris>
+/caption = "Think back to Part 1 of the experiment. Chris and another word were pulled from the same bag. Was Chris pulled from the same bag as...:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Shared_Features_Awarenesscontingency_Chris; 2 = Chris]
+</surveypage>
+
+<radiobuttons Shared_Features_Awarenesscontingency_Chris>
+/options = ("POSITIVE Words", "NEGATIVE Words", "I don't remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+<surveypage Shared_Features_Awarenesscontingency_James>
+/caption = "Think back to Part 1 of the experiment. James and another word were pulled from the same bag. Was James pulled from the same bag as...:"
+/ showpagenumbers = false 
+/showquestionnumbers = false
+/questions = [1=Shared_Features_Awarenesscontingency_James; 2 = James]
+</surveypage>
+
+<radiobuttons Shared_Features_Awarenesscontingency_James>
+/options = ("POSITIVE Words", "NEGATIVE Words", "I don't remember")
+/ orientation = vertical
+/ required=true
+</radiobuttons>
+
+
+**********************************************************
+**********************************************************
+
+<survey Writing_Down_Contingencies>
+/ pages = [1 = notes] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage notes>
+/caption = "Did you ever take notes (or write down) what happened during this experiment in order to help you figure out what was going on? Please be honest here (you will receive payment regardless of what you say)."
+/showquestionnumbers = false
+/questions = [1=notes]
+</surveypage>
+
+<dropdown notes>
+/options = ("Yes", "No", "I don't remember")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey Demand>
+/ pages = [1 = demand1; 2 = demand2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage demand1>
+/caption = "Earlier you rated Chris and James as positive, negative, or neutral. Did you base your response on how you actually felt about them OR on what you thought the researchers wanted you to say?"
+/showquestionnumbers = false
+/questions = [1=demand1]
+</surveypage>
+
+<dropdown demand1>
+/options = ("How I actually felt about Chris and James", "What I thought the researchers wanted me to say (i.e., not on how I personally felt)", "I don't know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage demand2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you base your performance in that task on your best efforts to perform the categorizations as quickly and accurately as possible? Or did you attempt to influence your speed or accuracy in order to go along with what you thought the researchers wanted you to feel about the words?"
+/showquestionnumbers = false
+/questions = [1=demand2, IAT]
+</surveypage>
+
+<dropdown demand2>
+/options = ("I tried to perform the task as quickly and accuarely as possible", "I tried to alter my performance based on what I thought the researchers wanted to find", "I don't know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+*********************************************************
+**********************************************************
+
+<survey reactance>
+/ pages = [1 = reactance1; 2 = reactance2] 
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, false)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage reactance1>
+/caption = "Earlier you rated Chris and James as positive, negative, or neutral. Did you consciously resist what you thought the researchers wanted you to feel about Chris and James?"
+/showquestionnumbers = false
+/questions = [1=reactance1]
+</surveypage>
+
+<dropdown reactance1>
+/options = ("Yes", "No", "I don't know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+<surveypage reactance2>
+/caption = "Earlier you completed the Implicit Association Test (see below). Did you try to influence your speed or accuracy in order to consciously resist what you thought the researchers wanted you to feel about those words"
+/showquestionnumbers = false
+/questions = [1=reactance2, IAT]
+</surveypage>
+
+<dropdown reactance2>
+/options = ("Yes", "No", "I don't know")
+/ orientation = vertical
+/ required=true
+</dropdown>
+
+******************************************************************************
+<surveypage influence_awareness_1>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=hypothesis_awareness]
+/finishlabel = "Next"
+</surveypage>
+
+<surveypage influence_awareness_2>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=hypothesis_Influence]
+/finishlabel = "Next"
+</surveypage>
+
+<textbox hypothesis_awareness>
+/caption = "Think back to Part 1 of the experiment. 
+
+In the first part of the experiment we told you that words and images were pulled from two bags. Did you notice that Chris and negative words were pulled from one bag and that James and positive words were pulled from another bag? 
+
+Please be honest here" 
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/ textboxSize = (50,20)
+/ position = (5%, 5%)
+</textbox>
+
+<textbox hypothesis_Influence>
+/caption = "Do you think that the fact that Chris and negative words were pulled from one bag (and that James and positive words were pulled from another bag) influenced how much you like or dislike Chris or James? Please be honest here"
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/ textboxSize = (50,30)
+/ position = (5%, 5%)
+</textbox>
+
+<survey influence_awareness>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ nextlabel = "Next"
+/pages = [1=influence_awareness_1; 2 = influence_awareness_2]
+</survey>
+
+<image IAT>
+/ items = ("IAT.jpg")
+/ position = (10%, 50%)
+/ size = (25%, 25%)
+</image>
+
+<image EC_Phase>
+/ items = ("EC_Phase.jpg")
+/ position = (5%, 50%)
+</image>
+
+<image Color>
+/ items = ("Color.jpg")
+/ position = (5%, 50%)
+</image>
+
+******************************************************************************
+<surveypage issues>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/questions = [1=issues]
+/finishlabel = "Next"
+</surveypage>
+
+<textbox issues>
+/caption = "Did you encounter any issues or problems when doing this study? For instance, did anything go wrong, did everything appear OK, did you find anything difficult? If so, please list any issues here." 
+/ multiline = true
+/ txcolor = (0,0,0)
+/ required = true
+/ fontstyle = ("ARIAL", 2.5%, false, false, false, false, 5, 0)
+/ textboxSize = (50,20)
+/ position = (5%, 5%)
+</textbox>
+
+<survey issues>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ nextlabel = "Next"
+/pages = [1=issues]
+</survey>

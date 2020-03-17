@@ -1,0 +1,281 @@
+﻿***************************************************************************************
+***************************************************************************************
+											SCRIPT OVERVIEW (Shared Features Color)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 29/07/2019
+***************************************************************************************
+***************************************************************************************
+
+*************************General Variables****************************
+**********************************************************************
+
+<defaults>
+/ canvassize = (100%, 100%)
+/ screencolor = white
+/ txcolor = black
+/ fontstyle = ("Arial", 21%)
+/ inputdevice = mouse
+</defaults>
+
+<expt>
+/ blocks = [1 = block1; 2 = block2; 3 = block3]
+</expt>
+
+<variables>
+/group = (1 of 1) (block1 = begin, block2 = Valence_Ratings, block3 = Intention_Ratings)
+</variables>
+
+
+**************  Stimuli ***************
+
+
+<image Stimulus_1a>
+/ items = ("stimulus_1a_1.jpg")
+/ position = (35%, 10%)
+</image>
+
+
+<image Stimulus_2a>
+/ items = ("stimulus_2a_1.jpg")
+/ position = (35%, 10%)
+</image>
+
+
+<image Morag_Choice>
+/ items = ("stimulus_1a_Choice.jpg")
+/ position = (35%, 5%)
+</image>
+
+
+<image Struan_Choice>
+/ items = ("stimulus_2a_Choice.jpg")
+/ position = (55%, 5%)
+</image>
+
+
+**************** text ************************
+
+<text verder>
+/numitems =1
+/items= ("Press the spacebar to continue.")
+/ txcolor = black
+/ txbgcolor = (0, 0, 0)
+/ position = (50%, 95%)
+/ font = ("Times New Roman", -18, 700, 0, 49)
+</text>
+
+
+
+****************  Valence-Ratings (Positive/Negative) **************
+********************************************************************
+
+<radiobuttons Positive_Negative>
+/ fontstyle = ("Arial", 2.5%, true)
+/ txcolor = black
+/ subcaptionfontstyle = ("Arial", 2.5%, false)
+/ caption ="                                    Please indicate how you feel about this item
+
+"
+/ subcaption = "Negative                                               Neutral                                                 Positive"
+/options = ("-5     ", "-4     ", "-3     ", "-2     ", "-1     ", "0     ", "1     ", "2     ", "3     ", "4     ","5     ")
+/ required = true
+/orientation = horizontal
+/ position = (20%, 50%)
+</radiobuttons>
+
+<surveypage Stimulus_1a_Positive_Negative>
+/ showpagenumbers = false
+/ questions = [1=Positive_Negative,  Stimulus_1a]
+</surveypage>
+
+<surveypage Stimulus_2a_Positive_Negative>
+/ showpagenumbers = false
+/ questions = [1=Positive_Negative,  Stimulus_2a]
+</surveypage>
+
+
+
+****************  Valence-Ratings (Good/Bad) **************
+********************************************************************
+
+<radiobuttons Good_Bad>
+/ fontstyle = ("Arial", 2.5%, true)
+/ txcolor = black
+/ subcaptionfontstyle = ("Arial", 2.5%, false)
+/ caption ="                                    Please indicate how you feel about this item
+
+"
+/ subcaption = "Bad                                                      Neutral                                                   Good"
+/options = ("-5     ", "-4     ", "-3     ", "-2     ", "-1     ", "0     ", "1     ", "2     ", "3     ", "4     ","5     ")
+/ required = true
+/orientation = horizontal
+/ position = (20%, 50%)
+</radiobuttons>
+
+<surveypage Stimulus_1a_Good_Bad>
+/ showpagenumbers = false
+/ questions = [1=Good_Bad,  Stimulus_1a]
+</surveypage>
+
+<surveypage Stimulus_2a_Good_Bad>
+/ showpagenumbers = false
+/ questions = [1=Good_Bad,  Stimulus_2a]
+</surveypage>
+
+
+
+****************  Valence-Ratings (Pleasant/Unpleasant) **************
+********************************************************************
+
+<radiobuttons Pleasant_Unpleasant>
+/ fontstyle = ("Arial", 2.5%, true)
+/ txcolor = black
+/ subcaptionfontstyle = ("Arial", 2.5%, false)
+/ caption ="                                    Please indicate how you feel about this item
+
+"
+/ subcaption = "Unpleasant                                            Neutral                                                 Pleasant"
+/options = ("-5     ", "-4     ", "-3     ", "-2     ", "-1     ", "0     ", "1     ", "2     ", "3     ", "4     ","5     ")
+/ required = true
+/orientation = horizontal
+/ position = (20%, 50%)
+</radiobuttons>
+
+<surveypage Stimulus_1a_Pleasant_Unpleasant>
+/ showpagenumbers = false
+/ questions = [1=Pleasant_Unpleasant,  Stimulus_1a]
+</surveypage>
+
+<surveypage Stimulus_2a_Pleasant_Unpleasant>
+/ showpagenumbers = false
+/ questions = [1=Pleasant_Unpleasant,  Stimulus_2a]
+</surveypage>
+
+
+
+****************  Valence-Ratings (Like/Dislike) **************
+********************************************************************
+
+<radiobuttons Like_Dislike>
+/ fontstyle = ("Arial", 2.5%, true)
+/ txcolor = black
+/ subcaptionfontstyle = ("Arial", 2.5%, false)
+/ caption ="                                    Please indicate how you feel about this item
+
+"
+/ subcaption = "I dislike it                                              Neutral                                                   I like it"
+/options = ("-5     ", "-4     ", "-3     ", "-2     ", "-1     ", "0     ", "1     ", "2     ", "3     ", "4     ","5     ")
+/ required = true
+/orientation = horizontal
+/ position = (20%, 50%)
+</radiobuttons>
+
+<surveypage Stimulus_1a_Like_Dislike>
+/ showpagenumbers = false
+/ questions = [1=Like_Dislike,  Stimulus_1a]
+</surveypage>
+
+<surveypage Stimulus_2a_Like_Dislike>
+/ showpagenumbers = false
+/ questions = [1=Like_Dislike,  Stimulus_2a]
+</surveypage>
+
+
+
+<survey Valence_Ratings>
+/ pages = [1-8 = noreplacenorepeat(Stimulus_1a_Positive_Negative, Stimulus_2a_Positive_Negative, Stimulus_1a_Good_Bad, Stimulus_2a_Good_Bad, Stimulus_1a_Pleasant_Unpleasant, Stimulus_2a_Pleasant_Unpleasant, Stimulus_1a_Like_Dislike, Stimulus_2a_Like_Dislike)]
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.7%, true)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+
+
+******************************************************
+****************  Behavioral-Intentions **************
+************************************************
+
+<radiobuttons Intentions>
+/ fontstyle = ("Arial", 2.5%, true)
+/ txcolor = black
+/ subcaptionfontstyle = ("Arial", 3%, false)
+/ caption ="Imagine you encounter these two products in the supermarket. Which of the following options would be true for you?
+
+"
+/options = ("I would try Morag", "I would try Struan", "I would try neither Brand")
+/ required = true
+/orientation = vertical
+/ position = (10%, 50%)
+</radiobuttons>
+
+<surveypage Stimulus_Intentions>
+/ showpagenumbers = false
+/ questions = [1=Intentions,  Morag_Choice, Struan_Choice]
+</surveypage>
+
+<survey Intention_Ratings>
+/ pages = [1 = Stimulus_Intentions]
+/ txcolor = Black
+/ fontstyle = ("Arial", 2.5%, true)
+/ showpagenumbers = false
+/ showquestionnumbers = false
+/ showprogressbar = true
+</survey>
+
+
+
+
+******************************************************
+******************************************************
+
+<block begin>
+/ screencolor = (255, 255, 255)
+/ trials = [1 = pause]
+</block>
+
+<trial pause>
+/trialcode = "pause"
+/stimulustimes = [ 1= erasebig]
+/trialduration = 1000
+</trial>
+
+<picture erasebig>
+/ erase = false 
+/ items = ("erasebig.jpg")
+</picture>
+
+
+**********  Instructions  *************
+
+<instruct>  
+/ font = ("Times New Roman", -20, 800, 0, 49)
+/ inputdevice = keyboard
+/ nextkey = (" ")
+/ nextlabel = "Druk op de spatiebalk om verder te gaan"
+/ prevlabel = "Druk t om terug te gaan"
+/ prevkey = ("t")
+</instruct>
+
+
+<data>
+/ columns = [date time subject blockcode blocknum trialcode trialnum latency correct pretrialpause posttrialpause response stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus stimulus]
+/ labels = true
+/ header = true
+/ format = fixed
+</data>
+
+***********************************************************************
+Test Monkey
+***********************************************************************
+<monkey>
+/ latencydistribution = normal(500, 100)
+/ percentcorrect = 60
+</monkey>
+
+

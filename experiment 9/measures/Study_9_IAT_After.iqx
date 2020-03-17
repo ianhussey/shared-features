@@ -1,0 +1,484 @@
+**************************************************************************************************************
+**************************************************************************************************************
+	Implicit Attitude Test (IAT)
+**************************************************************************************************************
+**************************************************************************************************************
+	Last Modified:	05-19-2009 at 09:00 AM (PST)
+**************************************************************************************************************
+**************************************************************************************************************
+
+***********************************************************************
+This sample IAT can be easily adapted to different target categories 
+and attributes. To change the categories, you need only change the 
+stimulus items and labels immediately below this line.
+
+***********************************************************************
+
+<item attributeAlabel>
+/1 = "Good"
+</item>
+
+<item attributeA>
+/1 = "Confident"
+/2 = "Loving"
+/3 = "Cheerful"
+/4 = "Loyal"
+/5 = "Generous"
+/6 = "Happy"
+/7 = "Likeable"
+/8 = "Warm"
+</item>
+
+<item attributeBlabel>
+/1 = "Bad"
+</item>
+
+<item attributeB>
+/1 = "Liar"
+/2 = "Cruel"
+/3 = "Evil"
+/4 = "Ignorant"
+/5 = "Manipulative"
+/6 = "Rude"
+/7 = "Selfish"
+/8 = "Disloyal"
+</item>
+
+<item targetAlabel>
+/1 = "Chris_IAT.jpg"
+</item>
+
+<item targetA>
+/1 = "Chris_IAT_1.jpg"
+/2 = "Chris_IAT_2.jpg"
+/3 = "Chris_IAT_3.jpg"
+</item>
+
+<item targetBlabel>
+/1 = "James_IAT.jpg"
+</item>
+
+<item targetB>
+/1 = "James_IAT_1.jpg"
+/2 = "James_IAT_2.jpg"
+/3 = "James_IAT_3.jpg"
+</item>
+
+***********************************************************************
+To change the categories, you need only change the stimulus items and 
+labels immediately above this line. All commands below relate to the 
+IAT procedure, and need only be changed if you wish to modify the 
+generic IAT procedure.
+***********************************************************************
+
+
+***********************************************************************
+Performance summary
+***********************************************************************
+
+<trial summary>
+/ validresponse = (" ")
+/ recorddata = false
+/ ontrialbegin = [values.magnitude = ""]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = ""]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = ""]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = ""]
+/ ontrialbegin = [if(expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
+/ ontrialbegin = [if(expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
+/ ontrialbegin = [if(expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
+/ ontrialbegin = [if(expressions.d >= 0.0) expressions.notpreferred= item.targetBLabel.1]
+</trial>
+
+***********************************************************************
+Task instruction stimuli
+***********************************************************************
+
+<trial instructions>
+/ stimulustimes = [1=instructions, spacebar]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<text instructions>
+/ items = instructions
+/ hjustify = left
+/ size = (90%, 60%)
+/ position = (50%, 100%)
+/ valign = bottom
+/ select = sequence
+/ resetinterval = 20
+</text>
+
+<item instructions>
+/ 1 = "This is a timed task where you have to sort items. Put your fingers on the E and the I key. 
+
+Sort the item in the middle of the screen based on the items that appear on the top left (E) or right (I) sides of the screen. Try to respond AS QUICKLY AS POSSIBLE without making too many mistakes.
+
+When you make a mistake there will be a red cross. This cross will remain onscreen until you press the correct key."
+
+/ 2 = "Look above. The items have changed. So will the items that appear in the middle of the screen. 
+
+Sort the items in the middle of the screen based on the items that appear on the top left (E) or right (I) sides of the screen. Try to respond AS QUICKLY AS POSSIBLE without making too many mistakes."
+/ 3 = "Look above. The four items you saw separately now appear together. 
+
+Sort the items in the middle of the screen based on the items that appear on the top left (E) or right (I) sides of the screen. Try to respond AS QUICKLY AS POSSIBLE without making too many mistakes"
+
+/ 4 = "Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible".
+
+/ 5 = "Look above. There are only two items now and they have switched locations. The item that was previously on the left is now on the right (and vice-versa). 
+
+Sort the items in the middle of the screen based on the items that appear on the top left (E) or right (I) sides of the screen. Try to respond AS QUICKLY AS POSSIBLE without making too many mistakes"
+
+/ 6 = "Look above. The four words now appear together. 
+
+Sort the words in the middle of the screen based on the words that appear on the top left (E) or right (I) sides of the screen. Try to respond AS QUICKLY AS POSSIBLE without making too many mistakes."
+
+/ 7 = "Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible."
+</item>
+
+<text spacebar>
+/ items = ("Press the SPACE BAR to begin.")
+/ position = (50%, 95%)
+/ valign = bottom
+</text>
+
+<text attributeA>
+/ items = attributeA
+/ fontstyle = ("Arial", 5%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<text attributeB>
+/ items = attributeB
+/ fontstyle = ("Arial", 5%)
+/ txcolor = (0, 255, 0)
+</text>
+
+<picture targetB>
+/ items = targetB
+/ size = (20%, 20%)
+</picture>
+
+<picture targetA>
+/ items = targetA
+/ size = (20%, 20%)
+</picture>
+
+<text error>
+/ position = (50%, 75%)
+/ items = ("X")
+/ color = (255, 0, 0)
+/ fontstyle = ("Arial", 10%, true)
+</text>
+
+<text attributeAleft>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (10%, 15%)
+/ txcolor = (0, 255, 0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeBright>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (90%, 15%)
+/ txcolor = (0, 255, 0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeAleftmixed>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (10%, 33%)
+/ txcolor = (0, 255, 0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeBrightmixed>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (88%, 33%)
+/ txcolor = (0, 255, 0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<picture targetBleft>
+/ items = targetBlabel
+/ valign = top
+/ halign = left	
+/ position = (10%, 5%)
+</picture>
+
+<picture targetBright>
+/ items = targetBlabel
+/ valign = top
+/ halign = right
+/ position = (90%, 5%)
+</picture>
+
+<picture targetAleft>
+/ items = targetAlabel
+/ valign = top
+/ halign = left
+/ position = (10%, 5%)
+</picture>
+
+<picture targetAright>
+/ items = targetAlabel
+/ valign = top
+/ halign = right
+/ position = (90%, 5%)
+</picture>
+
+<text orleft>
+/ items = ("or")
+/ valign = top
+/ halign = left
+/ position = (12%, 27%)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text orright>
+/ items = ("or")
+/ valign = top
+/ halign = right
+/ position = (87%, 27%)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+***********************************************************************
+Trials
+***********************************************************************
+
+<trial attributeA>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeA]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeB>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeB]
+/ posttrialpause = 250
+</trial>
+
+
+<trial targetBleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetAleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetAright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+***********************************************************************
+Blocks
+***********************************************************************
+
+<block attributepractice>
+/ bgstim = (attributeAleft, attributeBright)
+/ trials = [1=instructions;2-21 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetcompatiblepractice>
+/ bgstim = (targetAleft, targetBright)
+/ trials = [1=instructions;2-21 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetincompatiblepractice>
+/ bgstim = (targetAright, targetBleft)
+/ trials = [1=instructions;2-21 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetcompatiblepracticeswitch>
+/ bgstim = (targetAleft, targetBright)
+/ trials = [1=instructions;2-41 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetincompatiblepracticeswitch>
+/ bgstim = (targetAright, targetBleft)
+/ trials = [1=instructions;2-41 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block compatibletest1>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21= random(targetAleft, targetBright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.sum1a =  values.sum1a + block.compatibletest1.latency]
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.n1a =  values.n1a + 1]
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.ss1a =  values.ss1a + (block.compatibletest1.latency * block.compatibletest1.latency)]
+</block>
+
+<block compatibletest2>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(targetAleft, targetBright);
+  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.sum1b =  values.sum1b + block.compatibletest2.latency]
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.n1b =  values.n1b + 1]
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.ss1b =  values.ss1b + (block.compatibletest2.latency * block.compatibletest2.latency)]
+</block>
+
+<block incompatibletest1>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21 = random(targetBleft, targetAright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1) values.sum2a =  values.sum2a + block.incompatibletest1.latency]
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1 ) values.n2a =  values.n2a + 1]
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1 ) values.ss2a =  values.ss2a + (block.incompatibletest1.latency * block.incompatibletest1.latency)]
+</block>
+
+<block incompatibletest2>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(targetBleft, targetAright);
+  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.sum2b =  values.sum2b + block.incompatibletest2.latency]
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.n2b =  values.n2b + 1]
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.ss2b =  values.ss2b + (block.incompatibletest2.latency * block.incompatibletest2.latency)]
+</block>
+
+<block compatibletestinstructions>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1=instructions]
+/ recorddata = false
+</block>
+
+<block incompatibletestinstructions>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1=instructions]
+/ recorddata = false
+</block>
+
+<block summary>
+/ trials = [1=summary]
+/ recorddata = false
+</block>
+
+***********************************************************************
+Experiment
+***********************************************************************
+
+<defaults>
+/ fontstyle = ("Arial", 3.5%)
+/ screencolor = (0,0,0)
+/ txbgcolor = (0,0,0)
+/ txcolor = (255, 255, 255)
+/ minimumversion = "3.0.0.0"
+</defaults>
+
+<expt>
+/ blocks = [1=block1; 2=attributepractice; 3=block3; 4=block4; 5=block5; 6=block6; 7=block7; 8=block8; 9=block9]
+</expt>
+
+<variables>
+/ group = (1 of 1) (block1=targetcompatiblepractice; block3=compatibletest1; block4=compatibletestinstructions; block5=compatibletest2; block6=targetincompatiblepractice; block7=incompatibletest1; block8=incompatibletestinstructions; block9=incompatibletest2)
+</variables>
+
+***********************************************************************
+Data Columns
+***********************************************************************
+
+<data>
+/ columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, response, correct, latency, stimulusnumber, stimulusitem, expressions.da, expressions.db, expressions.d ]
+</data>
+
+***********************************************************************
+Test Monkey
+***********************************************************************
+<monkey>
+/ latencydistribution = normal(500, 100)
+/ percentcorrect = 90
+</monkey>
+
+***********************************************************************
+Scoring
+***********************************************************************
+<values>
+/ sum1a = 0
+/ sum2a = 0
+/ sum1b = 0
+/ sum2b = 0
+/ n1a = 0
+/ n2a = 0
+/ n1b = 0
+/ n2b = 0
+/ ss1a = 0
+/ ss2a = 0
+/ ss1b = 0
+/ ss2b = 0
+/ magnitude = "unknown"
+</values>
+
+* 1 is compatible, 2 is incompatible
+* a is first block, b is second block
+
+<expressions>
+/ m1a = values.sum1a / values.n1a
+/ m2a = values.sum2a / values.n2a
+/ m1b = values.sum1b / values.n1b
+/ m2b = values.sum2b / values.n2b
+/ sd1a = sqrt((values.ss1a - (values.n1a * (expressions.m1a * expressions.m1a))) / (values.n1a - 1))
+/ sd2a = sqrt((values.ss2a - (values.n2a * (expressions.m2a * expressions.m2a))) / (values.n2a - 1))
+/ sd1b = sqrt((values.ss1b - (values.n1b * (expressions.m1b * expressions.m1b))) / (values.n1b - 1))
+/ sd2b = sqrt((values.ss2b - (values.n2b * (expressions.m2b * expressions.m2b))) / (values.n2b - 1))
+/ sda = sqrt((((values.n1a - 1) * (expressions.sd1a * expressions.sd1a) + (values.n2a - 1) * (expressions.sd2a * expressions.sd2a)) + ((values.n1a + values.n2a) * ((expressions.m1a - expressions.m2a) * (expressions.m1a - expressions.m2a)) / 4) ) / (values.n1a + values.n2a - 1) )
+/ sdb = sqrt((((values.n1b - 1) * (expressions.sd1b * expressions.sd1b) + (values.n2b - 1) * (expressions.sd2b * expressions.sd2b)) + ((values.n1b + values.n2b) * ((expressions.m1b - expressions.m2b) * (expressions.m1b - expressions.m2b)) / 4) ) / (values.n1b + values.n2b - 1) )
+/ da = (m2a - m1a) / expressions.sda
+/ db = (m2b - m1b) / expressions.sdb
+/ d = (expressions.da + expressions.db) / 2
+/ preferred = "unknown"
+/ notpreferred = "unknown"
+</expressions>
+
+
+
+

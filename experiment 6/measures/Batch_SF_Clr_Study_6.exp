@@ -1,0 +1,131 @@
+***************************************************************************************
+***************************************************************************************
+			BATCH FOR SHARED FEATURES STUDY 6 (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 25/06/2019
+***************************************************************************************
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SB_MG.iqx"
+/ file="Study_6_Stimulus_Ratings_Before.exp"
+/ file="Study_6_IAT_After.exp"
+/ file="Study_6_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SB_MG.iqx"
+/ file="Study_6_Stimulus_Ratings_Before.exp"
+/ file="Study_6_IAT_After.exp"
+/ file="Study_6_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SB_MG.iqx"
+/ file="Study_6_IAT_Before.exp"
+/ file="Study_6_Stimulus_Ratings_After.exp"
+/ file="Study_6_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SB_MG.iqx"
+/ file="Study_6_IAT_Before.exp"
+/ file="Study_6_Stimulus_Ratings_After.exp"
+/ file="Study_6_Exploratory_Questions_SB_MG.exp"
+</batch>
+
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (CON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(5 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SG_MB.iqx"
+/ file="Study_6_Stimulus_Ratings_Before.exp"
+/ file="Study_6_IAT_After.exp"
+/ file="Study_6_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) -  EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(6 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SG_MB.iqx"
+/ file="Study_6_Stimulus_Ratings_Before.exp"
+/ file="Study_6_IAT_After.exp"
+/ file="Study_6_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - IAT (CON) - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(7 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SG_MB.iqx"
+/ file="Study_6_IAT_Before.exp"
+/ file="Study_6_Stimulus_Ratings_After.exp"
+/ file="Study_6_Exploratory_Questions_SG_MB.exp"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - SHARED FEATURES 1  - EXPLICIT - IAT (INCON) - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(8 of 8)
+/ groupassignment = subjectnumber
+/ file="Study_6_consent.exp"
+/ file="Study_6_Demographics.iqx"
+/ file="Study_6_SG_MB.iqx"
+/ file="Study_6_IAT_Before.exp"
+/ file="Study_6_Stimulus_Ratings_After.exp"
+/ file="Study_6_Exploratory_Questions_SG_MB.exp"
+</batch>

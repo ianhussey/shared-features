@@ -1,0 +1,70 @@
+﻿***************************************************************************************
+***************************************************************************************
+			BATCH FOR SHARED FEATURES SIZE STUDY 8 (HUGHES, MATTAVELLI, DE HOUWER)
+***************************************************************************************
+***************************************************************************************
+Script Info
+
+Author: Sean Hughes (sean.hughes@ugent.be)
+last updated: 29/07/2019
+***************************************************************************************
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - ACQUISITION  - EXPLICIT - EP - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(1 of 4)
+/ groupassignment = subjectnumber
+/ file="Study_8_consent.iqx"
+/ file="Study_8_Demographics.iqx"
+/ file="Study_8_SB_MG.iqx"
+/ file="Study_8_Stimulus_Ratings_Before.iqx"
+/ file="Study_8_EP_Task_After.iqx"
+/ file="Study_8_Exploratory_Questions_SB_MG.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - ACQUISITION  - EP - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(2 of 4)
+/ groupassignment = subjectnumber
+/ file="Study_8_consent.iqx"
+/ file="Study_8_Demographics.iqx"
+/ file="Study_8_SB_MG.iqx"
+/ file="Study_8_EP_Task_Before.iqx"
+/ file="Study_8_Stimulus_Ratings_After.iqx"
+/ file="Study_8_Exploratory_Questions_SB_MG.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - ACQUISITION  - EXPLICIT - EP - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(3 of 4)
+/ groupassignment = subjectnumber
+/ file="Study_8_consent.iqx"
+/ file="Study_8_Demographics.iqx"
+/ file="Study_8_SG_MB.iqx"
+/ file="Study_8_Stimulus_Ratings_Before.iqx"
+/ file="Study_8_EP_Task_After.iqx"
+/ file="Study_8_Exploratory_Questions_SG_MB.iqx"
+</batch>
+
+***************************************************************************************
+CONSENT - DEMOGRAPHICS - ACQUISITION  - EP - EXPLICIT - EXPLORATORY QUESTIONS
+***************************************************************************************
+ 
+<batch>
+/ subjects=(4 of 4)
+/ groupassignment = subjectnumber
+/ file="Study_8_consent.iqx"
+/ file="Study_8_Demographics.iqx"
+/ file="Study_8_SG_MB.iqx"
+/ file="Study_8_EP_Task_Before.iqx"
+/ file="Study_8_Stimulus_Ratings_After.iqx"
+/ file="Study_8_Exploratory_Questions_SG_MB.iqx"
+</batch>
