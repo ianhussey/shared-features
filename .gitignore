@@ -2,3 +2,4 @@
 *.DS_Store
 *.Rhistory
 old/*
+*.html linguist-detectable=false
